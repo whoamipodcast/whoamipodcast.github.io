@@ -2,17 +2,51 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+{% include intro.empty.html %}
+  <main id="main">
+{% include about_section.empty.html %}
+{% include speakers.empty.html %}
+{% include schedule.empty.html %}
+{% include venue.empty.html %}
+{% include gallery.empty.html %}
+{% include sponsors.empty.html %}
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    <section id="faq" class="wow fadeInUp">
 
-      <div class="entry">
-        {{ post.excerpt }}
+      <div class="container">
+
+        <div class="section-header">
+          <h2>F.A.Q </h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+              <ul id="faq-list">
+{% for episode in site.episodes %}
+                <li>
+                  <a data-toggle="collapse" class="collapsed" href="#faq1">{{ episode.description }}<i class="fa fa-minus-circle"></i></a>
+                  <div id="faq1" class="collapse" data-parent="#faq-list">
+                    <div>
+                      [audio player: {{ episode: audio_file }}]
+                    </div>
+					<div>
+                      [video player: {{ episode: video_file }}]
+                    </div>
+					<div>
+						<a href="{{ site.baseurl }}{{ episode.url }}" class="buy-ticket">Read More
+					</div>
+                  </div>
+                </li>
+{% endfor %}
+              </ul>
+          </div>
+        </div>
+
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+    </section>
+
+{% include subscribe.empty.html %}
+{% include patreon.empty.html %}
+{% include contact.empty.html %}
+  </main>
