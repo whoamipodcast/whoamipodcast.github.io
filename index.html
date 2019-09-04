@@ -5,7 +5,7 @@ layout: default
 {% include intro.html %}
   <main id="main">
 {% include about_section.empty.html %}
-{% include speakers_list.empty.html %}
+{% include speakers_list.html %}
 {% include schedule.empty.html %}
 {% include venue.empty.html %}
 {% include gallery.empty.html %}
@@ -25,8 +25,10 @@ layout: default
 {% for post in site.posts %}
   {% if post.categories contains "episode" %}
                 <li>
-                  <a data-toggle="collapse" class="collapsed" href="#faq1">{{ post.description }}<i class="fa fa-minus-circle"></i></a>
-                  <div id="faq1" class="collapse" data-parent="#faq-list">
+                  <a data-toggle="collapse" class="collapsed" href="#ep{{ post.epnumber }}">#{{ post.epnumber }}&nbsp;{{ post.title }}<i class="fa fa-minus-circle"></i></a>
+                  <div id="ep{{ post.epnumber }}" class="collapse" data-parent="#faq-list">
+				    <div>episode length: {{ post.length }}</div>
+				    <div>{{ post.description }}</div>
                     <div>
                       [audio player: {{ post.audio_file }}]
                     </div>

@@ -2,4 +2,16 @@
 layout: default
 ---
 
-huh?!
+{% if page.categories contains "episode" %}
+	episode
+	{{ content }}
+{% elseif page.categories contains "host" %}
+	host
+	{{ content }}
+{% elseif page.categories contains "speaker" %}
+	speaker
+	{{ content }}
+{% else %}
+	none of the above
+	{{ content }}
+{% endif %}
