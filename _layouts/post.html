@@ -7,7 +7,7 @@ header: fixed
 {% include header.html %}
   </header>
 
-{% if page.categories contains "episode" %}
+{% if page.type == "episode" %}
   <main id="main" class="main-page">
 	title: {{ page.title }}<br>
 	length: {{ page.length }}<br>
@@ -27,7 +27,7 @@ header: fixed
 	{% endfor %}
   </main>
 
-{% elsif page.categories contains "host" %}
+{% elsif page.type == "host" %}
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
@@ -68,7 +68,7 @@ header: fixed
     </section>
   </main>
   
-{% elsif page.categories contains "speaker" %}
+{% elsif page.type == "speaker" %}
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">

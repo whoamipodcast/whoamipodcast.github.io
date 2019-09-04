@@ -10,7 +10,7 @@
           <div class="col-lg-9">
               <ul id="faq-list">
 {% for post in site.posts %}
-  {% if post.categories contains "episode" %}
+  {% if post.type == "episode" %}
                 <li>
                   <a data-toggle="collapse" class="collapsed" href="#ep{{ post.epnumber }}">#{{ post.epnumber }}&nbsp;{{ post.title }}<i class="fa fa-minus-circle"></i></a>
                   <div id="ep{{ post.epnumber }}" class="collapse" data-parent="#faq-list">

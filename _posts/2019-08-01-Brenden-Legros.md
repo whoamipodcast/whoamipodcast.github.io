@@ -1,12 +1,12 @@
 ---
 layout: post
+type: speaker
 name: Brenden Legros
 image: /bm/img/speakers/1.jpg
 title: Praesentium ut qui possimus sapiente nulla
 twitter: asd
 facebook: asd
 linkedin: asd
-categories: speaker
 ---
 
 Voluptatem perferendis sed assumenda voluptatibus. Laudantium molestiae sint. Doloremque odio dolore dolore sit. Quae labore alias ea omnis ex expedita sapiente molestias atque. Optio voluptas et.

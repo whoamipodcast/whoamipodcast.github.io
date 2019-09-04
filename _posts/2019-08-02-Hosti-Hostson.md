@@ -1,12 +1,12 @@
 ---
 layout: post
+type: host
 name: Hosti Hostson
 image: /bm/img/speakers/2.jpg
 title: Praesentium ut qui possimus sapiente nulla
 twitter: hosti
 facebook: hosti
 isntagram: hosti
-categories: host, speaker
 ---
 
 Voluptatem perferendis sed assumenda voluptatibus. Laudantium molestiae sint. Doloremque odio dolore dolore sit. Quae labore alias ea omnis ex expedita sapiente molestias atque. Optio voluptas et.

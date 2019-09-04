@@ -1,5 +1,6 @@
 ---
 layout: post
+type: post
 title: You're up and running!
 ---
 
