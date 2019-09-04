@@ -25,8 +25,8 @@ layout: default
 
 	{% endif %}
 
-
-{% elsif page.categories contains "host" %}
+{% else %}
+{% if page.categories contains "host" %}
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
@@ -67,8 +67,8 @@ layout: default
     </section>
   </main>
   
-
-{% elsif page.categories contains "speaker" %}
+{% else %}
+{% if page.categories contains "speaker" %}
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
@@ -106,5 +106,6 @@ layout: default
     </section>
   </main>
   
-
+{% endif %}
+{% endif %}
 {% endif %}
