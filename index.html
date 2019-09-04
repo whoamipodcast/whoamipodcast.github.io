@@ -16,27 +16,29 @@ layout: default
       <div class="container">
 
         <div class="section-header">
-          <h2>F.A.Q </h2>
+          <h2>Episodes</h2>
         </div>
 
         <div class="row justify-content-center">
           <div class="col-lg-9">
               <ul id="faq-list">
-{% for episode in site.episodes %}
+{% for post in site.posts %}
+  {% if post.categories contains "episode" %}
                 <li>
-                  <a data-toggle="collapse" class="collapsed" href="#faq1">{{ episode.description }}<i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" class="collapsed" href="#faq1">{{ post.description }}<i class="fa fa-minus-circle"></i></a>
                   <div id="faq1" class="collapse" data-parent="#faq-list">
                     <div>
-                      [audio player: {{ episode: audio_file }}]
+                      [audio player: {{ post.audio_file }}]
                     </div>
 					<div>
-                      [video player: {{ episode: video_file }}]
+                      [video player: {{ post.video_file }}]
                     </div>
 					<div>
-						<a href="{{ site.baseurl }}{{ episode.url }}" class="about-btn scrollto">Read More
+						<a href="{{ site.baseurl }}{{ post.url }}" class="about-btn scrollto">Read More
 					</div>
                   </div>
                 </li>
+  {% endif %}
 {% endfor %}
               </ul>
           </div>

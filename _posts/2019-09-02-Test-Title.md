@@ -1,10 +1,12 @@
 ---
-layout: episode
-title: Test Title
-length: 29
+layout: post
+title: Test Title2
+length: 39
 description: A very peculiar discussion about plants
 audio_file: asd.mp3
 video_file: asd.mp4
+categories: [discussion, plants, episode]
+tags: [very, peculiar]
 ---
 
 
