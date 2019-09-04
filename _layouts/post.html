@@ -2,16 +2,109 @@
 layout: default
 ---
 
+
+
 {% if page.categories contains "episode" %}
-	episode
-	{{ content }}
+
+	title: {{ page.title }}<br>
+	length: {{ page.length }}<br>
+	description: {{ page.description }}<br>
+	audio_file: {{ page.audio_file }}<br>
+	video_file: {{ page.video_file }}<br>
+
+	categories:
+	{% for category in page.categories %}
+	{{ category }}, 
+	{% endfor %}
+	<br>
+
+	tags:
+	{% for tag in page.tags %}
+	{{ tag }}, 
+	{% endfor %}
+
+	{% endif %}
+
+
 {% elsif page.categories contains "host" %}
-	host
-	{{ content }}
+  <main id="main" class="main-page">
+    <section id="speakers-details" class="wow fadeIn">
+      <div class="container">
+        <div class="section-header">
+          <h2>Host Details</h2>
+          <p>{{ page.title }}</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <img src="{{ page.image }}" alt="Speaker 1" class="img-fluid">
+          </div>
+
+          <div class="col-md-6">
+            <div class="details">
+              <h2>{{ page.name }}</h2>
+              <div class="social">
+{% if page.twitter %}
+                <a href="https://twitter.com/{{ page.twitter }}"><i class="fa fa-twitter"></i></a>
+{% endif %}
+{% if page.facebook %}
+                <a href="https://facebook.com/{{ page.facebook }}"><i class="fa fa-facebook"></i></a>
+{% endif %}
+{% if page.instagram %}
+                <a href="https://instagram.com/{{ page.instagram }}"><i class="fa fa-instagram"></i></a>
+{% endif %}
+{% if page.linkedin %}
+                <a href="https://linkedin.com/{{ page.linkedin }}"><i class="fa fa-linkedin"></i></a>
+{% endif %}
+              </div>
+{{ content }}
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+  </main>
+  
+
 {% elsif page.categories contains "speaker" %}
-	speaker
-	{{ content }}
-{% else %}
-	none of the above
-	{{ content }}
+  <main id="main" class="main-page">
+    <section id="speakers-details" class="wow fadeIn">
+      <div class="container">
+        <div class="section-header">
+          <h2>Speaker Details</h2>
+          <p>{{ page.title }}</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <img src="{{ page.image }}" alt="Speaker 1" class="img-fluid">
+          </div>
+
+          <div class="col-md-6">
+            <div class="details">
+              <h2>{{ page.name }}</h2>
+              <div class="social">
+{% if page.twitter %}
+                <a href="https://twitter.com/{{ page.twitter }}"><i class="fa fa-twitter"></i></a>
+{% endif %}
+{% if page.facebook %}
+                <a href="https://facebook.com/{{ page.facebook }}"><i class="fa fa-facebook"></i></a>
+{% endif %}
+{% if page.linkedin %}
+                <a href="https://linkedin.com/{{ page.linkedin }}"><i class="fa fa-linkedin"></i></a>
+{% endif %}
+              </div>
+{{ content }}
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+  </main>
+  
+
 {% endif %}
