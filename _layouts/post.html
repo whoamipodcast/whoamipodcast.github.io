@@ -27,12 +27,16 @@ header: fixed
 	{% endfor %}
   </main>
 
-{% elsif page.type == "host" %}
+{% elsif page.type contains "speaker" %}
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
         <div class="section-header">
+  {% if page.type contains "host" %}
           <h2>Host Details</h2>
+  {% else %}
+          <h2>Speaker Details</h2>
+  {% endif %}
           <p>{{ page.title }}</p>
         </div>
 
@@ -45,18 +49,18 @@ header: fixed
             <div class="details">
               <h2>{{ page.name }}</h2>
               <div class="social">
-{% if page.twitter %}
+  {% if page.twitter %}
                 <a href="https://twitter.com/{{ page.twitter }}"><i class="fa fa-twitter"></i></a>
-{% endif %}
-{% if page.facebook %}
+  {% endif %}
+  {% if page.facebook %}
                 <a href="https://facebook.com/{{ page.facebook }}"><i class="fa fa-facebook"></i></a>
-{% endif %}
-{% if page.instagram %}
+  {% endif %}
+  {% if page.instagram %}
                 <a href="https://instagram.com/{{ page.instagram }}"><i class="fa fa-instagram"></i></a>
-{% endif %}
-{% if page.linkedin %}
+  {% endif %}
+  {% if page.linkedin %}
                 <a href="https://linkedin.com/{{ page.linkedin }}"><i class="fa fa-linkedin"></i></a>
-{% endif %}
+  {% endif %}
               </div>
 {{ content }}
             </div>
@@ -68,42 +72,4 @@ header: fixed
     </section>
   </main>
   
-{% elsif page.type == "speaker" %}
-  <main id="main" class="main-page">
-    <section id="speakers-details" class="wow fadeIn">
-      <div class="container">
-        <div class="section-header">
-          <h2>Speaker Details</h2>
-          <p>{{ page.title }}</p>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <img src="{{ page.image }}" alt="Speaker 1" class="img-fluid">
-          </div>
-
-          <div class="col-md-6">
-            <div class="details">
-              <h2>{{ page.name }}</h2>
-              <div class="social">
-{% if page.twitter %}
-                <a href="https://twitter.com/{{ page.twitter }}"><i class="fa fa-twitter"></i></a>
-{% endif %}
-{% if page.facebook %}
-                <a href="https://facebook.com/{{ page.facebook }}"><i class="fa fa-facebook"></i></a>
-{% endif %}
-{% if page.linkedin %}
-                <a href="https://linkedin.com/{{ page.linkedin }}"><i class="fa fa-linkedin"></i></a>
-{% endif %}
-              </div>
-{{ content }}
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
-    </section>
-  </main>
-
 {% endif %}

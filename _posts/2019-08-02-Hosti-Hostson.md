@@ -1,6 +1,6 @@
 ---
 layout: post
-type: host
+type: [host, speaker]
 name: Hosti Hostson
 image: /bm/img/speakers/2.jpg
 title: Praesentium ut qui possimus sapiente nulla
