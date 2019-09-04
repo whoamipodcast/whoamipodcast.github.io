@@ -3,12 +3,12 @@ layout: default
 header: fixed
 ---
 
-<header id="header" class="header-fixed">
+  <header id="header" class="header-fixed">
 {% include header.html %}
-</header>
+  </header>
 
 {% if page.categories contains "episode" %}
-
+  <main id="main" class="main-page">
 	title: {{ page.title }}<br>
 	length: {{ page.length }}<br>
 	description: {{ page.description }}<br>
@@ -25,6 +25,7 @@ header: fixed
 	{% for tag in page.tags %}
 	{{ tag }}, 
 	{% endfor %}
+  </main>
 
 {% elsif page.categories contains "host" %}
   <main id="main" class="main-page">
