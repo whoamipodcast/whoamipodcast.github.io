@@ -2,13 +2,6 @@
 <html lang="en">
 {% include head.html %}
 <body>
-{% if page.header == "transparent" %}
-<header id="header">
-{% elsif page.header == "fixed" %}
-<header id="header" class="header-fixed">
-{% endif %}
-{% include header.html %}
-</header>
 {{ content }}
 {% include footer.html %}
   <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>

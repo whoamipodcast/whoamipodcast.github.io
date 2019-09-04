@@ -3,6 +3,10 @@ layout: default
 header: transparent
 ---
 
+<header id="header">
+{% include header.html %}
+</header>
+
 {% include intro.html %}
   <main id="main">
 {% include about_section.empty.html %}
@@ -11,46 +15,7 @@ header: transparent
 {% include venue.empty.html %}
 {% include gallery.empty.html %}
 {% include sponsors.empty.html %}
-
-    <section id="faq" class="wow fadeInUp">
-
-      <div class="container">
-
-        <div class="section-header">
-          <h2>Episodes</h2>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-              <ul id="faq-list">
-{% for post in site.posts %}
-  {% if post.categories contains "episode" %}
-                <li>
-                  <a data-toggle="collapse" class="collapsed" href="#ep{{ post.epnumber }}">#{{ post.epnumber }}&nbsp;{{ post.title }}<i class="fa fa-minus-circle"></i></a>
-                  <div id="ep{{ post.epnumber }}" class="collapse" data-parent="#faq-list">
-				    <div>episode length: {{ post.length }}</div>
-				    <div>{{ post.description }}</div>
-                    <div>
-                      [audio player: {{ post.audio_file }}]
-                    </div>
-					<div>
-                      [video player: {{ post.video_file }}]
-                    </div>
-					<div>
-						<a href="{{ site.baseurl }}{{ post.url }}" class="about-btn scrollto">Read More</a>
-					</div>
-                  </div>
-                </li>
-  {% endif %}
-{% endfor %}
-              </ul>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
+{% include episodes.html %}
 {% include subscribe.empty.html %}
 {% include patreon.empty.html %}
 {% include contact.empty.html %}

@@ -3,7 +3,9 @@ layout: default
 header: fixed
 ---
 
-
+<header id="header" class="header-fixed">
+{% include header.html %}
+</header>
 
 {% if page.categories contains "episode" %}
 
@@ -24,8 +26,7 @@ header: fixed
 	{{ tag }}, 
 	{% endfor %}
 
-{% else %}
-{% if page.categories contains "host" %}
+{% elsif page.categories contains "host" %}
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
@@ -66,8 +67,7 @@ header: fixed
     </section>
   </main>
   
-{% else %}
-{% if page.categories contains "speaker" %}
+{% elsif page.categories contains "speaker" %}
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
