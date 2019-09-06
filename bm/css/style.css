@@ -1100,20 +1100,20 @@ body.mobile-nav-active #mobile-nav-toggle {
 # F.A.Q Section
 --------------------------------------------------------------*/
 
-#faq {
+#episodes {
   padding: 60px 0;
 }
 
-#faq #faq-list {
+#episodes #episodes-list {
   padding: 0;
   list-style: none;
 }
 
-#faq #faq-list li {
+#episodes #episodes-list li {
   border-bottom: 1px solid #ddd;
 }
 
-#faq #faq-list a {
+#episodes #episodes-list a {
   padding: 18px 0;
   display: block;
   position: relative;
@@ -1124,42 +1124,42 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-right: 20px;
 }
 
-#faq #faq-list i {
+#episodes #episodes-list i {
   font-size: 24px;
   position: absolute;
   right: 0;
   top: 16px;
 }
 
-#faq #faq-list p {
+#episodes #episodes-list p {
   margin-bottom: 20px;
 }
 
-#faq #faq-list a.collapse {
+#episodes #episodes-list a.collapse {
   color: #f82249;
 }
 
-#faq #faq-list a.collapsed {
+#episodes #episodes-list a.collapsed {
   color: #000;
 }
 
-#faq #faq-list a.collapsed i::before {
+#episodes #episodes-list a.collapsed i::before {
   content: "\f055" !important;
 }
 
 /*--------------------------------------------------------------
-# Subscribe Section
+# newsletter Section
 --------------------------------------------------------------*/
 
-#subscribe {
+#newsletter {
   padding: 60px;
-  background: url(/bm/img/subscribe-bg.jpg) center center no-repeat;
+  background: url(/bm/img/newsletter-bg.jpg) center center no-repeat;
   background-size: cover;
   overflow: hidden;
   position: relative;
 }
 
-#subscribe:before {
+#newsletter:before {
   content: "";
   background: rgba(6, 12, 34, 0.6);
   position: absolute;
@@ -1169,12 +1169,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   right: 0;
 }
 
-#subscribe .section-header h2,
-#subscribe p {
+#newsletter .section-header h2,
+#newsletter p {
   color: #fff;
 }
 
-#subscribe input {
+#newsletter input {
   background: #fff;
   color: #060c22;
   border: 0;
@@ -1185,7 +1185,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
 }
 
-#subscribe button {
+#newsletter button {
   border: 0;
   padding: 9px 25px;
   cursor: pointer;
@@ -1197,7 +1197,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 50px;
 }
 
-#subscribe button:hover {
+#newsletter button:hover {
   background: #e0072f;
 }
 
@@ -1536,7 +1536,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 
 @media (min-width: 767px) {
-  #subscribe input {
+  #newsletter input {
     min-width: 400px;
   }
 }
@@ -1569,7 +1569,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-attachment: fixed;
   }
 
-  #subscribe {
+  #newsletter {
     background-attachment: fixed;
   }
 }
@@ -1622,11 +1622,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     bottom: 15px;
   }
 
-  #faq #faq-list a {
+  #episodes #episodes-list a {
     font-size: 18px;
   }
 
-  #faq #faq-list i {
+  #episodes #episodes-list i {
     top: 13px;
   }
 }
@@ -1650,7 +1650,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (max-width: 460px) {
-  #subscribe button {
+  #newsletter button {
     margin-top: 10px;
   }
 }
