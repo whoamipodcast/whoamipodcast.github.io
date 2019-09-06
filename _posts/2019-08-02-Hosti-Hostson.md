@@ -1,12 +1,12 @@
 ---
 layout: post
 type: [host, speaker]
-name: Hosti Hostson
+name: William B
 image: /bm/img/speakers/2.jpg
-title: Praesentium ut qui possimus sapiente nulla
-twitter: hosti
-facebook: hosti
-isntagram: hosti
+title: Co-Host of the Podcast
+twitter: WilliamBlacoe
+facebook: williamblacoe
+isntagram: williamblacoe
 ---
 
 Voluptatem perferendis sed assumenda voluptatibus. Laudantium molestiae sint. Doloremque odio dolore dolore sit. Quae labore alias ea omnis ex expedita sapiente molestias atque. Optio voluptas et.

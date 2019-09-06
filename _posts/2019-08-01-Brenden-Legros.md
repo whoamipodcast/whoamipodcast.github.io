@@ -1,9 +1,9 @@
 ---
 layout: post
-type: speaker
-name: Brenden Legros
+type: [host, speaker]
+name: Steve G
 image: /bm/img/speakers/1.jpg
-title: Praesentium ut qui possimus sapiente nulla
+title: Co-Host of the Podcast
 twitter: asd
 facebook: asd
 linkedin: asd
