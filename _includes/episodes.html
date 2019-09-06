@@ -1,4 +1,4 @@
-    <section id="episodes" class="wow fadeInUp">
+    <section id="faq" class="wow fadeInUp">
 
       <div class="container">
 
@@ -12,7 +12,7 @@
 {% for post in site.posts %}
   {% if post.type == "episode" %}
                 <li>
-                  <a data-toggle="collapse" class="collapsed" href="#ep{{ post.epnumber }}">[{{ post.date | date: "%e %b %Y" }}] #{{ post.epnumber }}&nbsp;{{ post.title }}<i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" class="collapsed" href="#ep{{ post.epnumber }}">{{ post.date | date: "%e %b %Y" }} | Ep. #{{ post.epnumber }} | {{ post.title }}<i class="fa fa-minus-circle"></i></a>
                   <div id="ep{{ post.epnumber }}" class="collapse" data-parent="#faq-list">
 				    <div>episode length: {{ post.length }}</div>
 				    <div>{{ post.description }}</div>
