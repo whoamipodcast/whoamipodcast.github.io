@@ -2,11 +2,15 @@
 layout: default
 ---
 
-<article class="page">
-
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
-    {{ content }}
-  </div>
-</article>
+  <header id="header" class="header-fixed">
+{% include header.html %}
+  </header>
+  
+  <main id="main" class="main-page">
+  <article class="page">
+    <h1>{{ page.title }}</h1>
+    <div class="entry">
+{{ content }}
+    </div>
+  </article>
+  </main>
