@@ -2,7 +2,7 @@
       <div class="container">
         <div class="section-header">
           <h2>Podcast Speakers</h2>
-          <p>Here are some of our speakers</p>
+          <p>Here are our hosts and speakers we have had on</p>
         </div>
         <div class="row">		
 {% for post in site.posts %}
@@ -14,7 +14,7 @@
 			  </a>
               <div class="details">
                 <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a></h3>
-                <p>Quas alias incidunt</p>
+                <p>{{ post.title }}</p>
                 <div class="social">
     {% if post.twitter %}
                   <a href="twitter.com/{{ post.twitter }}"><i class="fa fa-twitter"></i></a>
