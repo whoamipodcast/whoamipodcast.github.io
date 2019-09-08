@@ -3,18 +3,11 @@ layout: default
 header: fixed
 ---
 
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0"></script>
-
   <header id="header" class="header-fixed">
 {% include header.html %}
   </header>
 
 {% if page.type == "episode" %}
-<div class="fb-like" data-href="{{ site.baseurl }}{{ page.url }}" data-width="300" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
-<div class="fb-comments" data-href="{{ site.baseurl }}{{ page.url }}" data-width="30" data-numposts="10"></div>
-
-
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
@@ -56,6 +49,7 @@ tags:
       </div>
 
     </section>
+{% include disqus.html %}
   </main>
 
 {% elsif page.type contains "speaker" %}
