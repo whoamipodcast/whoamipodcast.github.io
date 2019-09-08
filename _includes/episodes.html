@@ -12,7 +12,9 @@
 {% for post in site.posts %}
   {% if post.type == "episode" %}
                 <li>
-                  <a data-toggle="collapse" class="collapsed" href="#ep{{ post.epnumber }}">Ep. #{{ post.epnumber }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ post.title }}<i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" class="collapsed" href="#ep{{ post.epnumber }}">Ep. #{{ post.epnumber }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ post.title }}
+				  <div class="fb-like" data-href="https://whoamipodcast.com" data-width="300" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+				  <i class="fa fa-minus-circle"></i></a>
                   <div id="ep{{ post.epnumber }}" class="collapse" data-parent="#episodes-list">
 				    <div>episode length: {{ post.length }}</div>
 				    <div>{{ post.description }}</div>
