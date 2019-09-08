@@ -1,10 +1,26 @@
 <!-- share buttons -->
-<!--<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="left: 0px; top: 150px;">-->
-<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_default_style" style="left: 0px; bottom: 0px; width: 100%;">
-  <!--<a class="a2a_dd" href="https://www.addtoany.com/share"></a>-->
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="left: 0px; top: 150px;">
   <a class="a2a_button_facebook"></a>
   <a class="a2a_button_twitter"></a>
   <a class="a2a_button_telegram"></a>
   <a class="a2a_button_whatsapp"></a>
   <a class="a2a_button_email"></a>
 </div>
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_default_style" style="bottom:0px; left:50%; transform:translateX(-50%);">
+  <a class="a2a_button_facebook"></a>
+  <a class="a2a_button_twitter"></a>
+  <a class="a2a_button_telegram"></a>
+  <a class="a2a_button_whatsapp"></a>
+  <a class="a2a_button_email"></a>
+</div>
+<style>
+@media screen and (max-width: 980px) {
+    .a2a_floating_style.a2a_vertical_style { display: none; }
+	.a2a_floating_style.a2a_default_style { display: block; }
+}
+@media screen and (min-width: 980px) {
+    .a2a_floating_style.a2a_default_style { display: none; }
+	.a2a_floating_style.a2a_vertical_style { display: block; }
+}
+</style>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
