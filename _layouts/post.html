@@ -27,8 +27,9 @@ header: fixed
 	{% endfor %}
   </main>
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v4.0"></script>
-<div class="fb-like" data-href="https://whoamipodcast.com" data-width="300" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0"></script>
+<div class="fb-like" data-href="{{ site.baseurl }}{{ page.url }}" data-width="300" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+<div class="fb-comments" data-href="{{ site.baseurl }}{{ page.url }}" data-width="30" data-numposts="10"></div>
 
 {% elsif page.type contains "speaker" %}
   <main id="main" class="main-page">
