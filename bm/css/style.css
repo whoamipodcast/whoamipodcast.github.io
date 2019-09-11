@@ -1537,7 +1537,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (min-width: 767px) {
   #newsletter input {
-    min-width: 400px;
+    min-width: 300px;
   }
 }
 
@@ -1650,6 +1650,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (max-width: 460px) {
+  #newsletter input {
+    margin-top: 10px;
+  }
   #newsletter button {
     margin-top: 10px;
   }

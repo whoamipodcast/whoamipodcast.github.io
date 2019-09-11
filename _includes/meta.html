@@ -2,3 +2,16 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
+
+  <!-- Facebook SEO -->
+  <meta property="og:url"           content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:type"          content="website" />
+{% if page.type contains "episode" %}
+  <meta property="og:title"         content="Episode {{ page.epnumber }} - {{ page.title }}" />
+{% elsif page.type contains "speaker" %}
+  <meta property="og:title"         content="{{ page.name }} - {{ page.title }}" />
+{% else %}
+  <meta property="og:title"         content="{{ page.title }}" />
+{% endif %}
+  <meta property="og:description"   content="{{ page.description }}" />
+  <meta property="og:image"         content="{{ site.url }}{{ page.image }}" />

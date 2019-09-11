@@ -9,22 +9,45 @@ header: fixed
 
 {% if page.type == "episode" %}
   <main id="main" class="main-page">
-	title: {{ page.title }}<br>
-	length: {{ page.length }}<br>
-	description: {{ page.description }}<br>
-	audio_file: {{ page.audio_file }}<br>
-	video_file: {{ page.video_file }}<br>
+    <section id="speakers-details" class="wow fadeIn">
+      <div class="container">
+        <div class="section-header">
+          <h2>Episode #{{ page.epnumber }}</h2>
+          <p>{{ page.title }}</p>
+        </div>
 
-	categories:
-	{% for category in page.categories %}
-	{{ category }}, 
-	{% endfor %}
-	<br>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="{{ page.image }}" alt="Speaker 1" class="img-fluid">
+          </div>
 
-	tags:
-	{% for tag in page.tags %}
-	{{ tag }}, 
-	{% endfor %}
+          <div class="col-md-6">
+            <div class="details">
+              <h2>{{ page.title }}</h2>
+title: {{ page.title }}<br>
+length: {{ page.length }}<br>
+description: {{ page.description }}<br>
+audio_file: {{ page.audio_file }}<br>
+video_file: {{ page.video_file }}<br>
+
+categories:
+{% for category in page.categories %}
+{{ category }}, 
+{% endfor %}
+<br>
+
+tags:
+{% for tag in page.tags %}
+{{ tag }}, 
+{% endfor %}
+
+{{ content }}
+            </div>
+          </div>
+        </div>
+{% include disqus.html %}
+      </div>
+    </section>
   </main>
 
 {% elsif page.type contains "speaker" %}
@@ -74,3 +97,5 @@ header: fixed
   </main>
   
 {% endif %}
+
+{% include sharebuttons.html %}
