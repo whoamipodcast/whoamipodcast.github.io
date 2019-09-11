@@ -1,16 +1,14 @@
 ---
 layout: post
 type: [host, speaker]
-name: Steve G
-image: /bm/img/speakers/1.jpg
+name: Steven Guscott
+image: /images/Steven.min.jpg
 title: Co-Host of the Podcast
-facebook: asd
-twitter: asd
-linkedin: asd
+facebook: steve.guscott.7
 ---
 
-Voluptatem perferendis sed assumenda voluptatibus. Laudantium molestiae sint. Doloremque odio dolore dolore sit. Quae labore alias ea omnis ex expedita sapiente molestias atque. Optio voluptas et.
+Steven lives in Gloucester, England, UK. In his teens he enjoyed philosophical and religious discussions with friends and teachers alike. Absorbing any medium of fictional stories also became a great source of enjoyment, while broadening his perspective through vicarious experience.
 
-Aboriosam inventore dolorem inventore nam est esse. Aperiam voluptatem nisi molestias laborum ut. Porro dignissimos eum. Tempore dolores minus unde est voluptatum incidunt ut aperiam.
+His own experiences in life have also led to a great desire to discuss and explore perspectives on any subject. He has found that the moment you think you grasp a situation, or think you know something, the opposite will often take place to obliterate the narrowing nature of thinking in absolutes. One of Steven’s favourite things to talk about is Frank Herbert’s Sci-Fi classic, Dune.
 
-Et dolore blanditiis officiis non quod id possimus. Optio non commodi alias sint culpa sapiente nihil ipsa magnam. Qui eum alias provident omnis incidunt aut. Eius et officia corrupti omnis error vel quia omnis velit. In qui debitis autem aperiam voluptates unde sunt et facilis.
+Steven also loves writing his own stories, playing computer games, having simple silly fun with his nieces and nephew, playing DnD and board games with friends, and eating a lot of pizza and ice cream.
