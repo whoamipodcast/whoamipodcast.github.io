@@ -2,12 +2,13 @@
       <div class="container">
         <div class="section-header">
           <h2>Podcast Speakers</h2>
-          <p>Here are our hosts and speakers we have had on</p>
+          <p>Get to know the speakers on our podcast.</p>
         </div>
         <div class="row">		
 {% for post in site.posts %}
   {% if post.type contains "speaker" %}
-          <div class="col-lg-4 col-md-6">
+          <!--<div class="col-lg-4 col-md-6">-->
+		  <div class="col-md-6">
             <div class="speaker">
 			  <a href="{{ site.baseurl }}{{ post.url }}">
                 <img src="{{ post.image }}" alt="{{ post.name }}" class="img-fluid">
