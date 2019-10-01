@@ -17,8 +17,9 @@ header: fixed
 
         <div class="row">
           <div class="col-md-6">
-		    <h2>{{ page.title }}</h2>
+		    <h1>{{ page.title }}</h1>
 		    <p>{{ page.description }}</p>
+			<img src="{{ page.image }}" alt="Episode #{{ page.epnumber }}: {{ page.title }}" class="img-fluid">
           </div>
 
           <div class="col-md-6">
@@ -45,14 +46,11 @@ tags:
 {{ tag }}, 
 {% endfor %}
 -->
-
-
-{{ content }}
             </div>
           </div>
         </div>
-		<div class="offset-md-6">
-		  <img src="{{ page.image }}" alt="Episode #{{ page.epnumber }}: {{ page.title }}" class="img-fluid">
+		<div style="margin-left: 25%; max-width: 50%;">
+		  {{ content }}
 		</div>
 {% include disqus.html %}
       </div>
