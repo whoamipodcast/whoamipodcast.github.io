@@ -12,8 +12,8 @@ header: fixed
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
         <div class="section-header">
-          <h2>Episode #{{ page.epnumber }}</h2>
-          <p>{{ page.title }}</p>
+          <h3>Episode #{{ page.epnumber }}</h3>
+          <h2>{{ page.title }}</h2>
         </div>
 
         <div class="row">
@@ -23,10 +23,9 @@ header: fixed
 
           <div class="col-md-6">
             <div class="details">
-              <h2>{{ page.title }}</h2>
+			  <p>{{ page.description }}</p>
 			  <p><iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" height="102px" width="400px" frameborder="0" scrolling="no"></iframe></p>
 			  <p><iframe width="560" height="315" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-			  <p>{{ page.description }}</p>
 <!--
 title: {{ page.title }}<br>
 length: {{ page.length }}<br>
