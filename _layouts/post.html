@@ -12,20 +12,21 @@ header: fixed
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
         <div class="section-header">
-          <h3>Episode #{{ page.epnumber }}</h3>
-          <h2>{{ page.title }}</h2>
+          <h2>Episode #{{ page.epnumber }}</h2>
         </div>
 
         <div class="row">
           <div class="col-md-6">
-            <img src="{{ page.image }}" alt="Speaker 1" class="img-fluid">
+		    <h2>{{ page.title }}</h2>
+		    <p>{{ page.description }}</p>
           </div>
 
           <div class="col-md-6">
             <div class="details">
-			  <p>{{ page.description }}</p>
-			  <p><iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" height="102px" width="400px" frameborder="0" scrolling="no"></iframe></p>
-			  <p><iframe width="560" height="315" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+			  <h3>Listen:</h3>
+			  <p><iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" width="100%" frameborder="0" scrolling="no"></iframe></p>
+			  <h3>Watch:</h3>
+			  <p><iframe width="100%" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 <!--
 title: {{ page.title }}<br>
 length: {{ page.length }}<br>
@@ -50,6 +51,9 @@ tags:
             </div>
           </div>
         </div>
+		<div class="offset-md-6">
+		  <img src="{{ page.image }}" alt="Episode #{{ page.epnumber }}: {{ page.title }}" class="img-fluid">
+		</div>
 {% include disqus.html %}
       </div>
     </section>
