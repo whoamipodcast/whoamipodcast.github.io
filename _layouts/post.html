@@ -19,15 +19,19 @@ header: fixed
           <div class="col-md-6">
 		    <h1>{{ page.title }}</h1>
 		    <p>{{ page.description }}</p>
-			<img src="{{ page.image }}" alt="Episode #{{ page.epnumber }}: {{ page.title }}" class="img-fluid">
+			<p><img src="{{ page.image }}" alt="Episode #{{ page.epnumber }}: {{ page.title }}" class="img-fluid"></p>
           </div>
 
           <div class="col-md-6">
             <div class="details">
 			  <h3>Listen:</h3>
-			  <p><iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" width="100%" frameborder="0" scrolling="no"></iframe></p>
+			  <div class="aspect-ratio-audio">
+			    <iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" width="100%" frameborder="0" scrolling="no"></iframe>
+			  </div>
 			  <h3>Watch:</h3>
-			  <p><iframe width="100%" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+			  <div class="aspect-ratio-video">
+			    <iframe width="100%" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			  </div>
 <!--
 title: {{ page.title }}<br>
 length: {{ page.length }}<br>
@@ -49,7 +53,7 @@ tags:
             </div>
           </div>
         </div>
-		<div style="margin-left: 25%; max-width: 50%;">
+		<div style="margin-left: 15%; max-width: 70%; text-align: center;">
 		  {{ content }}
 		</div>
 {% include disqus.html %}
