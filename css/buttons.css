@@ -7,11 +7,11 @@
 .action-button
 {
 	position: relative;
-	padding: 6px 30px;
-  margin: 0px 6px 6px 0px;
+	padding: 5px 15px;
+  margin: 0px 10px 10px 0px;
   float: left;
 	border-radius: 6px;
-	font-size: 20px;
+	font-size: 18px;
 	color: #FFF;
 	text-decoration: none;
 }
