@@ -10,7 +10,7 @@
           <div class="col-lg-9">
 {% for post in site.posts | sort:'post_date' | reverse %}
   {% if post.type == "episode" %}
-			<a href="/Ep{% if post.epnumber < 10 %}0{% endif %}{{ post.epnumber }}/" class="action-button shadow animate pagecolor"><i class="fa fa-play-circle-o"></i>&nbsp;&nbsp;Ep. {% if post.epnumber < 10 %}0{% endif %}{{ post.epnumber }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ post.title }}</a>
+			<a href="/Ep{% if post.epnumber < 10 %}0{% endif %}{{ post.epnumber }}/" class="action-button shadow animate pagecolor" width="100%"><i class="fa fa-play-circle-o"></i>&nbsp;&nbsp;Ep. {% if post.epnumber < 10 %}0{% endif %}{{ post.epnumber }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ post.title }}</a>
   {% endif %}
 {% endfor %}
           </div>
