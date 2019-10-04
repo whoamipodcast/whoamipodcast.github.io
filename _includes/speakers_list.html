@@ -7,7 +7,6 @@
         <div class="row">		
 {% for post in site.posts %}
   {% if post.type contains "speaker" %}
-          <!--<div class="col-lg-4 col-md-6">-->
 		  <div class="col-md-6">
             <div class="speaker">
 			  <a href="{{ site.baseurl }}{{ post.url }}">
@@ -21,13 +20,13 @@
                   <a href="https://twitter.com/{{ post.twitter }}"><i class="fa fa-twitter"></i></a>
     {% endif %}
     {% if post.facebook %}
-                  <a href="https://facebook.com/{{ post.facebook }}"><i class="fa fa-facebook"></i></a>
+                  <a href="https://facebook.com/{{ post.facebook }}"><i class="fa fa-facebook-square"></i></a>
     {% endif %}
     {% if post.instagram %}
                   <a href="https://instagram.com/{{ post.instagram }}"><i class="fa fa-instagram"></i></a>
     {% endif %}
     {% if post.linkedin %}
-                  <a href="https://linkedin.com/in/{{ post.linkedin }}"><i class="fa fa-linkedin"></i></a>
+                  <a href="https://linkedin.com/in/{{ post.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
     {% endif %}
                 </div>
               </div>

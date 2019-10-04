@@ -8,28 +8,13 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-9">
-              <ul id="episodes-list">
-{% for post in site.posts %}
+		    <a href="/Ep{% if post.epnumber < 10 %}0{{ post.epnumber }}/">
+{% for post in site.posts | sort:'post_date' | reverse %}
   {% if post.type == "episode" %}
-                <li>
-                  <a data-toggle="collapse" class="collapsed" href="#ep{{ post.epnumber }}">Ep. #{{ post.epnumber }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ post.title }}<i class="fa fa-minus-circle"></i></a>
-                  <div id="ep{{ post.epnumber }}" class="collapse" data-parent="#episodes-list">
-				    <div>episode length: {{ post.length }}</div>
-				    <div>{{ post.description }}</div>
-                    <div>
-                      [audio player: {{ post.audio_file }}]
-                    </div>
-					<div>
-                      [video player: {{ post.video_file }}]
-                    </div>
-					<div>
-						<a href="{{ site.baseurl }}{{ post.url }}" class="about-btn scrollto">Read More</a>
-					</div>
-                  </div>
-                </li>
+			  <div class="listed-episode">Ep. #{{ post.epnumber }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ post.title }}<i class="fa fa-play-circle-o"></i></div>
+			</a>
   {% endif %}
 {% endfor %}
-              </ul>
           </div>
         </div>
 
