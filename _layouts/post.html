@@ -12,7 +12,7 @@ header: fixed
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
         <div class="section-header">
-          <h2>Episode #{{ page.epnumber }}</h2>
+          <h2>Episode #{% if page.enumber < 10 %}0{% endif %}{{ page.epnumber }}</h2>
         </div>
 
         <div class="row">
@@ -51,15 +51,15 @@ header: fixed
 		  </div>
 		  <div class="col-md-6">
 		    <p>{{ page.description }}</p>
-			<p><img src="{{ page.image }}" alt="Episode #{{ page.epnumber }}: {{ page.title }}" class="img-fluid"></p>
+			<!--<p><img src="{{ page.image }}" alt="Episode #{{ page.epnumber }}: {{ page.title }}" class="img-fluid"></p>-->
+			<div class="aspect-ratio-audio">
+			  <iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" width="100%" frameborder="0" scrolling="no"></iframe>
+			</div>
           </div>
 
           <div class="col-md-6">
             <div class="details">
 			  <h3>Listen:</h3>
-			  <div class="aspect-ratio-audio">
-			    <iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" width="100%" frameborder="0" scrolling="no"></iframe>
-			  </div>
 			  <h3>Watch:</h3>
 			  <div class="aspect-ratio-video">
 			    <iframe width="100%" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
