@@ -26,10 +26,8 @@ header: fixed
 {% assign forindex = 0 %}
 {% for category in page.categories %}
 {% assign forindex = forindex | plus:1 %}
-{% if forindex < amount %}
-				  <a href="#">{{ category }}, </a>
-{% else %}
-				  <a href="#">{{ category }}</a>
+{% if forindex < amount %}				  <a href="#">{{ category }}, </a>
+{% else %}				  <a href="#">{{ category }}</a>
 {% endif %}
 {% endfor %}
 				  </span>
@@ -39,10 +37,8 @@ header: fixed
 {% assign forindex = 0 %}
 {% for tag in page.tags %}
 {% assign forindex = forindex | plus:1 %}
-{% if forindex < amount %}
-				  <a href="#">{{ tag }}, </a>
-{% else %}
-				  <a href="#">{{ tag }}</a>
+{% if forindex < amount %}				  <a href="#">{{ tag }}, </a>
+{% else %}				  <a href="#">{{ tag }}</a>
 {% endif %}
 {% endfor %}
 				</span>
@@ -78,17 +74,13 @@ header: fixed
       </div>
     </section>
   </main>
-
 {% elsif page.type contains "speaker" %}
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
         <div class="section-header">
-  {% if page.type contains "host" %}
-          <!--<h2>Host Details</h2>-->
-		  <h2>Speaker Details</h2>
-  {% else %}
-          <h2>Speaker Details</h2>
+  {% if page.type contains "host" %}		  <h2>Speaker Details</h2>
+  {% else %}          <h2>Speaker Details</h2>
   {% endif %}
           <p>{{ page.title }}</p>
         </div>
@@ -102,17 +94,13 @@ header: fixed
             <div class="details">
               <h2>{{ page.name }}</h2>
               <div class="social">
-  {% if page.twitter %}
-                <a href="https://twitter.com/{{ page.twitter }}"><i class="fa fa-twitter"></i></a>
+  {% if page.twitter %}                <a href="https://twitter.com/{{ page.twitter }}"><i class="fa fa-twitter"></i></a>
   {% endif %}
-  {% if page.facebook %}
-                <a href="https://facebook.com/{{ page.facebook }}"><i class="fa fa-facebook"></i></a>
+  {% if page.facebook %}                <a href="https://facebook.com/{{ page.facebook }}"><i class="fa fa-facebook"></i></a>
   {% endif %}
-  {% if page.instagram %}
-                <a href="https://instagram.com/{{ page.instagram }}"><i class="fa fa-instagram"></i></a>
+  {% if page.instagram %}                <a href="https://instagram.com/{{ page.instagram }}"><i class="fa fa-instagram"></i></a>
   {% endif %}
-  {% if page.linkedin %}
-                <a href="https://linkedin.com/in/{{ page.linkedin }}"><i class="fa fa-linkedin"></i></a>
+  {% if page.linkedin %}                <a href="https://linkedin.com/in/{{ page.linkedin }}"><i class="fa fa-linkedin"></i></a>
   {% endif %}
               </div>
 {{ content }}
@@ -124,7 +112,6 @@ header: fixed
 
     </section>
   </main>
-  
 {% endif %}
 
 {% include sharebuttons.html %}
