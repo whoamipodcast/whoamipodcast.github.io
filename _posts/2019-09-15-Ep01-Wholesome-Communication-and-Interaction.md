@@ -13,6 +13,10 @@ tags: [communication, games, writing, creativity]
 comments: true
 ---
 
+<a href="#communication">Communication</a>
+<a href="#interactions">Interactions</a>
+<a href="#creativity-and-writing">Creativity and Writing</a>
+
 <p><b>Steven:</b> Why we think that having a chat together
 is worth doing, actually recording
 and sharing?
@@ -40,7 +44,7 @@ impressive when you think about it
 actually.
 </p>
 
-<h2>Communication</h2>
+<h2 id="communication">Communication</h2>
 
 <p><b>William:</b> The meat of our chats has not
 become less. I feel
@@ -283,7 +287,7 @@ waffle maker, it's true. I like it. My
 brain is a waffle maker.
 </p>
 
-<h2>Interactions</h2>
+<h2 id="interactions">Interactions</h2>
 
 <p><b>William:</b> So you have to
 spend time with who?
@@ -640,7 +644,7 @@ from the world we know than others;
 but that's just his work.
 </p>
 
-<h2>Creativity and Writing</h2>
+<h2 id="creativity-and-writing">Creativity and Writing</h2>
 
 <p><b>Steven:</b> Yeah, that's a
 perfect segue that will probably be part

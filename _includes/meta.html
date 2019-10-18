@@ -1,17 +1,44 @@
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+  <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="{{ page.tags | join: ','}}">
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | prepend: site.url }}">
 
-  <!-- Facebook SEO -->
-  <meta property="og:url"           content="{{ site.url }}{{ page.url }}" />
-  <meta property="og:type"          content="website" />
+  <!-- OpenGraph SEO -->
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:type" content="article">
 {% if page.type contains "episode" %}
-  <meta property="og:title"         content="Episode {{ page.epnumber }} - {{ page.title }}" />
+  <meta property="og:title" content="Episode {{ page.epnumber }} - {{ page.title }}" />
 {% elsif page.type contains "speaker" %}
-  <meta property="og:title"         content="{{ page.name }} - {{ page.title }}" />
+  <meta property="og:title" content="{{ page.name }} - {{ page.title }}" />
 {% else %}
-  <meta property="og:title"         content="{{ page.title }}" />
+  <meta property="og:title" content="{{ page.title }}" />
 {% endif %}
-  <meta property="og:description"   content="{{ page.description }}" />
-  <meta property="og:image"         content="{{ site.url }}{{ page.image }}" />
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
+  <meta property="og:image:alt" content="{{ page.title }} Poster" />
+  <meta property="og:site_name" content="WhoAmI Podcast" />
+  <meta property="og:updated_time" content="{{ page.date | date_to_xmlschema }}" />
+  <meta property="article:publisher" content="https://www.facebook.com/podcastwhoami" />
+  <meta property="article:author" content="https://facebook.com/williamblacoe" />
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+  <meta property="article:modified_time" content="{{ page.date | date_to_xmlschema }}" />
+  {% for tag in page.tags %}
+  <meta property="article:tag" content="{{ tag }}">
+  {% endfor %}
+  
+  <!-- Twitter SEO -->
+  <meta name="twitter:card" content="summary_large_image"/>
+{% if page.type contains "episode" %}
+  <meta name="twitter:title" content="Episode {{ page.epnumber }} - {{ page.title }}" />
+{% elsif page.type contains "speaker" %}
+  <meta name="twitter:title" content="{{ page.name }} - {{ page.title }}" />
+{% else %}
+  <meta name="twitter:title" content="{{ page.title }}" />
+{% endif %}
+  <meta name="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:site" content="@PodcastWhoami" />
+  <meta name="twitter:creator" content="@WilliamBlacoe">
+  <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+  <meta name="twitter:card" content="summary">
+  

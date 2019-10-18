@@ -13,6 +13,10 @@ tags: [self-awareness, robots, artificial intelligence, mind body problem]
 comments: true
 ---
 
+<a href="#robots-and-zombies">1. Robots and Zombies</a>
+<a href="#re-humans-mere-machines">2. Are Humans Mere Machines?</a>
+<a href="#can-consciousness-be-recreated-artificially">Can Consciousness Be Recreated Artificially?</a>
+
 <p><b>Steven:</b> Hello, welcome to the podcast "Who am I".
 I'm Steven.
 </p>
@@ -63,7 +67,7 @@ to that.
 <p><b>Steven:</b> Yes.
 </p>
 
-<h2>Robots and Zombies</h2>
+<h2 id="robots-and-zombies">Robots and Zombies</h2>
 
 <p><b>William:</b> Okay, today my suggestion for a
 topic of discussion is self-awareness.
@@ -463,7 +467,7 @@ mean conscious machines?
 <p><b>Steven:</b> Yeah.
 </p>
 
-<h2>Are Humans Mere Machines?</h2>
+<h2 id="are-humans-mere-machines">Are Humans Mere Machines?</h2>
 
 <p><b>William:</b> Uhm, I have a
 different view. I really enjoy the
@@ -722,7 +726,7 @@ people use the word, something not
 certain.
 </p>
 
-<h2>Can Consciousness Be Recreated Artificially?</h2>
+<h2 id="can-consciousness-be-recreated-artificially">Can Consciousness Be Recreated Artificially?</h2>
 
 <p><b>Steven:</b> And, I guess, linking it back to
 the robotics side of things, where that's
