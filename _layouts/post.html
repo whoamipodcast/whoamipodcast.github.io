@@ -53,9 +53,12 @@ header: fixed
 		    <p>{{ page.description }}</p>
 			<!--<p><img src="{{ page.image }}" alt="Episode #{{ page.epnumber }}: {{ page.title }}" class="img-fluid"></p>-->
 			<h3>Listen:</h3>
-			<div class="aspect-ratio-audio">
+			<!--<div class="aspect-ratio-audio">
 			  <iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" width="100%" frameborder="0" scrolling="no"></iframe>
-			</div>
+			</div>-->
+			<a src="https://anchor.fm/whoamipodcast/episodes/{{ page.audio }}" border="0">
+			  <img src="/images/playOnAnchor.min.png" width="100%">
+			</a>
           </div>
 
           <div class="col-md-6">
@@ -67,7 +70,7 @@ header: fixed
             </div>
           </div>
         </div>
-		<div style="margin-left: 15%; max-width: 70%; margin-top: 30px;">
+		<div style="margin-left: 5%; max-width: 90%; margin-top: 30px;">
 		  <h1 style="text-align: center; font-weight: bold;">Transcript</h1>
 		  {{ content }}
 		</div>
