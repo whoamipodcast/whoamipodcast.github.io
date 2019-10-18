@@ -13,9 +13,9 @@ tags: [communication, games, writing, creativity]
 comments: true
 ---
 
-<a href="#communication">Communication</a>
-<a href="#interactions">Interactions</a>
-<a href="#creativity-and-writing">Creativity and Writing</a>
+<a class="toc" href="#communication">1. Communication</a>
+<a class="toc" href="#interactions">2. Interactions</a>
+<a class="toc" href="#creativity-and-writing">3. Creativity and Writing</a>
 
 <p><b>Steven:</b> Why we think that having a chat together
 is worth doing, actually recording

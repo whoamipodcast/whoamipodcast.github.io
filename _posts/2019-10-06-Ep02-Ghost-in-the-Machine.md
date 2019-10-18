@@ -13,9 +13,9 @@ tags: [self-awareness, robots, artificial intelligence, mind body problem]
 comments: true
 ---
 
-<a href="#robots-and-zombies">1. Robots and Zombies</a>
-<a href="#re-humans-mere-machines">2. Are Humans Mere Machines?</a>
-<a href="#can-consciousness-be-recreated-artificially">Can Consciousness Be Recreated Artificially?</a>
+<a class="toc" href="#robots-and-zombies">1. Robots and Zombies</a>
+<a class="toc" href="#are-humans-mere-machines">2. Are Humans Mere Machines?</a>
+<a class="toc" href="#can-consciousness-be-recreated-artificially">3. Can Consciousness Be Recreated Artificially?</a>
 
 <p><b>Steven:</b> Hello, welcome to the podcast "Who am I".
 I'm Steven.
