@@ -11,82 +11,106 @@ header: fixed
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
-        <!--<div class="section-header">-->
-		<div style="background-image: urL('{{ page.image }}'); background-repeat: no-repeat; background-size: cover; background-position: left center;">
-          <h3 style="padding-bottom: 70px;">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
-		  <h1 style="font-weight: bold;">{{ page.title }}</h1>
+		<div>
+          <h3>Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
+		  <img src="{{ page.image }}" style="max-width: 100%; max-height: 300px; margin-left: auto; margin-right: auto; display: block;">
+		  <h1 style="font-weight: bold; padding-top: 20px;">{{ page.title }}</h1>
         </div>
 
         <div class="row">
-          <div class="col-md-12">
-			  <div class="entry-meta">
-				<span><i class="fa fa-calendar"></i>{{ page.date | date: "%e %b %Y" }}</span>
-				<span class="tag-meta">
-				  <i class="fa fa-folder-o"></i>
+		
+          <!-- left column -->
+          <div class="col-md-9">
+		    <!-- meta data -->
+			<div class="entry-meta">
+			  <span><i class="fa fa-calendar"></i>{{ page.date | date: "%e %b %Y" }}</span>
+			  <span class="tag-meta">
+			    <i class="fa fa-folder-o"></i>
 {% assign amount = page.categories.size %}
 {% assign forindex = 0 %}
 {% for category in page.categories %}
 {% assign forindex = forindex | plus:1 %}
-{% if forindex < amount %}				  <a href="#">{{ category }}, </a>
-{% else %}				  <a href="#">{{ category }}</a>
+{% if forindex < amount %}
+  			    <a href="#">{{ category }}, </a>
+{% else %}
+			    <a href="#">{{ category }}</a>
 {% endif %}
 {% endfor %}
-				  </span>
-				<span>
-				  <i class="fa fa-tags"></i>
+  		      </span>
+			  <span>
+				<i class="fa fa-tags"></i>
 {% assign amount = page.tags.size %}
 {% assign forindex = 0 %}
 {% for tag in page.tags %}
 {% assign forindex = forindex | plus:1 %}
-{% if forindex < amount %}				  <a href="#">{{ tag }}, </a>
-{% else %}				  <a href="#">{{ tag }}</a>
+{% if forindex < amount %}
+				<a href="#">{{ tag }}, </a>
+{% else %}
+				<a href="#">{{ tag }}</a>
 {% endif %}
 {% endfor %}
-				</span>
-				<!--<span><i class="fa fa-clock-o"></i>{{ page.words | divided_by:130 | round }} min. read</span>-->
-			  </div>
-			  
-			  <p>{{ page.description }}</p>
-		  </div>
-
+			  </span>
+			</div>
+			<!-- description -->
+			<p>{{ page.description }}</p>
 {% if page.video %}		  
-		  <div class="col-md-6">
-            <div class="details">
-			  <h3 style="padding-top: 10px">Watch:</h3>
+            <!-- video -->
+            <div class="col-md-9">
+  		      <h3 style="padding-top: 10px">Watch:</h3>
 			  <div class="aspect-ratio-video">
-			    <iframe width="100%" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  			    <iframe width="100%" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			  </div>
-            </div>
-          </div>
+		    </div>
 {% endif %}
-
 {% if page.audio %}
-		  <div class="col-md-6">
-            <div class="details">
+            <!-- audio -->
+            <div class="col-md-9">
 			  <h3 style="padding-top: 10px">Listen:</h3>
 			  <div>
-			  <!--<div class="aspect-ratio-audio">
-			    <iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" width="100%" frameborder="0" scrolling="no"></iframe>-->
-				<iframe sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups" scrolling="no" width="100%" height="185" frameborder="0" src="https://embed.radiopublic.com/e?if=who-am-i-6Vy9k9&ge={{ page.audio }}"></iframe>
+  				<iframe sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups" scrolling="no" width="100%" height="185" frameborder="0" src="https://embed.radiopublic.com/e?if=who-am-i-6Vy9k9&ge={{ page.audio }}"></iframe>
 			  </div>
-            </div>
-          </div>
+		  </div>
 {% endif %}
-          
-        </div>
-		<div style="margin-left: 5%; max-width: 90%; margin-top: 30px;">
-		  <h1 style="text-align: center; font-weight: bold;">Transcript</h1>
-		  {{ content }}
+		  <!-- transcript -->
+          <div class="col-md-9">
+		    <h2 style="text-align: left; font-weight: bold;">Transcript</h2>
+		    {{ content }}
+		  </div>
+		  <!-- related posts -->
+		  <div>
 {% for post in site.posts %}
-  {% if post.type == "episode" %}
+{% if post.type == "episode" %}
 			<a href="{{ site.baseurl }}{{ post.url }}" class="action-button shadow animate pagecolor" style="display: block; width: 100%;"><i class="fa fa-play-circle-o"></i>&nbsp;&nbsp;[{% if post.epnumber < 10 %}0{% endif %}{{ post.epnumber }}]&nbsp;&nbsp;{{ post.title }}</a>
-  {% endif %}
+{% endif %}
 {% endfor %}
-		</div>
+          </div>
+		  <!-- related posts -->
+		  Related Posts
+		  <!-- comments -->
 {% include disqus.html %}
+		</div>
+		
+        <!-- right column -->
+        <div class="col-md-3">
+		  TODO:<br>
+		  involved speakers and their profile photos<br>
+		  subscribe to newsletter<br>
+		  ad<br>
+		  recent posts<br>
+		  ad<br>
+		  most popular categories<br>
+		  ad<br>
+		  most popular tags<br>
+		</div>
+		
+	  <!-- end row -->
       </div>
     </section>
   </main>
+
+
+
+
 {% elsif page.type contains "speaker" %}
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
