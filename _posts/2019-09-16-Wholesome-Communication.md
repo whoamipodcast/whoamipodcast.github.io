@@ -4,13 +4,10 @@ type: episode
 title: Wholesome Communication
 epnumber: 1
 section: 1
-words: -1
-description: -
-image: -
-audio: -
-video: -
-categories: []
-tags: []
+image: /images/ep01poster.min.png
+video: no
+categories: [cat1, cat2]
+tags: [tag1, tag2]
 comments: true
 ---
 

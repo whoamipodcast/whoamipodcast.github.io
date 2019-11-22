@@ -4,6 +4,10 @@ type: episode
 title: Can Consciousness Be Recreated Artificially?
 epnumber: 2
 section: 3
+image: /images/ep02poster.min.png
+video: no
+categories: [cat1, cat2]
+tags: [tag1, tag2]
 comments: true
 ---
 

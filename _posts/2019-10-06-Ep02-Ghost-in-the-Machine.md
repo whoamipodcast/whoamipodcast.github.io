@@ -4,23 +4,14 @@ type: episode
 title: Ghost in the Machine
 epnumber: 2
 section: 0
-words: -1
 description: In this episode Steven and William share their excitement for science-fiction as it pertains to self-awareness, free will and the difference between man and machine, if there is any. Will there ever be conscious robots, indistinguishable from humans?
 image: /images/ep02poster.min.png
-audio: Ep-02-Ghost-in-the-machine-e6adqa
+audio: s1!e5c487bb538175f43efdbd3a2dc17dbbe2f45f7f
 video: dvSkpgAuOq8
 categories: [philosophy, sci-fi]
 tags: [self-awareness, robots, artificial intelligence, mind body problem]
 comments: true
 ---
-
-<!--
-<a class="toc" href="#robots-and-zombies">1. Robots and Zombies</a>
-<a class="toc" href="#are-humans-mere-machines">2. Are Humans Mere Machines?</a>
-<a class="toc" href="#can-consciousness-be-recreated-artificially">3. Can Consciousness Be Recreated Artificially?</a>
--->
-
-<h2>Introduction</h2>
 
 <p><b>Steven:</b> Hello, welcome to the podcast "Who am I".
 I'm Steven.
