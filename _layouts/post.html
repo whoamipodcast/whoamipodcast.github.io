@@ -11,16 +11,19 @@ header: fixed
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
-		<div>
-          <h3>Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
-		  <img src="{{ page.image }}" style="max-width: 100%; max-height: 300px; margin-left: auto; margin-right: auto; display: block;">
-		  <h1 style="font-weight: bold; padding-top: 20px;">{{ page.title }}</h1>
-        </div>
 
         <div class="row">
 		
           <!-- left column -->
           <div class="col-md-9">
+		  
+		    <!-- image and title -->
+			<div>
+              <h3>Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
+		      <img src="{{ page.image }}" style="max-width: 100%; max-height: 300px; margin-left: auto; margin-right: auto; display: block;">
+		      <h1 style="font-weight: bold; padding-top: 20px;">{{ page.title }}</h1>
+            </div>
+		  
 		    <!-- meta data -->
 			<div class="entry-meta">
 			  <span><i class="fa fa-calendar"></i>{{ page.date | date: "%e %b %Y" }}</span>
@@ -55,7 +58,7 @@ header: fixed
 			<p>{{ page.description }}</p>
 {% if page.video %}		  
             <!-- video -->
-            <div class="col-md-9">
+            <div>
   		      <h3 style="padding-top: 10px">Watch:</h3>
 			  <div class="aspect-ratio-video">
   			    <iframe width="100%" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -64,7 +67,7 @@ header: fixed
 {% endif %}
 {% if page.audio %}
             <!-- audio -->
-            <div class="col-md-9">
+            <div>
 			  <h3 style="padding-top: 10px">Listen:</h3>
 			  <div>
   				<iframe sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups" scrolling="no" width="100%" height="185" frameborder="0" src="https://embed.radiopublic.com/e?if=who-am-i-6Vy9k9&ge={{ page.audio }}"></iframe>
@@ -72,7 +75,7 @@ header: fixed
 		  </div>
 {% endif %}
 		  <!-- transcript -->
-          <div class="col-md-9">
+          <div>
 		    <h2 style="text-align: left; font-weight: bold;">Transcript</h2>
 		    {{ content }}
 		  </div>
@@ -85,7 +88,10 @@ header: fixed
 {% endfor %}
           </div>
 		  <!-- related posts -->
-		  Related Posts
+		  <div>
+		    TODO:<br>
+		    Related Posts
+		  </div>
 		  <!-- comments -->
 {% include disqus.html %}
 		</div>
