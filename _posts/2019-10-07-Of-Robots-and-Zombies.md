@@ -4,7 +4,7 @@ type: episode
 title: Of Robots and Zombies
 epnumber: 2
 section: 1
-image: /images/ep02poster.min.png
+image: /images/ep02banner.png
 audio: no
 video: no
 categories: [cat1, cat2]

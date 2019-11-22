@@ -4,7 +4,7 @@ type: episode
 title: Creativity and Writing
 epnumber: 1
 section: 3
-image: /images/ep01poster.min.png
+image: /images/ep01banner.png
 video: no
 audio: no
 categories: [cat1, cat2]

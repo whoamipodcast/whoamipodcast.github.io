@@ -4,7 +4,7 @@ type: episode
 title: Social Interaction
 epnumber: 1
 section: 2
-image: /images/ep01poster.min.png
+image: /images/ep01banner.png
 audio: no
 video: no
 categories: [cat1, cat2]
