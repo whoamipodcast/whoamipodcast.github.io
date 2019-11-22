@@ -76,8 +76,10 @@ header: fixed
 		<div style="margin-left: 5%; max-width: 90%; margin-top: 30px;">
 		  <h1 style="text-align: center; font-weight: bold;">Transcript</h1>
 		  {{ content }}
-{% for post in site.posts %}
-		  <p><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></p>
+{% for post in site.posts | sort:'post_date'}
+  {% if post.type == "episode" %}
+			<a href="{{ site.baseurl }}{{ post.url }}" class="action-button shadow animate pagecolor" style="display: block; width: 100%;"><i class="fa fa-play-circle-o"></i>&nbsp;&nbsp;[{% if post.epnumber < 10 %}0{% endif %}{{ post.epnumber }}]&nbsp;&nbsp;{{ post.title }}</a>
+  {% endif %}
 {% endfor %}
 		</div>
 {% include disqus.html %}
