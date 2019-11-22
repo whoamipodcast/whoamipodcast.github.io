@@ -5,6 +5,7 @@ title: Of Robots and Zombies
 epnumber: 2
 section: 1
 image: /images/ep02poster.min.png
+audio: no
 video: no
 categories: [cat1, cat2]
 tags: [tag1, tag2]

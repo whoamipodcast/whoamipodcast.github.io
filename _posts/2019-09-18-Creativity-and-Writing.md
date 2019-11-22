@@ -6,6 +6,7 @@ epnumber: 1
 section: 3
 image: /images/ep01poster.min.png
 video: no
+audio: no
 categories: [cat1, cat2]
 tags: [tag1, tag2]
 comments: true

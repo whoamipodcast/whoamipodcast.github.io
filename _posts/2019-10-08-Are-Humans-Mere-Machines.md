@@ -5,6 +5,7 @@ title: Are Humans Mere Machines?
 epnumber: 2
 section: 2
 image: /images/ep02poster.min.png
+audio: no
 video: no
 categories: [cat1, cat2]
 tags: [tag1, tag2]

@@ -5,6 +5,7 @@ title: Social Interaction
 epnumber: 1
 section: 2
 image: /images/ep01poster.min.png
+audio: no
 video: no
 categories: [cat1, cat2]
 tags: [tag1, tag2]

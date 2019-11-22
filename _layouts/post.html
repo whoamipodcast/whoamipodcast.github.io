@@ -11,13 +11,14 @@ header: fixed
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
-        <div class="section-header">
-          <h3>Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
+        <!--<div class="section-header">-->
+		<div style="background-image: urL('{{ page.image }}'); background-repeat: no-repeat; background-size: cover; background-position: left center;">
+          <h3 style="padding-bottom: 70px;">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
+		  <h1 style="font-weight: bold;">{{ page.title }}</h1>
         </div>
 
         <div class="row">
           <div class="col-md-12">
-		    <h1 style="font-weight: bold;">{{ page.title }}</h1>
 			  <div class="entry-meta">
 				<span><i class="fa fa-calendar"></i>{{ page.date | date: "%e %b %Y" }}</span>
 				<span class="tag-meta">
@@ -45,31 +46,32 @@ header: fixed
 				<!--<span><i class="fa fa-clock-o"></i>{{ page.words | divided_by:130 | round }} min. read</span>-->
 			  </div>
 			  
-			  <div class="col-md-6">
-		        <p>{{ page.description }}</p>
-			    <!--<p><img src="{{ page.image }}" alt="Episode #{{ page.epnumber }}: {{ page.title }}" class="img-fluid"></p>-->
-              </div>
+			  <p>{{ page.description }}</p>
 		  </div>
-		  
+
+{% if page.video != "no" %}		  
 		  <div class="col-md-6">
             <div class="details">
-			  <h3>Watch:</h3>
+			  <h3 style="padding-top: 10px">Watch:</h3>
 			  <div class="aspect-ratio-video">
 			    <iframe width="100%" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			  </div>
             </div>
           </div>
-		  
+{% endif %}
+
+{% if page.audio != "no" %}
 		  <div class="col-md-6">
             <div class="details">
-			  <h3>Listen:</h3>
+			  <h3 style="padding-top: 10px">Listen:</h3>
 			  <div>
 			  <!--<div class="aspect-ratio-audio">
 			    <iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" width="100%" frameborder="0" scrolling="no"></iframe>-->
 				<iframe sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups" scrolling="no" width="100%" height="185" frameborder="0" src="https://embed.radiopublic.com/e?if=who-am-i-6Vy9k9&ge={{ page.audio }}"></iframe>
-			  </div>-->
+			  </div>
             </div>
           </div>
+{% endif %}
           
         </div>
 		<div style="margin-left: 5%; max-width: 90%; margin-top: 30px;">
