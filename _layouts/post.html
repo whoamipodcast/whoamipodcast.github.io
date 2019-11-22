@@ -12,7 +12,7 @@ header: fixed
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
         <div class="section-header">
-          <h2>Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }}</h2>
+          <h3>Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
         </div>
 
         <div class="row">
@@ -42,22 +42,16 @@ header: fixed
 {% endif %}
 {% endfor %}
 				</span>
-				<span><i class="fa fa-clock-o"></i>{{ page.words | divided_by:130 | round }} min. read</span>
+				<!--<span><i class="fa fa-clock-o"></i>{{ page.words | divided_by:130 | round }} min. read</span>-->
 			  </div>
+			  
+			  <div class="col-md-6">
+		        <p>{{ page.description }}</p>
+			    <!--<p><img src="{{ page.image }}" alt="Episode #{{ page.epnumber }}: {{ page.title }}" class="img-fluid"></p>-->
+              </div>
 		  </div>
+		  
 		  <div class="col-md-6">
-		    <p>{{ page.description }}</p>
-			<!--<p><img src="{{ page.image }}" alt="Episode #{{ page.epnumber }}: {{ page.title }}" class="img-fluid"></p>-->
-			<h3>Listen:</h3>
-			<!--<div class="aspect-ratio-audio">
-			  <iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" width="100%" frameborder="0" scrolling="no"></iframe>
-			</div>-->
-			<a href="https://anchor.fm/whoamipodcast/episodes/{{ page.audio }}" border="0">
-			  <img src="/images/playOnAnchor.min.png" width="100%">
-			</a>
-          </div>
-
-          <div class="col-md-6">
             <div class="details">
 			  <h3>Watch:</h3>
 			  <div class="aspect-ratio-video">
@@ -65,10 +59,28 @@ header: fixed
 			  </div>
             </div>
           </div>
+		  
+		  <div class="col-md-6">
+            <div class="details">
+			  <h3>Listen:</h3>
+			  <!--<div class="aspect-ratio-audio">
+			    <iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" width="100%" frameborder="0" scrolling="no"></iframe>
+			  </div>-->
+			  <a href="https://anchor.fm/whoamipodcast/episodes/{{ page.audio }}" border="0">
+			  <img src="/images/playOnAnchor.min.png" width="100%">
+			  </a>
+            </div>
+          </div>
+          
         </div>
 		<div style="margin-left: 5%; max-width: 90%; margin-top: 30px;">
 		  <h1 style="text-align: center; font-weight: bold;">Transcript</h1>
 		  {{ content }}
+{% for post in site.posts %}
+{% if post.epnumber == page.epnumber %}
+		  <p><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></p>
+{% endif %}
+{% endfor %}
 		</div>
 {% include disqus.html %}
       </div>
