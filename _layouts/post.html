@@ -44,6 +44,15 @@ header: fixed
 	{% endif %}
   {% endif %}
 {% endfor %}
+äää<br>
+{{ prevprevepisodeurl }}<br>
+{{ assign prevepisodeurl }}<br>
+{{ assign episodeurl }}<br>
+{{ assign episodeepnumber }}<br>
+{{ assign prevprevsectionurl }}<br>
+{{ assign prevsectionurl }}<br>
+{{ assign sectionurl }}<br>
+{{ assign flag }}<br>
 			    <div style="width: 33.33%; float: left; text-align: left;">
 				  {% if prevprevepisodeurl != "" %}<a href="{{ site.baseurl }}{{ prevprevepisodeurl }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
 				  {% if prevprevsectionurl != "" %}<a href="{{ site.baseurl }}{{ prevprevsectionurl }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
