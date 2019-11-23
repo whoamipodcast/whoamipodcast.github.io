@@ -23,7 +23,7 @@ header: fixed
 {% assign pep = "" %}
 {% assign ep = "" %}
 {% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
-{% assign broke = false %}
+{% assign broke = 0 %}
 {% for post in posts %}
 ({{ post.url }})<br>
   {% if post.type == "episode" %}
@@ -33,13 +33,13 @@ header: fixed
 	{% assign pep = ep %}
 	{% assign ep = post %}
 	{% if pep != "" && pep.epnumber == page.epnumber %}
-	  {% assign broke = true %}
+	  {% assign broke = 1 %}
 	  {% break %}
 	{% endif %}
   {% endif %}
   {% endif %}
 {% endfor %}
-{% if broke == false %}
+{% if broke == 0 %}
   {% assign ppep = pep %}
   {% assign pep = ep %}
   {% assign ep = post %}
@@ -48,19 +48,19 @@ header: fixed
 {% assign pps = "" %}
 {% assign ps = "" %}
 {% assign s = "" %}
-{% assign broke = false %}
+{% assign broke = 0 %}
 {% for post in posts %}
   {% if post.type == "episode" %}
     {% assign pps = ps %}
     {% assign ps = s %}
 	{% assign s = post.url %}
 	{% if ps == page.url %}
-	  {% assign broke = true %}
+	  {% assign broke = 1 %}
 	  {% break %}
 	{% endif %}
   {% endif %}
 {% endfor %}
-{% if broke == false %}
+{% if broke == 0 %}
   {% assign pps = ps %}
   {% assign ps = s %}
   {% assign s = "" %}
