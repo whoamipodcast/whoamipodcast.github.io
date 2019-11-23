@@ -25,11 +25,10 @@ header: fixed
 {% assign en = -1 %}
 {% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
 {% for post in posts %}
-{{ post.url }}<br>
   {% if post.type == "episode" && section == 0 && post.epnumber != en %}
     {% assign ppe = pe %}
 	{% assign pe = e %}
-	{% e = post.url %}
+	{% assign e = post.url %}
 	{% en = post.epnumber %}
 	{% if pe == page.url %}
 	  {% break %}
