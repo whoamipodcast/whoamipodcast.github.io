@@ -3,7 +3,7 @@ layout: post
 type: episode
 title: Can Consciousness Be Recreated Artificially?
 epnumber: 2
-section: 3
+section: 4
 image: /images/ep02banner.png
 audio: no
 video: no

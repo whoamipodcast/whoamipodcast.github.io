@@ -24,15 +24,14 @@ header: fixed
 {% assign ep = nil %}
 {% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
 {% for post in posts %}
-  {% if post.type == "episode" %}
-  {% if post.section == 0 %}
+  {% if post.type == "episode" && post.section == 1 %}
+{{ post.url }}<br>
     {% assign ppep = pep %}
 	{% assign pep = ep %}
 	{% assign ep = post %}
 	{% if pep != nil && pep.epnumber == page.epnumber %}
 	  {% break %}
 	{% endif %}
-  {% endif %}
   {% endif %}
 {% endfor %}
 
@@ -59,7 +58,7 @@ header: fixed
 				  {% if pps != nil %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
 				  &nbsp;
 				</div>
-                <h3 style="width: 60%; float: left; text-align: center;">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
+                <h3 style="width: 60%; float: left; text-align: center;">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 1 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
 				<div style="width: 20%; float: left; text-align: right; white-space: nowrap;">
 				  &nbsp;
 				  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}

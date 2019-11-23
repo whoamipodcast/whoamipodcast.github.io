@@ -3,7 +3,7 @@ layout: post
 type: episode
 title: Creativity and Writing
 epnumber: 1
-section: 3
+section: 4
 image: /images/ep01banner.png
 video: no
 audio: no

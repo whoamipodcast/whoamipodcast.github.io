@@ -3,7 +3,7 @@ layout: post
 type: episode
 title: Are Humans Mere Machines?
 epnumber: 2
-section: 2
+section: 3
 image: /images/ep02banner.png
 audio: no
 video: no

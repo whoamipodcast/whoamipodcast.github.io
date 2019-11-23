@@ -3,7 +3,7 @@ layout: post
 type: episode
 title: Ghost in the Machine
 epnumber: 2
-section: 0
+section: 1
 description: In this episode Steven and William share their excitement for science-fiction as it pertains to self-awareness, free will and the difference between man and machine, if there is any. Will there ever be conscious robots, indistinguishable from humans?
 image: /images/ep02banner.png
 audio: s1!e5c487bb538175f43efdbd3a2dc17dbbe2f45f7f

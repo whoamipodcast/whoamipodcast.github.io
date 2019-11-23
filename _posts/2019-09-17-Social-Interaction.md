@@ -3,7 +3,7 @@ layout: post
 type: episode
 title: Social Interaction
 epnumber: 1
-section: 2
+section: 3
 image: /images/ep01banner.png
 audio: no
 video: no

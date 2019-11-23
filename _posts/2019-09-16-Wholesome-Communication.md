@@ -3,7 +3,7 @@ layout: post
 type: episode
 title: Wholesome Communication
 epnumber: 1
-section: 1
+section: 2
 image: /images/ep01banner.png
 categories: [cat1, cat2]
 tags: [tag1, tag2]
