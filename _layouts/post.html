@@ -47,13 +47,12 @@ header: fixed
 	    {% assign flag = 1 %}
 	  {% endif %}
     {% elsif flag < 1 %}
-        {% assign previoussection = post.section %}
-		{% assign previoussectionurl = post.url %}
-        {% if post.epnumber != previousepnumber %}
-		  {% assign previousepnumber = post.epnumber %}
-		  {% assign previousepisodeurl = post.url %}
-		{% endif %}
-      {% endif %}
+      {% assign previoussection = post.section %}
+	  {% assign previoussectionurl = post.url %}
+      {% if post.epnumber != previousepnumber %}
+		{% assign previousepnumber = post.epnumber %}
+		{% assign previousepisodeurl = post.url %}
+	  {% endif %}
     {% endif %}
   {% endif %}
 {% endfor %}
