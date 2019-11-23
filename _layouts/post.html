@@ -23,6 +23,7 @@ header: fixed
 {% assign pep = "" %}
 {% assign ep = "" %}
 {% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
+{% broke = false %}
 {% for post in posts %}
 ({{ post.url }})<br>
   {% if post.type == "episode" %}
@@ -33,14 +34,21 @@ header: fixed
 	{% assign ep = post %}
 	{% if pep != "" && pep.epnumber == page.epnumber %}
 	  {% break %}
+	  {% assign broke = true %}
 	{% endif %}
   {% endif %}
   {% endif %}
 {% endfor %}
+{% if broke == false %}
+  {% assign ppep = pep %}
+  {% assign pep = ep %}
+  {% assign ep = post %}
+{% end if %}
 
 {% assign pps = "" %}
 {% assign ps = "" %}
 {% assign s = "" %}
+{% broke = false %}
 {% for post in posts %}
   {% if post.type == "episode" %}
     {% assign pps = ps %}
@@ -48,10 +56,11 @@ header: fixed
 	{% assign s = post.url %}
 	{% if ps == page.url %}
 	  {% break %}
+	  {% assign broke = true %}
 	{% endif %}
   {% endif %}
 {% endfor %}
-{% if s == page.url %}
+{% if broke == false %}
   {% assign pps = ps %}
   {% assign ps = s %}
   {% assign s = "" %}
@@ -61,7 +70,7 @@ header: fixed
 				  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
 				  &nbsp;
 				</div>
-                <h3 style="width: 60%; float: left; text-align: center;">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 1 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
+                <h3 style="width: 60%; float: left; text-align: center;">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
 				<div style="width: 20%; float: left; text-align: right; white-space: nowrap;">
 				  &nbsp;
 				  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
