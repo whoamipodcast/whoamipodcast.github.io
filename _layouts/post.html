@@ -38,9 +38,13 @@ assign nextsectionurl = ""<br>
 {% assign flag = 0 %}
 assign flag = 0<br>
 {% for post in site.posts %}
+for post in site.posts<br>
   {% if post.type == "episode" %}
+if post.type == "episode"<br>
     {% if flag < 3 %}
+if flag < 3<br>
       {% if flag == 1 %}
+if flag == 1<br>
         {% assign nextsection = post.section %}
 assign nextsection = post.section<br>
 		{% assign nextsectionurl = post.url %}
@@ -48,6 +52,7 @@ assign nextsectionurl = post.url<br>
 	    {% assign flag = 2 %}
 assign flag = 2<br>
 		{% if nextepnumber != post.epnumber %}
+if nextepnumber != post.epnumber<br>
 		  {% assign nextepnumber = post.epnumber %} 
 assign nextepnumber = post.epnumber<br>
 		  {% assign nextepisodeurl = post.url %}
@@ -57,18 +62,22 @@ assign flag = 3<br>
 		{% endif %}
       {% endif %}
 	{% elsif flag < 2 %}
+elsif flag < 2<br>
       {% if post.epnumber == page.epnumber && post.section == page.section %}
+if post.epnumber == page.epnumber && post.section == page.section<br>
 	    {% assign nextepnumber = post.epnumber %}
 assign nextepnumber = post.epnumber<br>
 	    {% assign flag = 1 %}
 assign flag = 1<br>
 	  {% endif %}
     {% elsif flag < 1 %}
+elsif flag < 1<br>
       {% assign previoussection = post.section %}
 assign previoussection = post.section<br>
 	  {% assign previoussectionurl = post.url %}
 assign previoussectionurl = post.url<br>
       {% if post.epnumber != previousepnumber %}
+if post.epnumber != previousepnumber<br>
 		{% assign previousepnumber = post.epnumber %}
 assign previousepnumber = post.epnumber<br>
 		{% assign previousepisodeurl = post.url %}
@@ -144,7 +153,7 @@ assign previousepisodeurl = post.url<br>
 		  TODO: previous / next section / episode
 		  <!-- transcript -->
           <div>
-		    <h3 class="boldh3">Transcript:</h3>
+		    <h3 class="boldh3">Transcript{% if page.section > 0 %} (continued){% endif %}:</h3>
 		    {{ content }}
 		  </div>
 		  <!-- previous / next section / episode -->
