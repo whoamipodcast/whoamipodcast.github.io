@@ -27,7 +27,7 @@ header: fixed
 {% assign prevsectionurl = "" %}
 {% assign sectionurl = "" %}
 {% assign flag = 0 %}
-{% for post in site.posts | reversed %}
+{% for post in site.posts %}
 {{ post.url }}<br>
   {% if post.type == "episode" && flag == 0 %}
     {% assign prevprevsectionurl = prevsectionurl %}
@@ -44,7 +44,7 @@ header: fixed
 	{% endif %}
   {% endif %}
 {% endfor %}
-äää<br>
+ööö<br>
 {{ prevprevepisodeurl }}<br>
 {{ assign prevepisodeurl }}<br>
 {{ assign episodeurl }}<br>
