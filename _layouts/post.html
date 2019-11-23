@@ -31,7 +31,7 @@ header: fixed
     {% assign ppep = pep %}
 	{% assign pep = ep %}
 	{% assign ep = post %}
-	{% if pep != "" && pep.epnumber == page.epnumber %}
+	{% if pep != "" and pep.epnumber == page.epnumber %}
 	  {% assign broke = true %}
 	  {% break %}
 	{% endif %}
