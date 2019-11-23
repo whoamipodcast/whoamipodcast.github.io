@@ -25,7 +25,6 @@ header: fixed
 {% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
 {% assign braked = 0 %}
 {% for post in posts %}
-({{ post.url }})<br>
   {% if post.type == "episode" %}
   {% if post.section == 0 %}
   {% if braked == 0 %}
@@ -148,7 +147,7 @@ header: fixed
 {% endfor %}
           </div>
 		  <!-- comments -->
-		  <h3 class="boldh3" style="margin-top: 30px">Leave a Comment:</h3>
+		  <h3 class="boldh3">Leave a Comment:</h3>
 {% include disqus.html %}
 		</div>
 		
