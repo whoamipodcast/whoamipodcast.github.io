@@ -29,7 +29,7 @@ header: fixed
 {% assign nextsectionurl = "" %}
 {% assign flag = 0 %}
 {% for post in site.posts %}
-  {% if type == "episode" %}
+  {% if post.type == "episode" %}
     {% if flag < 3 %}
       {% if flag == 1 %}
         {% assign nextsection = post.section %}
