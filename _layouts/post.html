@@ -27,7 +27,8 @@ header: fixed
 {% assign prevsectionurl = "" %}
 {% assign sectionurl = "" %}
 {% assign flag = 0 %}
-{% for post in site.posts | sort: 'post_date' %}
+{% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
+{% for post in posts %}
 {{ post.url }}<br>
   {% if post.type == "episode" && flag == 0 %}
     {% assign prevprevsectionurl = prevsectionurl %}
