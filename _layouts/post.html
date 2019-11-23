@@ -57,7 +57,7 @@ header: fixed
   {% assign s = "" %}
 {% endif %}
 			    <div style="width: 20%; float: left; text-align: left; white-space: nowrap;">
-				  {% if ppe != "" %}<a href="{{ site.baseurl }}{{ ppe }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
+				  {% if ppe != "" %}<a href="{{ site.baseurl }}{{ ppe.url }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
 				  {% if pps != nil %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
 				  &nbsp;
 				</div>
@@ -112,7 +112,7 @@ header: fixed
 		  <!-- previous / next section / episode -->
 		  <div>
 			<div style="width: 50%; float: left; text-align: left;">
-			  {% if ppe != nil %}<a href="{{ site.baseurl }}{{ ppe }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
+			  {% if ppe != nil %}<a href="{{ site.baseurl }}{{ ppe.url }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
 			  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
 			  &nbsp;
 			</div>
