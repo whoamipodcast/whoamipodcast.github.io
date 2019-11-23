@@ -28,7 +28,7 @@ header: fixed
 {% assign sectionurl = "" %}
 {% assign flag = 0 %}
 {% for post in site.posts reversed %}
-  {% if post.type == "episode" && flag = 0 %}
+  {% if post.type == "episode" && flag == 0 %}
     {% assign prevprevsectionurl = prevsectionurl %}
 	{% assign prevsectionurl = sectionurl %}
 	{% assign sectionurl = post.url %}
