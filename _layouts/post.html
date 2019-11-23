@@ -33,7 +33,7 @@ header: fixed
 	{% endif %}
   {% endif %}
 {% endfor %}
-{% if e.epnumber == page.epnumber %}
+{% if e != nil && e.epnumber == page.epnumber %}
   {% assign ppe = pe %}
   {% assign pe = e %}
   {% assign e = nil %}
