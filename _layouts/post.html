@@ -112,14 +112,14 @@ header: fixed
 		  <!-- previous / next section / episode -->
 		  <div>
 			<div style="width: 50%; float: left; text-align: left;">
-			  {% if ppe != "" %}<a href="{{ site.baseurl }}{{ ppe }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
+			  {% if ppe != nil %}<a href="{{ site.baseurl }}{{ ppe }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
 			  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
 			  &nbsp;
 			</div>
 			<div style="width: 50%; float: left; text-align: right;">
 			  &nbsp;
 			  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
-			  {% if e != "" %}<a href="{{ site.baseurl }}{{ e }}"><img class="forward" src="/images/fastforwardicon.svg"></a>{% endif %}
+			  {% if e != nil %}<a href="{{ site.baseurl }}{{ e }}"><img class="forward" src="/images/fastforwardicon.svg"></a>{% endif %}
 			</div>
 		  </div>
 		  <!-- related posts -->
