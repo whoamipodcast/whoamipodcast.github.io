@@ -3,7 +3,7 @@ layout: post
 type: episode
 title: Of Robots and Zombies
 epnumber: 2
-section: 2
+section: 1
 image: /images/ep02banner.png
 audio: no
 video: no
