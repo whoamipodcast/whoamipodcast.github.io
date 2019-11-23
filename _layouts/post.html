@@ -38,7 +38,7 @@ header: fixed
 	  {% assign episodeurl = post.url %}
 	  {% assign episodeepnumber = post.epnumber %}
 	{% endif %}
-	{% if prevsectionurl = page.url %}
+	{% if prevsectionurl == page.url %}
 	  {% assign flag = 1 %}
 	{% endif %}
   {% endif %}
