@@ -49,8 +49,8 @@ header: fixed
 				</div>
                 <h3 style="width: 33.33%; float: left; text-align: center;">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
 				<div style="width: 33.33%; float: left; text-align: right;">
-				  {% if sectionurl != "" %}<a href="{{ site.baseurl }}{{ nextsectionurl }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
-				  {% if episodeurl != "" %}<a href="{{ site.baseurl }}{{ nextepisodeurl }}"><img class="forward" src="/images/fastforwardicon.svg"></a>{% endif %}
+				  {% if sectionurl != "" %}<a href="{{ site.baseurl }}{{ sectionurl }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
+				  {% if episodeurl != "" %}<a href="{{ site.baseurl }}{{ episodeurl }}"><img class="forward" src="/images/fastforwardicon.svg"></a>{% endif %}
 			  </div>
 		      <img src="{{ page.image }}" style="max-width: 100%; max-height: 300px; margin-left: auto; margin-right: auto; display: block;">
 		      <h1 style="font-weight: bold; margin-top: 20px; text-align: center;">{{ page.title }}</h1>
