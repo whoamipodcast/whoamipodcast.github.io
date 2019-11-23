@@ -37,8 +37,8 @@ assign nextepisodeurl = ""<br>
 assign nextsectionurl = ""<br>
 {% assign flagg = 0 %}
 assign flagg = 0<br>
-{% for post in site.posts %}
-for post in site.posts<br>
+{% for post in site.posts reversed %}
+for post in site.posts reversed<br>
   {% if post.type == "episode" %}
 if post.type == "episode"<br>
     {% if flagg < 3 %}
@@ -63,7 +63,7 @@ assign flagg = 3<br>
       {% endif %}
 	{% endif %}
 	{% if flagg < 2 %}
-elsif flagg < 2<br>
+if flagg < 2<br>
       {% if post.epnumber == page.epnumber && post.section == page.section %}
 if post.epnumber == page.epnumber && post.section == page.section<br>
 	    {% assign nextepnumber = post.epnumber %}
@@ -73,7 +73,7 @@ assign flagg = 1<br>
 	  {% endif %}
 	{% endif %}
     {% if flagg < 1 %}
-elsif flagg < 1<br>
+if flagg < 1<br>
       {% assign previoussection = post.section %}
 assign previoussection = post.section<br>
 	  {% assign previoussectionurl = post.url %}
