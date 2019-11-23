@@ -23,21 +23,21 @@ header: fixed
 {% assign pep = "" %}
 {% assign ep = "" %}
 {% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
-{% assign braked = 0 %}
+{% assign broke = false %}
 {% for post in posts %}
 ({{ post.url }})<br>
-  {% if post.type == "episode" && if post.section == 0 && braked == 0 %}
+  {% if post.type == "episode" and if post.section == 0 and broke == false %}
 {{ post.url }}<br>
     {% assign ppep = pep %}
 	{% assign pep = ep %}
 	{% assign ep = post %}
 	{% if pep != "" && pep.epnumber == page.epnumber %}
-	  {% assign braked = 1 %}
+	  {% assign broke = true %}
 	  {% break %}
 	{% endif %}
   {% endif %}
 {% endfor %}
-{% if braked == 0 %}
+{% if broke == false %}
   {% assign ppep = pep %}
   {% assign pep = ep %}
   {% assign ep = "" %}
@@ -46,19 +46,19 @@ header: fixed
 {% assign pps = "" %}
 {% assign ps = "" %}
 {% assign s = "" %}
-{% assign braked = 0 %}
+{% assign broke = false %}
 {% for post in posts %}
-  {% if post.type == "episode" && braked == 0%}
+  {% if post.type == "episode" and broke == false %}
     {% assign pps = ps %}
     {% assign ps = s %}
 	{% assign s = post.url %}
 	{% if ps == page.url %}
-	  {% assign braked = 1 %}
+	  {% assign broke = true %}
 	  {% break %}
 	{% endif %}
   {% endif %}
 {% endfor %}
-{% if braked == 0 %}
+{% if broke == false %}
   {% assign pps = ps %}
   {% assign ps = s %}
   {% assign s = "" %}
