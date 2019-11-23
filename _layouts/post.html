@@ -61,7 +61,8 @@ assign nextepisodeurl = post.url<br>
 assign flagg = 3<br>
 		{% endif %}
       {% endif %}
-	{% elsif flagg < 2 %}
+	{% endif %}
+	{% if flagg < 2 %}
 elsif flagg < 2<br>
       {% if post.epnumber == page.epnumber && post.section == page.section %}
 if post.epnumber == page.epnumber && post.section == page.section<br>
@@ -70,7 +71,8 @@ assign nextepnumber = post.epnumber<br>
 	    {% assign flagg = 1 %}
 assign flagg = 1<br>
 	  {% endif %}
-    {% elsif flagg < 1 %}
+	{% endif %}
+    {% if flagg < 1 %}
 elsif flagg < 1<br>
       {% assign previoussection = post.section %}
 assign previoussection = post.section<br>
