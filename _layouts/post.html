@@ -20,38 +20,59 @@ header: fixed
 			<div>
 			  <div>
 {% assign previousepnumber = -1 %}
+assign previousepnumber = -1<br>
 {% assign previousepisodeurl = "" %}
+assign previousepisodeurl = ""<br>
 {% assign previoussection = -1 %}
+assign previoussection = -1<br>
 {% assign previoussectionurl = "" %}
+assign previoussectionurl = ""<br>
 {% assign nextepnumber = -1 %}
+assign nextepnumber = -1<br>
 {% assign nextsection = -1 %}
+assign nextsection = -1<br>
 {% assign nextepisodeurl = "" %}
+assign nextepisodeurl = ""<br>
 {% assign nextsectionurl = "" %}
+assign nextsectionurl = ""<br>
 {% assign flag = 0 %}
+assign flag = 0<br>
 {% for post in site.posts %}
   {% if post.type == "episode" %}
     {% if flag < 3 %}
       {% if flag == 1 %}
         {% assign nextsection = post.section %}
+assign nextsection = post.section<br>
 		{% assign nextsectionurl = post.url %}
+assign nextsectionurl = post.url<br>
 	    {% assign flag = 2 %}
+assign flag = 2<br>
 		{% if nextepnumber != post.epnumber %}
 		  {% assign nextepnumber = post.epnumber %} 
+assign nextepnumber = post.epnumber<br>
 		  {% assign nextepisodeurl = post.url %}
+assign nextepisodeurl = post.url<br>
 		  {% assign flag = 3 %}
+assign flag = 3<br>
 		{% endif %}
       {% endif %}
 	{% elsif flag < 2 %}
       {% if post.epnumber == page.epnumber && post.section == page.section %}
 	    {% assign nextepnumber = post.epnumber %}
+assign nextepnumber = post.epnumber<br>
 	    {% assign flag = 1 %}
+assign flag = 1<br>
 	  {% endif %}
     {% elsif flag < 1 %}
       {% assign previoussection = post.section %}
+assign previoussection = post.section<br>
 	  {% assign previoussectionurl = post.url %}
+assign previoussectionurl = post.url<br>
       {% if post.epnumber != previousepnumber %}
 		{% assign previousepnumber = post.epnumber %}
+assign previousepnumber = post.epnumber<br>
 		{% assign previousepisodeurl = post.url %}
+assign previousepisodeurl = post.url<br>
 	  {% endif %}
     {% endif %}
   {% endif %}
