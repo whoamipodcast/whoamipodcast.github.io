@@ -27,7 +27,8 @@ header: fixed
 {% assign prevsectionurl = "" %}
 {% assign sectionurl = "" %}
 {% assign flag = 0 %}
-{% for post in site.posts | reverse %}
+{% for post in site.posts | sort: 'section' | sort: 'epnumber' | reverse %}
+post.url<br>
   {% if post.type == "episode" && flag == 0 %}
     {% assign prevprevsectionurl = prevsectionurl %}
 	{% assign prevsectionurl = sectionurl %}
@@ -51,6 +52,7 @@ header: fixed
 				<div style="width: 33.33%; float: left; text-align: right;">
 				  {% if sectionurl != "" %}<a href="{{ site.baseurl }}{{ sectionurl }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
 				  {% if episodeurl != "" %}<a href="{{ site.baseurl }}{{ episodeurl }}"><img class="forward" src="/images/fastforwardicon.svg"></a>{% endif %}
+				</div>
 			  </div>
 		      <img src="{{ page.image }}" style="max-width: 100%; max-height: 300px; margin-left: auto; margin-right: auto; display: block;">
 		      <h1 style="font-weight: bold; margin-top: 20px; text-align: center;">{{ page.title }}</h1>
@@ -61,29 +63,11 @@ header: fixed
 			  <span><i class="fa fa-calendar"></i>{{ page.date | date: "%e %b %Y" }}</span>
 			  <span class="tag-meta">
 			    <i class="fa fa-folder-o"></i>
-{% assign amount = page.categories.size %}
-{% assign forindex = 0 %}
-{% for category in page.categories %}
-{% assign forindex = forindex | plus:1 %}
-{% if forindex < amount %}
-  			    <a href="#">{{ category }}, </a>
-{% else %}
-			    <a href="#">{{ category }}</a>
-{% endif %}
-{% endfor %}
+				<a href="#">{{ page.categories | join: ', ' }}</a>
   		      </span>
 			  <span>
 				<i class="fa fa-tags"></i>
-{% assign amount = page.tags.size %}
-{% assign forindex = 0 %}
-{% for tag in page.tags %}
-{% assign forindex = forindex | plus:1 %}
-{% if forindex < amount %}
-				<a href="#">{{ tag }}, </a>
-{% else %}
-				<a href="#">{{ tag }}</a>
-{% endif %}
-{% endfor %}
+				<a href="#">{{ page.tags | join: ', ' }}</a>
 			  </span>
 			</div>
 			<!-- description -->
