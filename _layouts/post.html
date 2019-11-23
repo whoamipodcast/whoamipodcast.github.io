@@ -138,11 +138,12 @@ header: fixed
 			</div>
 		  </div>
 		  <!-- related posts -->
-		  <div style="margin-top: 30px">
+		  <div style="clear: both;">
 		    <h3 class="boldh3">Related Posts:</h3>
 {% for post in site.posts %}
 {% if post.type == "episode" %}
-			<a href="{{ site.baseurl }}{{ post.url }}" class="action-button shadow animate pagecolor" style="display: block; width: 100%;"><i class="fa fa-play-circle-o"></i>&nbsp;&nbsp;[{% if post.epnumber < 10 %}0{% endif %}{{ post.epnumber }}]&nbsp;&nbsp;{{ post.title }}</a>
+			<!--<a href="{{ site.baseurl }}{{ post.url }}" class="action-button shadow animate pagecolor" style="display: block; width: 100%;"><i class="fa fa-play-circle-o"></i>&nbsp;&nbsp;[{% if post.epnumber < 10 %}0{% endif %}{{ post.epnumber }}]&nbsp;&nbsp;{{ post.title }}</a>-->
+			<a href="{{ site.baseurl }}{{ post.url }}" style="display: block; width: 100%;"><i class="fa fa-play-circle-o"></i>&nbsp;&nbsp;[{% if post.epnumber < 10 %}0{% endif %}{{ post.epnumber }}]&nbsp;&nbsp;{{ post.title }}</a>
 {% endif %}
 {% endfor %}
           </div>
