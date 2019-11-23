@@ -60,12 +60,12 @@ header: fixed
   {% assign ps = s %}
   {% assign s = "" %}
 {% endif %}
-			    <div style="width: 33.33%; float: left; text-align: left;">
+			    <div style="width: 20%; float: left; text-align: left;">
 				  {% if ppe != "" %}<a href="{{ site.baseurl }}{{ ppe }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
 				  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
 				</div>
-                <h3 style="width: 33.33%; float: left; text-align: center;">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
-				<div style="width: 33.33%; float: left; text-align: right;">
+                <h3 style="width: 60%; float: left; text-align: center;">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
+				<div style="width: 20%; float: left; text-align: right;">
 				  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
 				  {% if e != "" %}<a href="{{ site.baseurl }}{{ e }}"><img class="forward" src="/images/fastforwardicon.svg"></a>{% endif %}
 				</div>
@@ -106,15 +106,22 @@ header: fixed
 			  </div>
 		  </div>
 {% endif %}
-          <!-- previous / next section / episode -->
-		  TODO: previous / next section / episode
 		  <!-- transcript -->
           <div>
 		    <h3 class="boldh3">Transcript{% if page.section > 0 %} (continued){% endif %}:</h3>
 		    {{ content }}
 		  </div>
 		  <!-- previous / next section / episode -->
-		  TODO: previous / next section / episode
+		  <div>
+			<div style="width: 50%; float: left; text-align: left;">
+			  {% if ppe != "" %}<a href="{{ site.baseurl }}{{ ppe }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
+			  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
+			</div>
+			<div style="width: 50%; float: left; text-align: right;">
+			  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
+			  {% if e != "" %}<a href="{{ site.baseurl }}{{ e }}"><img class="forward" src="/images/fastforwardicon.svg"></a>{% endif %}
+			</div>
+		  </div>
 		  <!-- related posts -->
 		  <div>
 		    <h3 class="boldh3">Related Posts:</h3>
@@ -125,6 +132,7 @@ header: fixed
 {% endfor %}
           </div>
 		  <!-- comments -->
+		  <h3 class="boldh3">Leave a Comment:</h3>
 {% include disqus.html %}
 		</div>
 		
