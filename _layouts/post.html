@@ -22,23 +22,23 @@ header: fixed
 {% assign ppe = "" %}
 {% assign pe = "" %}
 {% assign e = "" %}
-{% assign ppen = -3 %}
-{% assign pen = -2 %}
-{% assign en = -1 %}
 {% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
 {% for post in posts %}
   {% if post.type == "episode" && post.section == 0 %}
+post.url<br>
     {% assign ppe = pe %}
 	{% assign pe = e %}
-	{% assign e = post.url %}
-	{% assign ppen = pen %}
-	{% assign pen = en %}
-	{% assign en = post.epnumber %}
-	{% if pen == page.epnumber %}
+	{% assign e = post %}
+	{% if pe.epnumber == page.epnumber %}
 	  {% break %}
 	{% endif %}
   {% endif %}
 {% endfor %}
+{% if e.epnumber == page.epnumber %}
+  {% assign ppe = pe %}
+  {% assign pe = e %}
+  {% assign e = "" %}
+{% endif %}
 {% assign pps = "" %}
 {% assign ps = "" %}
 {% assign s = "" %}
@@ -124,8 +124,8 @@ header: fixed
 			</div>
 		  </div>
 		  <!-- related posts -->
-		  <div>
-		    <h3 class="boldh3" style="margin-top: 30px">Related Posts:</h3>
+		  <div style="margin-top: 30px">
+		    <h3 class="boldh3">Related Posts:</h3>
 {% for post in site.posts %}
 {% if post.type == "episode" %}
 			<a href="{{ site.baseurl }}{{ post.url }}" class="action-button shadow animate pagecolor" style="display: block; width: 100%;"><i class="fa fa-play-circle-o"></i>&nbsp;&nbsp;[{% if post.epnumber < 10 %}0{% endif %}{{ post.epnumber }}]&nbsp;&nbsp;{{ post.title }}</a>
@@ -133,7 +133,7 @@ header: fixed
 {% endfor %}
           </div>
 		  <!-- comments -->
-		  <h3 class="boldh3">Leave a Comment:</h3>
+		  <h3 class="boldh3" style="margin-top: 30px">Leave a Comment:</h3>
 {% include disqus.html %}
 		</div>
 		
