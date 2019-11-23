@@ -19,49 +19,49 @@ header: fixed
 		    <!-- image and title -->
 			<div>
 			  <div>
-{% assign prevprevepisodeurl = "" %}
-{% assign prevepisodeurl = "" %}
-{% assign episodeurl = "" %}
-{% assign episodeepnumber = -1 %}
-{% assign prevprevsectionurl = "" %}
-{% assign prevsectionurl = "" %}
-{% assign sectionurl = "" %}
-{% assign flag = 0 %}
+{% assign ppe = "" %}
+{% assign pe = "" %}
+{% assign e = "" %}
+{% assign en = -1 %}
 {% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
 {% for post in posts %}
 {{ post.url }}<br>
-  {% if post.type == "episode" && flag == 0 %}
-    {% assign prevprevsectionurl = prevsectionurl %}
-	{% assign prevsectionurl = sectionurl %}
-	{% assign sectionurl = post.url %}
-	{% if episodeepnumber != post.epnumber %}
-	  {% assign prevprevepisodeurl = prevepisodeurl %}
-	  {% assign prevepisodeurl = episodeurl %}
-	  {% assign episodeurl = post.url %}
-	  {% assign episodeepnumber = post.epnumber %}
-	{% endif %}
-	{% if prevsectionurl == page.url %}
-	  {% assign flag = 1 %}
+  {% if post.type == "episode" && section == 0 && post.epnumber != en %}
+    {% assign ppe = pe %}
+	{% assign pe = e %}
+	{% e = post.url %}
+	{% en = post.epnumber %}
+	{% if pe == page.url %}
+	  {% break %}
 	{% endif %}
   {% endif %}
 {% endfor %}
-ööö<br>
-{{ prevprevepisodeurl }}<br>
-{{ assign prevepisodeurl }}<br>
-{{ assign episodeurl }}<br>
-{{ assign episodeepnumber }}<br>
-{{ assign prevprevsectionurl }}<br>
-{{ assign prevsectionurl }}<br>
-{{ assign sectionurl }}<br>
-{{ assign flag }}<br>
+{% if ppe == "" %}
+  {% assign ppe = pe %}
+  {% assign pe = e %}
+  {% e = "" %}  
+{% endif %}
+{% assign pps = "" %}
+{% assign ps = "" %}
+{% assign s = "" %}
+{% for post in posts %}
+  {% if post.type == "episode" %}
+    {% assign pps = ps %}
+    {% assign ps = s %}
+	{% assign s = post.url %}
+	{% if ps == page.url %}
+	  {% break %}
+	{% endif %}
+  {% endif %}
+{% endfor %}
 			    <div style="width: 33.33%; float: left; text-align: left;">
-				  {% if prevprevepisodeurl != "" %}<a href="{{ site.baseurl }}{{ prevprevepisodeurl }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
-				  {% if prevprevsectionurl != "" %}<a href="{{ site.baseurl }}{{ prevprevsectionurl }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
+				  {% if ppe != "" %}<a href="{{ site.baseurl }}{{ ppe }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
+				  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
 				</div>
                 <h3 style="width: 33.33%; float: left; text-align: center;">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }} - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
 				<div style="width: 33.33%; float: left; text-align: right;">
-				  {% if sectionurl != "" %}<a href="{{ site.baseurl }}{{ sectionurl }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
-				  {% if episodeurl != "" %}<a href="{{ site.baseurl }}{{ episodeurl }}"><img class="forward" src="/images/fastforwardicon.svg"></a>{% endif %}
+				  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
+				  {% if e != "" %}<a href="{{ site.baseurl }}{{ e }}"><img class="forward" src="/images/fastforwardicon.svg"></a>{% endif %}
 				</div>
 			  </div>
 		      <img src="{{ page.image }}" style="max-width: 100%; max-height: 300px; margin-left: auto; margin-right: auto; display: block;">
