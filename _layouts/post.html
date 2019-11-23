@@ -26,17 +26,14 @@ header: fixed
 {% assign braked = 0 %}
 {% for post in posts %}
 ({{ post.url }})<br>
-  {% if post.type == "episode" %}
-  {% if post.section == 0 %}
+  {% if post.type == "episode" && if post.section == 0 && braked == 0%}
 {{ post.url }}<br>
     {% assign ppep = pep %}
 	{% assign pep = ep %}
 	{% assign ep = post %}
 	{% if pep != "" && pep.epnumber == page.epnumber %}
 	  {% assign braked = 1 %}
-	  {% break %}
 	{% endif %}
-  {% endif %}
   {% endif %}
 {% endfor %}
 {% if braked == 0 %}
@@ -50,13 +47,12 @@ header: fixed
 {% assign s = "" %}
 {% assign braked = 0 %}
 {% for post in posts %}
-  {% if post.type == "episode" %}
+  {% if post.type == "episode" && braked == 0%}
     {% assign pps = ps %}
     {% assign ps = s %}
 	{% assign s = post.url %}
 	{% if ps == page.url %}
 	  {% assign braked = 1 %}
-	  {% break %}
 	{% endif %}
   {% endif %}
 {% endfor %}
