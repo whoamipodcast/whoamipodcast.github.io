@@ -24,13 +24,15 @@ header: fixed
 {% assign ep = nil %}
 {% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
 {% for post in posts %}
-  {% if post.type == "episode" && post.section == 0 %}
+  {% if post.type == "episode" %}
+  {% if post.section == 0 %}
     {% assign ppep = pep %}
 	{% assign pep = ep %}
 	{% assign ep = post %}
 	{% if pep != nil && pep.epnumber == page.epnumber %}
 	  {% break %}
 	{% endif %}
+  {% endif %}
   {% endif %}
 {% endfor %}
 
