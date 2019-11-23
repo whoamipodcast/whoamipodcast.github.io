@@ -22,6 +22,7 @@ header: fixed
 {% assign ppe = "" %}
 {% assign pe = "" %}
 {% assign e = "" %}
+{% assign ppen = -3 %}
 {% assign pen = -2 %}
 {% assign en = -1 %}
 {% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
@@ -30,6 +31,7 @@ header: fixed
     {% assign ppe = pe %}
 	{% assign pe = e %}
 	{% assign e = post.url %}
+	{% assign ppen = pen %}
 	{% assign pen = en %}
 	{% assign en = post.epnumber %}
 	{% if pen == page.epnumber %}
@@ -118,8 +120,10 @@ header: fixed
 			<div style="width: 50%; float: left; text-align: left;">
 			  {% if ppe != "" %}<a href="{{ site.baseurl }}{{ ppe }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
 			  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
+			  &nbsp;
 			</div>
 			<div style="width: 50%; float: left; text-align: right;">
+			  &nbsp;
 			  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
 			  {% if e != "" %}<a href="{{ site.baseurl }}{{ e }}"><img class="forward" src="/images/fastforwardicon.svg"></a>{% endif %}
 			</div>
