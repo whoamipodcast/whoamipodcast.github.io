@@ -4,7 +4,7 @@ type: episode
 title: Social Family Norms
 epnumber: 3
 section: 2
-image: /images/ep03banner.png
+image: /images/ep03banner.jpg
 audio: no
 video: no
 categories: [society, family]

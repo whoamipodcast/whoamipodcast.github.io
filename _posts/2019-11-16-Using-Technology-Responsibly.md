@@ -4,7 +4,7 @@ type: episode
 title: Using Technology Responsibly
 epnumber: 3
 section: 1
-image: /images/ep03banner.png
+image: /images/ep03banner.jpg
 audio: no
 video: no
 categories: [technology, society]

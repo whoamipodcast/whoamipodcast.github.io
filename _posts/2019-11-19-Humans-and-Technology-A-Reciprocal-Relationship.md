@@ -4,7 +4,7 @@ type: episode
 title: Humans and Technology: A Reciprocal Relationship
 epnumber: 3
 section: 4
-image: /images/ep03banner.png
+image: /images/ep03banner.jpg
 audio: no
 video: no
 categories: [technology, regulation]
