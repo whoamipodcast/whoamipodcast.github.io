@@ -7,8 +7,8 @@ section: 3
 image: /images/ep02banner.png
 audio: no
 video: no
-categories: [cat1, cat2]
-tags: [tag1, tag2]
+categories: [philosophy, purpose of life]
+tags: [artificial life, determinism, free will, Kurt Gödel]
 comments: true
 ---
 
@@ -81,7 +81,7 @@ So the rule is "let's do
 something totally different, but..."
 </p>
 
-<p><b>Steven:</b> Where did the rule come from? Ìs it wired into our being? Is it a
+<p><b>Steven:</b> Where did the rule come from? Is it wired into our being? Is it a
 consequence of variables throughout the
 past of their existence? So it wasn't
 necessarily why I did again environment
@@ -423,13 +423,7 @@ him? He was a mathematician in the 30s, at
 least that's when he made
 his huge contributions. He was a
 party-pooper.
-</p>
-
-<p><b>Steven:</b> ...Because I had worn
-my mouse and anyone ever...
-</p>
-
-<p><b>William:</b> I like
+I like
 to call him that because people at the
 beginning of the 20th century were so
 excited about all these new discoveries

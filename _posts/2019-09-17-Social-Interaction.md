@@ -7,8 +7,8 @@ section: 2
 image: /images/ep01banner.png
 audio: no
 video: no
-categories: [cat1, cat2]
-tags: [tag1, tag2]
+categories: [communication]
+tags: [D&D, personalities, games, fun]
 comments: true
 ---
 
@@ -178,7 +178,7 @@ I think.
 </p>
 
 <p><b>William:</b> So does that mean the Dungeon
-Master have to keep building the world?
+Master has to keep building the world?
 </p>
 
 <p><b>Steven:</b> Yes, if it's their own world, yes. If it's

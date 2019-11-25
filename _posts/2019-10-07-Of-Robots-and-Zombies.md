@@ -7,8 +7,8 @@ section: 1
 image: /images/ep02banner.png
 audio: no
 video: no
-categories: [cat1, cat2]
-tags: [tag1, tag2]
+categories: [artificial intelligence, consciousness]
+tags: [Isaac Asimov, robotics]
 comments: true
 ---
 
@@ -48,7 +48,7 @@ readers as well.
 movies are you familiar with?
 </p>
 
-<p><b>Steven:</b> So I have... this is going to be difficultbe cause my memories are so bad.
+<p><b>Steven:</b> So I have... this is going to be difficult because my memories are so bad.
 The most famous one, I
 haven't read much of that one.
 </p>
@@ -395,17 +395,4 @@ cinema you tend to be...
 of on the ball with these things because
 I love. You know how much I love
 any media that tells story. Media,
-medium. That tells a story. But do you think
-in, personally, do you think that we in
-the next... or how long do you think we'll
-take, I mean, to be honest I think it'll
-happen.
-I personally... maybe you're different.
-</p>
-
-<p><b>William:</b> You
-mean conscious machines?
-</p>
-
-<p><b>Steven:</b> Yeah.
-</p>
+medium. That tells a story.

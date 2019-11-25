@@ -7,8 +7,8 @@ section: 3
 image: /images/ep01banner.png
 video: no
 audio: no
-categories: [cat1, cat2]
-tags: [tag1, tag2]
+categories: [creativity, learning]
+tags: [Dune, writing, stories]
 comments: true
 ---
 
