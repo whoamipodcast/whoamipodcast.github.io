@@ -227,7 +227,7 @@ on social media to get more feedback on
 what your readers think about your
 stories. I mean, if you want to go that
 way. Again, don't do anything to to kill
-the thing that works
+the thing that works.
 </p>
 
 <p><b>Steven:</b> As I
@@ -242,7 +242,7 @@ if you're trying to cover a certain
 theme. So I think that, yeah, for another
 time, definitely. How about you? What are
 your mediums for social creative outputs? You do
-coding and stuff
+coding and stuff.
 </p>
 
 <p><b>William:</b> Yeah. Well I haven't been

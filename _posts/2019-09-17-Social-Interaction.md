@@ -288,7 +288,7 @@ and our swords and we go and kill."
 <p><b>William:</b> In D&D you say a lot what you do, right?
 </p>
 
-<p><b>Steven:</b> Yes
+<p><b>Steven:</b> Yes.
 </p>
 
 <p><b>William:</b> But when you're with the group of
@@ -296,7 +296,7 @@ friends in person or I guess you
 say "I do this", which is not normal speech.
 </p>
 
-<p><b>Steven:</b> No
+<p><b>Steven:</b> No.
 </p>
 
 <p><b>William:</b> That's interesting.

@@ -13,4 +13,4 @@ tags: [communication, games, writing, creativity]
 comments: true
 ---
 
-<p><b>William:</b>Hi everybody, and welcome to Who Am I Podcast. This is William from Who Am I Podcast, together with Steven, discussing today our motivations for putting together this podcast, for discussing questions around personal identity, and why we chose this medium, and why it is important to us to have this creative output for you. So enjoy our discussion.</p>
+<p><b>William:</b> Hi everybody, and welcome to Who Am I Podcast. This is William from Who Am I Podcast, together with Steven, discussing today our motivations for putting together this podcast, for discussing questions around personal identity, and why we chose this medium, and why it is important to us to have this creative output for you. So enjoy our discussion.</p>

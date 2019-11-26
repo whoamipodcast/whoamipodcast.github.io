@@ -255,7 +255,7 @@ conversations are when you're
 willing to sacrifice what you want to
 say, and then just adapt to what the
 other person says. It's not
-always easy
+always easy.
 </p>
 
 <p><b>Steven:</b> It's not. It's about asking

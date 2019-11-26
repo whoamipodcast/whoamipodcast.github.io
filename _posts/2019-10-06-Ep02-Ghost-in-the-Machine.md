@@ -17,7 +17,7 @@ comments: true
 I'm Steven.
 </p>
 
-<p><b>William:</b> And I'm William
+<p><b>William:</b> And I'm William.
 </p>
 
 <p><b>Steven:</b> And this is episode 2. Welcome.

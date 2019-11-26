@@ -189,7 +189,7 @@ come along. And it wouldn't be a Black
 Swan if you expected it. So there are
 emergent... there are emergent phenomena
 like that where knowledge suddenly makes
-a leap
+a leap.
 </p>
 
 <p><b>Steven:</b> Yeah.
