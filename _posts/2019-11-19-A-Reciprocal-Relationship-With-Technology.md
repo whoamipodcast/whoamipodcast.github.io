@@ -1,7 +1,7 @@
 ---
 layout: post
 type: episode
-title: Humans and Technology: A Reciprocal Relationship
+title: A Reciprocal Relationship With Technology
 epnumber: 3
 section: 4
 image: /images/ep03banner.jpg
