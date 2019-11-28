@@ -7,10 +7,14 @@ section: 2
 image: /images/ep02banner.png
 audio: no
 video: no
-categories: [cat1, cat2]
-tags: [tag1, tag2]
+categories: [consciousness, science]
+tags: [machines, Stephen Hawking, black swan, scientific discoveries]
 comments: true
 ---
+
+<p><b>Steven:</b> How long do you think it will be until
+conscious machines? Because, I mean, to be honest, I think it'll happen.
+</p>
 
 <p><b>William:</b> Uhm, I have a
 different view. I really enjoy the
@@ -185,7 +189,7 @@ come along. And it wouldn't be a Black
 Swan if you expected it. So there are
 emergent... there are emergent phenomena
 like that where knowledge suddenly makes
-a leap
+a leap.
 </p>
 
 <p><b>Steven:</b> Yeah.

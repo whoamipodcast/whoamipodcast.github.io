@@ -7,8 +7,8 @@ section: 2
 image: /images/ep01banner.png
 audio: no
 video: no
-categories: [cat1, cat2]
-tags: [tag1, tag2]
+categories: [communication]
+tags: [D&D, personalities, games, fun]
 comments: true
 ---
 
@@ -178,7 +178,7 @@ I think.
 </p>
 
 <p><b>William:</b> So does that mean the Dungeon
-Master have to keep building the world?
+Master has to keep building the world?
 </p>
 
 <p><b>Steven:</b> Yes, if it's their own world, yes. If it's
@@ -288,7 +288,7 @@ and our swords and we go and kill."
 <p><b>William:</b> In D&D you say a lot what you do, right?
 </p>
 
-<p><b>Steven:</b> Yes
+<p><b>Steven:</b> Yes.
 </p>
 
 <p><b>William:</b> But when you're with the group of
@@ -296,7 +296,7 @@ friends in person or I guess you
 say "I do this", which is not normal speech.
 </p>
 
-<p><b>Steven:</b> No
+<p><b>Steven:</b> No.
 </p>
 
 <p><b>William:</b> That's interesting.

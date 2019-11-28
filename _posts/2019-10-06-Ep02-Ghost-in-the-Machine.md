@@ -8,8 +8,8 @@ description: In this episode Steven and William share their excitement for scien
 image: /images/ep02banner.png
 audio: s1!e5c487bb538175f43efdbd3a2dc17dbbe2f45f7f
 video: dvSkpgAuOq8
-categories: [philosophy, sci-fi]
-tags: [self-awareness, robots, artificial intelligence, mind body problem]
+categories: [philosophy, artificial intelligence, sci-fi]
+tags: [self-awareness, robotics, mind-body problem]
 comments: true
 ---
 
@@ -17,7 +17,7 @@ comments: true
 I'm Steven.
 </p>
 
-<p><b>William:</b> And I'm William
+<p><b>William:</b> And I'm William.
 </p>
 
 <p><b>Steven:</b> And this is episode 2. Welcome.
