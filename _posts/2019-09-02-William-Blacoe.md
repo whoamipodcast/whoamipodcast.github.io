@@ -2,7 +2,7 @@
 layout: post
 type: [host, speaker]
 name: William Blacoe
-image: /images/William.min.jpg
+image: /images/William540x720.min.jpg
 title: Co-Host of the Podcast
 facebook: williamblacoe
 twitter: WilliamBlacoe

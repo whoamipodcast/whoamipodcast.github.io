@@ -2,7 +2,7 @@
 layout: post
 type: [host, speaker]
 name: Steven Guscott
-image: /images/Steven.min.jpg
+image: /images/Steven540x720.min.jpg
 title: Co-Host of the Podcast
 facebook: steve.guscott.7
 ---
