@@ -150,7 +150,7 @@ header: fixed
 			  </div>
 			  <div class="excerpt">
 				<h5 class="boldh5">Ep. {{ post.epnumber }} {% if post.section > 0 %}({{ post.section }}) {% endif %}{{ post.title }}</h5>
-				<p style="margin-bottom: 0;">{{ post.excerpt | truncatewords:30 }}</p>
+				<p style="margin-bottom: 0;">{{ post.excerpt | truncatewords:30 | replace: '<b>', '' | replace '</b>', '' }}</p>
 				<p class="fadetowhite">
 				  <a class="readmorebutton" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
 				</p>
