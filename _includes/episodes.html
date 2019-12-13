@@ -8,10 +8,28 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-9">
-{% for post in site.posts | sort:'post_date' | reverse %}
-  {% if post.type == "episode" %}
-			<a href="{{ site.baseurl }}{{ post.url }}" class="action-button shadow animate pagecolor" style="display: block; width: 100%;"><i class="fa fa-play-circle-o"></i>&nbsp;&nbsp;[{% if post.epnumber < 10 %}0{% endif %}{{ post.epnumber }}]&nbsp;&nbsp;{{ post.title }}</a>
-  {% endif %}
+{% for post in site.posts limit: 3 %}
+{% if post.type == "episode" %}
+{% if post.section == 0 %}
+			<div class="latestepisodes">
+			  <div>
+				<a href="{{ site.baseurl }}{{ post.url }}">
+				  <img class="thumbnail" src="{{ post.image }}">
+				</a>
+			  </div>
+			  <div class="excerpt">
+			    <a href="{{ site.baseurl }}{{ post.url }}">
+				  <h5 class="boldh5">Ep. {{ post.epnumber }}{% if post.section > 0 %}({{ post.section }}){% endif %}: {{ post.title }}</h5>
+				</a>
+				<p style="margin-bottom: 0;">{{ post.excerpt | truncatewords:30 | replace: '<b>', '' | replace '</b>', '' }}</p>
+				<p class="fadetowhite">
+				  <a class="readmorebutton" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+				</p>
+			  </div>
+			  <div class="clearboth"></div>
+			</div>
+{% endif %}
+{% endif %}
 {% endfor %}
           </div>
         </div>
