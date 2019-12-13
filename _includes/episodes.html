@@ -10,7 +10,6 @@
           <div class="col-lg-9">
 {% for post in site.posts limit: 3 %}
 {% if post.type == "episode" %}
-{% if post.section == 0 %}
 			<div class="latestepisodes">
 			  <div>
 				<a href="{{ site.baseurl }}{{ post.url }}">
@@ -28,7 +27,6 @@
 			  </div>
 			  <div class="clearboth"></div>
 			</div>
-{% endif %}
 {% endif %}
 {% endfor %}
           </div>
