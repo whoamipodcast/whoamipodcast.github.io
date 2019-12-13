@@ -141,6 +141,7 @@ header: fixed
 		  <div style="display: inline-flex;">
 {% for post in site.posts %}
 {% if post.type == "episode" %}
+{% if post.epnumber != page.epnumber %}
 {% if post.section == 0 %}
 			<!--<a href="{{ site.baseurl }}{{ post.url }}" style="display: block; width: 100%;"><i class="fa fa-play-circle-o"></i>&nbsp;&nbsp;[{% if post.epnumber < 10 %}0{% endif %}{{ post.epnumber }}]&nbsp;&nbsp;{{ post.title }}</a>-->
 			<div class="latestepisodes">
@@ -153,13 +154,17 @@ header: fixed
 			    <a href="{{ site.baseurl }}{{ post.url }}">
 				  <h5 class="boldh5">Ep. {{ post.epnumber }}{% if post.section > 0 %}({{ post.section }}){% endif %}: {{ post.title }}</h5>
 				</a>
-				<p style="margin-bottom: 0;">{{ post.excerpt | truncatewords:30 | replace: '<b>', '' | replace '</b>', '' }}</p>
+				<p style="margin-bottom: 0;">{{ post.description | truncatewords:30 | replace: '<b>', '' | replace '</b>', '' }}</p>
 				<p class="fadetowhite">
-				  <a class="readmorebutton" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
 				</p>
+			  </div>
+			  <div style="float: bottom; width=100%;">
+				<a class="readmorebutton" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+				<p style="margin-bottom: 25px;"></p>
 			  </div>
 			  <div class="clearboth"></div>
 			</div>
+{% endif %}
 {% endif %}
 {% endif %}
 {% endfor %}
