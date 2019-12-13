@@ -74,7 +74,7 @@ header: fixed
 				  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
 				  &nbsp;
 				</div>
-                <h3 style="width: 60%; float: left; text-align: center;"><a class="episodelink">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }}</a> - {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
+                <h3 style="width: 60%; float: left; text-align: center;"><a class="episodelink">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }}</a> {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
 				<div style="width: 20%; float: left; text-align: right; white-space: nowrap;">
 				  &nbsp;
 				  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
@@ -154,7 +154,7 @@ header: fixed
 			    <a href="{{ site.baseurl }}{{ post.url }}">
 				  <h5 class="boldh5">Ep. {{ post.epnumber }}{% if post.section > 0 %}({{ post.section }}){% endif %}: {{ post.title }}</h5>
 				</a>
-				<p style="margin-bottom: 0;">{{ post.description | truncatewords:30 | replace: '<b>', '' | replace '</b>', '' }}</p>
+				<p style="margin-bottom: 0;">{{ post.description | truncatewords:50 | replace: '<b>', '' | replace '</b>', '' }}</p>
 				<p class="fadetowhite">
 				</p>
 			  </div>
