@@ -139,7 +139,7 @@ header: fixed
 		  <!-- related posts -->
 		  <h3 class="boldh3">Other Episodes:</h3>
 		  <div style="display: inline-flex;">
-{% for post in site.posts limit: 3 %}
+{% for post in site.posts %}
 {% if post.type == "episode" %}
 {% if post.section == 0 %}
 			<!--<a href="{{ site.baseurl }}{{ post.url }}" style="display: block; width: 100%;"><i class="fa fa-play-circle-o"></i>&nbsp;&nbsp;[{% if post.epnumber < 10 %}0{% endif %}{{ post.epnumber }}]&nbsp;&nbsp;{{ post.title }}</a>-->
