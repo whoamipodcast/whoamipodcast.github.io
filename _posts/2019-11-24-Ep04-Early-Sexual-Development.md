@@ -4,12 +4,11 @@ type: episode
 title: Early Sexual Development
 epnumber: 4
 section: 0
-description: 
 image: /images/ep04banner.png
 audio: no
-video: 34bNoHKsMww
-categories: [sexuality, childhood]
-tags: [Sigmund Freud, biology, psychology]
+video: no
+categories: []
+tags: []
 comments: true
 ---
 <p><b>William:</b> Hi. Welcome everybody. It's us again from
