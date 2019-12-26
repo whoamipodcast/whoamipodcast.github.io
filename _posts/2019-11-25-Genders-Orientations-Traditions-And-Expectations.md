@@ -11,7 +11,7 @@ categories: [sexuality, attraction]
 tags: [Oedipus, transgender, parenting]
 comments: true
 ---
-<p><b>William:</b> Right. I wanted to get into the Oedipus
+<p><b>William:</b> I wanted to get into the Oedipus
 phase or the Oedipus complex, it has
 different names, which is very
 interesting.
