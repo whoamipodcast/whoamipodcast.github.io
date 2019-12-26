@@ -4,8 +4,8 @@ type: episode
 title: Early Sexual Development
 epnumber: 4
 section: 0
-description: 
-image: /images/ep04banner.jpg
+description: Human sexuality begins to emerge at a very young age: Our personal identity emerges, we learn to distinguish genders, and we become involved in complex dynamics, at first with our parents, and later with society in general.
+image: /images/ep04banner.png
 audio: 
 video: 
 categories: [sexuality, childhood]
