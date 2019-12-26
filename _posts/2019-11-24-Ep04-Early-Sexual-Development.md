@@ -4,10 +4,10 @@ type: episode
 title: Early Sexual Development
 epnumber: 4
 section: 0
-description: Human sexuality begins to emerge at a very young age. Our personal identity takes form, we learn to distinguish genders, and we become involved in complex dynamics: at first with our parents and later with society in general.
+description: In this episode Steven and William share their excitement for science-fiction as it pertains to self-awareness, free will and the difference between man and machine, if there is any. Will there ever be conscious robots, indistinguishable from humans?
 image: /images/ep04banner.png
 audio: no
-video: no
+video: 34bNoHKsMww
 categories: [sexuality, childhood]
 tags: [Sigmund Freud, biology, psychology]
 comments: true
