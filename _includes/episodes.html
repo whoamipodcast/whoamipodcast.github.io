@@ -8,9 +8,9 @@
 
         <div class="row">
 {% for post in site.posts %}
-title: {% post.title %}<br>
-epnumber: {% post.epnumber %}<br>
-section: {% post.section %}<br>
+title: {{ post.title }}<br>
+epnumber: {{ post.epnumber }}<br>
+section: {{ post.section }}<br>
 {% if post.type == "episode" %}
 {% if post.section == 0 %}
 		  <div class="col-md-4">
