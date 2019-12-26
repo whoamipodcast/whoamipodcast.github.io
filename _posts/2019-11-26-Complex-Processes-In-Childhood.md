@@ -4,7 +4,7 @@ type: episode
 title: Complex Processes in Childhood
 epnumber: 4
 section: 2
-image: /images/ep04banner.jpg
+image: /images/ep04banner.png
 audio: no
 video: no
 categories: [sexuality, childhood]

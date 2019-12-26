@@ -9,7 +9,7 @@ image: /images/ep04banner.png
 audio: 
 video: 34bNoHKsMww
 categories: [sexuality, childhood]
-tags: [Freud, biology, psychology]
+tags: [Sigmund Freud, biology, psychology]
 comments: true
 ---
 <p><b>William:</b> Hi. Welcome everybody. It's us again from

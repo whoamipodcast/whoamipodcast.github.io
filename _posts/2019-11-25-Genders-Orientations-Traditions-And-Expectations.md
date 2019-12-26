@@ -4,7 +4,7 @@ type: episode
 title: Genders, Orientations, Traditions and Expectations
 epnumber: 4
 section: 1
-image: /images/ep04banner.jpg
+image: /images/ep04banner.png
 audio: no
 video: no
 categories: [sexuality, attraction]
