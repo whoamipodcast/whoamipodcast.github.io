@@ -73,26 +73,31 @@ setPrettyQuoteFontSize(s);
 var imageurl = document.getElementById("imageurl");
 var author = document.getElementById("author");
 
+function resizeImage(){
+  imageheight = h - prettyquote.offsetHeight;
+  author.style.height = imageheight + "px";
+}
+
 function apply(){
   quoteless = quote.value.replace(/\"/g, "");
   quoteparts = quoteless.split("\n");
   quoteformatted = "\"" + quoteparts[0] + "\"<br><br>" + quoteparts[2];
   prettyquote.innerHTML = quoteformatted
-  //parts = quote.value.split("\n");
-  //prettyquote.innerHTML = "\"" + parts[0] + "\"<br><br>- " + parts[1];
+
   author.src = imageurl.value;
-  imageheight = h - prettyquote.offsetHeight;
-  author.style.height = imageheight + "px";
+  resizeImage()
 }
 
 function smaller(){
   s -= 2;
   setPrettyQuoteFontSize(s);
+  resizeImage()
 }
 
 function bigger(){
   s += 2;
   setPrettyQuoteFontSize(s);
+  resizeImage()
 }
 </script>
 </body>
