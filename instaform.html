@@ -6,12 +6,16 @@
 	margin-bottom: 10px;
 	width: 100%;
   }
-  #imageurl{
-    font-size: 14pt;
+  #quote {
+    background: #ffaaaa;
   }
-  #applybutton {
-    width: 300px;
-	height: 50px;
+  #imageurl{
+    font-size: 20pt;
+	background: #aaffaa;
+  }
+  .button {
+    width: 30%;
+	height: 100px;
 	margin-bottom: 50px;
   }
   .mid {
@@ -26,7 +30,7 @@
     width: auto;
 	//background: blue;
 	font-family: Georgia;
-	font-size: 20pt;
+	//font-size: 20pt;
 	text-align: center;
 	padding-bottom: 5px;
   }
@@ -40,7 +44,9 @@
   <textarea class="block" id="quote"></textarea>
   Image URL:
   <input id="imageurl" class="block" value=""></input>
-  <input id="applybutton" type="button" value="Apply" onclick="apply();"></input>
+  <input id="applybutton" class="button" type="button" value="Apply" onclick="apply();"></input>
+  <input id="smallerbutton" class="button" type="button" value="Smaller" onclick="smaller();"></input>
+  <input id="biggerbutton" class="button" type="button" value="Bigger" onclick="bigger();"></input>
 </div>
 
 <div id="square">
@@ -58,6 +64,12 @@ square.style.height = h + "px";
 var quote = document.getElementById("quote");
 var prettyquote = document.getElementById("prettyquote");
 
+function setPrettyQuoteFontSize(s){
+  prettyquote.style.fontSize = s + "pt";
+}
+var s = 20;
+setPrettyQuoteFontSize(s);
+
 var imageurl = document.getElementById("imageurl");
 var author = document.getElementById("author");
 
@@ -71,6 +83,16 @@ function apply(){
   author.src = imageurl.value;
   imageheight = h - prettyquote.offsetHeight;
   author.style.height = imageheight + "px";
+}
+
+function smaller(){
+  s -= 2;
+  setPrettyQuoteFontSize(s);
+}
+
+function bigger(){
+  s += 2;
+  setPrettyQuoteFontSize(s);
 }
 </script>
 </body>
