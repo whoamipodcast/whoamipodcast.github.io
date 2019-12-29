@@ -6,6 +6,9 @@
 	margin-bottom: 10px;
 	width: 100%;
   }
+  #imageurl{
+    font-size: 14pt;
+  }
   #applybutton {
     width: 300px;
 	height: 50px;
@@ -62,7 +65,7 @@ function apply(){
   quoteless = quote.value.replace(/\"/g, "");
   quoteparts = quoteless.split("\n");
   quoteformatted = "\"" + quoteparts[0] + "\"<br><br>" + quoteparts[2];
-  //prettyquote.innerHTML = .replace(/\n/g, "<br>");
+  prettyquote.innerHTML = quoteformatted
   //parts = quote.value.split("\n");
   //prettyquote.innerHTML = "\"" + parts[0] + "\"<br><br>- " + parts[1];
   author.src = imageurl.value;
