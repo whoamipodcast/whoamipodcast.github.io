@@ -59,7 +59,9 @@ var imageurl = document.getElementById("imageurl");
 var author = document.getElementById("author");
 
 function apply(){
-  prettyquote.innerHTML = quote.value.replace(/\n/g, "<br>");
+  //prettyquote.innerHTML = quote.value.replace(/\n/g, "<br>");
+  parts = quote.value.split("\n");
+  prettyquote.innerHTML = "\"" + parts[0] + "\"<br><br>- " + parts[1];
   author.src = imageurl.value;
   imageheight = h - prettyquote.offsetHeight;
   author.style.height = imageheight + "px";
