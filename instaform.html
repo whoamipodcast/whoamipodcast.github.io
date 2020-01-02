@@ -8,45 +8,50 @@
   }
   #quote {
     background: #ffaaaa;
+	height: 100px;
   }
   #imageurl{
-    font-size: 20pt;
 	background: #aaffaa;
+	height: 100px;
   }
   .button {
     width: 30%;
 	height: 100px;
 	margin-bottom: 50px;
+	margin-right: 20px;
   }
   .mid {
     text-align: center;
   }
   #square {
-    //border: 2px black solid;
+    border: 20px #dddddd solid;
 	text-align: center;
 	width: 100%;
+	margin-bottom: 100px;
   }
   #prettyquote {
     width: auto;
-	//background: blue;
 	font-family: Georgia;
-	//font-size: 20pt;
 	text-align: center;
 	padding-bottom: 5px;
+  }
+  .font20 {
+	font-size: 20pt;
+	font-family: Arial;
   }
 </style>
 </head>
 <body>
 
 <div class="mid">
-<div>
+<div class="font20">
   Quote:
-  <textarea class="block" id="quote"></textarea>
+  <textarea class="block font20" id="quote"></textarea>
   Image URL:
-  <input id="imageurl" class="block" value=""></input>
-  <input id="applybutton" class="button" type="button" value="Apply" onclick="apply();"></input>
-  <input id="smallerbutton" class="button" type="button" value="Smaller" onclick="smaller();"></input>
-  <input id="biggerbutton" class="button" type="button" value="Bigger" onclick="bigger();"></input>
+  <input id="imageurl" class="block font20" value=""></input>
+  <input id="applybutton" class="button font20" type="button" value="Apply" onclick="apply();"></input>
+  <input id="smallerbutton" class="button font20" type="button" value="Smaller" onclick="smaller();"></input>
+  <input id="biggerbutton" class="button font20" type="button" value="Bigger" onclick="bigger();"></input>
 </div>
 
 <div id="square">
@@ -81,7 +86,11 @@ function resizeImage(){
 function apply(){
   quoteless = quote.value.replace(/\"/g, "");
   quoteparts = quoteless.split("\n");
-  quoteformatted = "\"" + quoteparts[0] + "\"<br><br>" + quoteparts[2];
+  author = quoteparts[2];
+  if(!author.startsWith("- ")){
+	author = "- " + author;
+  }
+  quoteformatted = "\"" + quoteparts[0] + "\"<br><br>" + author;
   prettyquote.innerHTML = quoteformatted
 
   author.src = imageurl.value;
