@@ -164,7 +164,7 @@ common sense basically.
 <p><b>Steven:</b> It's getting there, though.
 It's getting a lot of shows, you
 know, on TV and stuff:
-"Oranges is the new black", "Game of Thrones"
+"Orange is the new black", "Game of Thrones"
 covered these things, just making it more
 normal; it is in society. Because it has
 always been there. It is a myth that
