@@ -68,6 +68,7 @@ square.style.height = h + "px";
 
 var quote = document.getElementById("quote");
 var prettyquote = document.getElementById("prettyquote");
+var landscape = false;
 
 function setPrettyQuoteFontSize(s){
   prettyquote.style.fontSize = s + "pt";
@@ -81,20 +82,33 @@ var author = document.getElementById("author");
 function resizeImage(){
   imageheight = h - prettyquote.offsetHeight;
   author.style.height = imageheight + "px";
+  author.style.width = "auto";
+  imagewidth = author.offsetWidth;
+  squarewidth = prettyquote.offsetWidth;
+  if(landscape && imagewidth > squarewidth){
+	//imageheight = squarewidth / imagewidth * imageheight;
+	//author.style.height = imageheight + "px";
+	author.style.height = "auto";
+	imagewidth = squarewidth
+	author.style.width = imagewidth + "px";
+  }
 }
 
 function apply(){
   quoteless = quote.value.replace(/\"/g, "");
   quoteparts = quoteless.split("\n");
-  author = quoteparts[2];
-  if(!author.startsWith("- ")){
-	author = "- " + author;
+  authorformatted = quoteparts[2];
+  if(authorformatted && !authorformatted.startsWith("- ")){
+	authorformatted = "- " + authorformatted;
   }
-  quoteformatted = "\"" + quoteparts[0] + "\"<br><br>" + author;
-  prettyquote.innerHTML = quoteformatted
-
+  quoteformatted = "\"" + quoteparts[0] + "\"<br><br>" + authorformatted;
+  prettyquote.innerHTML = quoteformatted;
+  
+  author.onload = function(){
+    landscape = author.width > author.height;
+    resizeImage();
+  }
   author.src = imageurl.value;
-  resizeImage()
 }
 
 function smaller(){
