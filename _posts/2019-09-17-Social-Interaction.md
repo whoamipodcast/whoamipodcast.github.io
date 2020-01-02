@@ -6,7 +6,7 @@ epnumber: 1
 section: 2
 image: /images/ep01banner.png
 audio: no
-video: no
+video: -ER8sP5xg7c
 categories: [communication]
 tags: [D&D, personalities, games, fun]
 comments: true

@@ -5,8 +5,8 @@ title: Creativity and Writing
 epnumber: 1
 section: 3
 image: /images/ep01banner.png
-video: no
 audio: no
+video: neETRHFH5IM
 categories: [creativity, learning]
 tags: [Dune, writing, stories]
 comments: true

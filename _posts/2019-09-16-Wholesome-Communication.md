@@ -5,6 +5,7 @@ title: Wholesome Communication
 epnumber: 1
 section: 1
 image: /images/ep01banner.png
+video: u7wz6pyuRkI
 categories: [communication, media]
 tags: [respect, listening, signalling]
 comments: true
@@ -96,7 +97,7 @@ people are capable of that.
 <p><b>William:</b> I'm sometimes offended when I hear other
 people's opinions, and I might need to
 retreat. But when I feel I'm in a safe
-place and I can no longer be
+place where I can no longer be
 attacked or put in an
 uncomfortable conflict situation, then I
 can process it and not feel threatened
@@ -111,9 +112,9 @@ which I don't like in general.
 <p><b>Steven:</b> Again
 there's no need for a heated discussion.
 It just seems to be something
-that happens, that someone suddenly
+that happens, that suddenly someone
 gets defensive about a topic.
-And we forget that we can just pause
+And we forget that you can just pause
 and go "okay let's stop, it's becoming heated.
 Let's come back to this. We don't want it
 to be heated." It's just unnatural, maybe
