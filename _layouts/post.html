@@ -130,7 +130,7 @@ header: fixed
 			  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon_filled.png"></a>{% endif %}
 			  &nbsp;
 			</div>
-			<div style="width: 40%; float: left; text-align: center;">
+			<div style="width: 40%; line-height: 50px; float: left; text-align: center; font-size: 16pt;">
 {% for post in posts %}{% if post.type == "episode" %}{% if post.epnumber == page.epnumber %}{% if post.section == 0 %}<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;Intro&nbsp;</a>{% else %}|<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;{{ post.section }}&nbsp;</a>{% endif %}{% endif %}{% endif %}{% endfor %}
 			</div>
 			<div style="width: 30%; float: left; text-align: right; white-space: nowrap;">
