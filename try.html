@@ -1,18 +1,19 @@
 <html>
 <head>
 <script type="text/javascript">
-function loadXMLDoc(url){
+function loadXMLDoc(url, out){
 	var xmlhttp;
 	if(window.XMLHttpRequest){
-		// code for IE7+, Firefox, Chrome, Opera, Safari
+		//code for IE7+, Firefox, Chrome, Opera, Safari
 		xmlhttp = new XMLHttpRequest();
 	}else{
-		// code for IE6, IE5
+		//code for IE6, IE5
 		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 	}
 	xmlhttp.onreadystatechange = function(){
 		if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-			document.getElementById("textarea").innerHTML = xmlhttp.responseText;
+			//document.getElementById("textarea").innerHTML = xmlhttp.responseText;
+			out = xmlhttp.responseText;
 		}
 	}
 	xmlhttp.open("GET", url, true);
@@ -28,7 +29,13 @@ function loadXMLDoc(url){
 
 <script>
 function get(){
-  loadXMLDoc(document.getElementById("text").value);
+	var url = document.getElementById("text").value
+	var htmlString;
+	loadXMLDoc(url, htmlString);
+	var htmlEl = document.createElement("html");
+	htmlEl.innerHTML = htmlString;
+	var quoteEls = html.getElementsByClassName("quote");
+	
 }
 </script>
 
