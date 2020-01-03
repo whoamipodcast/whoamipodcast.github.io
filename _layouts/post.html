@@ -33,6 +33,7 @@ header: fixed
 	{% assign ep = post %}
 	{% if pep != "" %}
 	{% if pep.epnumber == page.epnumber %}
+	  {% assign thisep = pep %}
 	  {% assign braked = 1 %}
 	  {% break %}
 	{% endif %}
@@ -70,15 +71,15 @@ header: fixed
   {% assign s = "" %}
 {% endif %}
 			    <div style="width: 20%; float: left; text-align: left; white-space: nowrap;">
-				  {% if ppep != "" %}<a href="{{ site.baseurl }}{{ ppep.url }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
-				  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
+				  {% if ppep != "" %}<a href="{{ site.baseurl }}{{ ppep.url }}"><img class="backward" src="/images/fastforwardicon_filled.png"></a>{% endif %}
+				  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon_filled.png"></a>{% endif %}
 				  &nbsp;
 				</div>
-                <h3 style="width: 60%; float: left; text-align: center;"><a class="episodelink">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }}</a> {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
+                <h3 style="width: 60%; float: left; text-align: center;"><a class="episodelink" href="{{ site.baseurl }}{{ thisep.url }}">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }}</a> {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
 				<div style="width: 20%; float: left; text-align: right; white-space: nowrap;">
 				  &nbsp;
-				  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
-				  {% if ep != "" %}<a href="{{ site.baseurl }}{{ ep.url }}"><img class="forward" src="/images/fastforwardicon.svg"></a>{% endif %}
+				  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon_filled.png"></a>{% endif %}
+				  {% if ep != "" %}<a href="{{ site.baseurl }}{{ ep.url }}"><img class="forward" src="/images/fastforwardicon_filled.png"></a>{% endif %}
 				</div>
 			  </div>
 		      <img src="{{ page.image }}" style="max-width: 100%; max-height: 300px; margin-left: auto; margin-right: auto; display: block;">
@@ -102,7 +103,7 @@ header: fixed
 {% if page.video %}		  
             <!-- video -->
             <div>
-  		      <h3 class="boldh3">Watch:</h3>
+  		      <h3 class="boldh3">Watch{% if page.section == 0 %} the Full Episode{% else %} a Short Excerpt{% endif %}:</h3>
 			  <div class="aspect-ratio-video">
   			    <iframe width="100%" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			  </div>
@@ -111,7 +112,7 @@ header: fixed
 {% if page.audio %}
             <!-- audio -->
             <div>
-			  <h3 class="boldh3">Listen:</h3>
+			  <h3 class="boldh3">Listen{% if page.section = 0 %} to the Full Episode{% else %} to a Short Excerpt{% endif %}:</h3>
 			  <div>
   				<iframe sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups" scrolling="no" width="100%" height="185" frameborder="0" src="https://embed.radiopublic.com/e?if=who-am-i-6Vy9k9&ge={{ page.audio }}"></iframe>
 			  </div>
@@ -119,17 +120,24 @@ header: fixed
 {% endif %}
 		  <!-- transcript -->
           <div>
-		    <h3 class="boldh3">Transcript{% if page.section > 0 %} (continued){% endif %}:</h3>
+		    <h3 class="boldh3">Transcript{% if page.section = 0 %} of Introduction{% else %} (continued){% endif %}:</h3>
 		    {{ content }}
 		  </div>
 		  <!-- previous / next section / episode -->
 		  <div>
-			<div style="width: 50%; float: left; text-align: left;">
+			<div style="width: 30%; float: left; text-align: left;">
 			  {% if ppep != "" %}<a href="{{ site.baseurl }}{{ ppep.url }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
 			  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
 			  &nbsp;
 			</div>
-			<div style="width: 50%; float: left; text-align: right;">
+{% for post in posts %}
+  {% if post.type == "episode" %}
+  {% if post.epnumber == page.epnumber %}
+	<h5 style="width: 40%; float: left; text-align: center;"><a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">{% if post.section == 0 %}Intro{% else %} &nbsp; | &nbsp; post.section{% endif %}</a></h5>
+  {% endif %}
+  {% endif %}
+{% endfor %}
+			<div style="width: 30%; float: left; text-align: right;">
 			  &nbsp;
 			  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
 			  {% if ep != "" %}<a href="{{ site.baseurl }}{{ ep.url }}"><img class="forward" src="/images/fastforwardicon.svg"></a>{% endif %}
