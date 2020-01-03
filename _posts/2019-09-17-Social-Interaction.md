@@ -4,6 +4,7 @@ type: episode
 title: Social Interaction
 epnumber: 1
 section: 2
+description: In their first podcast episode Steven and William discuss their motivations for asking the age-old question 'Who am I?' and how best to go about their quest of exploring possible paths to an answer.
 image: /images/ep01banner.png
 audio: no
 video: -ER8sP5xg7c
