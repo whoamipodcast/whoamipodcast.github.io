@@ -120,27 +120,28 @@ header: fixed
 {% endif %}
 		  <!-- transcript -->
           <div>
-		    <h3 class="boldh3">Transcript{% if page.section == 0 %} of Introduction{% else %} (continued){% endif %}:</h3>
+		    <h3 class="boldh3">Transcript{% if page.section == 0 %} (Introduction){% else %} (continued){% endif %}:</h3>
 		    {{ content }}
 		  </div>
 		  <!-- previous / next section / episode -->
 		  <div>
 			<div style="width: 30%; float: left; text-align: left;">
-			  {% if ppep != "" %}<a href="{{ site.baseurl }}{{ ppep.url }}"><img class="backward" src="/images/fastforwardicon.svg"></a>{% endif %}
-			  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon.svg"></a>{% endif %}
+			  {% if ppep != "" %}<a href="{{ site.baseurl }}{{ ppep.url }}"><img class="backward" src="/images/fastforwardicon_filled.png"></a>{% endif %}
+			  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon_filled.png"></a>{% endif %}
 			  &nbsp;
 			</div>
+			<div style="width: 40%; float: left; text-align: center;">
 {% for post in posts %}
   {% if post.type == "episode" %}
   {% if post.epnumber == page.epnumber %}
-	<h5 style="width: 40%; float: left; text-align: center;"><a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">{% if post.section == 0 %}Intro{% else %} &nbsp; | &nbsp; post.section{% endif %}</a></h5>
+	<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">{% if post.section == 0 %}Intro{% else %} &nbsp; | &nbsp; {{ post.section }}{% endif %}</a>
   {% endif %}
   {% endif %}
 {% endfor %}
 			<div style="width: 30%; float: left; text-align: right;">
 			  &nbsp;
-			  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon.svg"></a>{% endif %}
-			  {% if ep != "" %}<a href="{{ site.baseurl }}{{ ep.url }}"><img class="forward" src="/images/fastforwardicon.svg"></a>{% endif %}
+			  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon_filled.png"></a>{% endif %}
+			  {% if ep != "" %}<a href="{{ site.baseurl }}{{ ep.url }}"><img class="forward" src="/images/fastforwardicon_filled.png"></a>{% endif %}
 			</div>
 		  </div>
 		  <div style="clear: both;"></div>
