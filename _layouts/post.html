@@ -130,15 +130,19 @@ header: fixed
 			  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon_filled.png"></a>{% endif %}
 			  &nbsp;
 			</div>
-			<div style="width: 40%; float: left; text-align: center;">
+			<div style="width: 40%; float: left; text-align: center; white-space: nowrap;">
 {% for post in posts %}
   {% if post.type == "episode" %}
   {% if post.epnumber == page.epnumber %}
-	<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">{% if post.section == 0 %}Intro{% else %} &nbsp; | &nbsp; {{ post.section }}{% endif %}</a>
+    {% if post.section == 0 %}
+			<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;Intro&nbsp;</a>
+	{% else %}
+			|<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;{{ post.section }}&nbsp;</a>{% endif %}</a>
+	{% endif %}
   {% endif %}
   {% endif %}
 {% endfor %}
-			<div style="width: 30%; float: left; text-align: right;">
+			<div style="width: 30%; float: left; text-align: right; white-space: nowrap;">
 			  &nbsp;
 			  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon_filled.png"></a>{% endif %}
 			  {% if ep != "" %}<a href="{{ site.baseurl }}{{ ep.url }}"><img class="forward" src="/images/fastforwardicon_filled.png"></a>{% endif %}
