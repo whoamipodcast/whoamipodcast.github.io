@@ -1,7 +1,13 @@
 <html>
-<head>
-<script type="text/javascript">
-function loadXMLDoc(url, out){
+<head></head>
+<body>
+
+<input type="text" id="text"></input>
+<input type="button" value="Get" onclick="get();"></input>
+<textarea id="textarea"></textarea>
+
+<script>
+/*function loadXMLDoc(url){
 	var xmlhttp;
 	if(window.XMLHttpRequest){
 		//code for IE7+, Firefox, Chrome, Opera, Safari
@@ -13,21 +19,38 @@ function loadXMLDoc(url, out){
 	xmlhttp.onreadystatechange = function(){
 		if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
 			//document.getElementById("textarea").innerHTML = xmlhttp.responseText;
-			out = xmlhttp.responseText;
+			return xmlhttp.responseText;
 		}
 	}
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
 }
-</script>
-</head>
-<body>
+*/
 
-<input type="text" id="text"></input>
-<input type="button" value="Get" onclick="get();"></input>
-<textarea id="textarea"></textarea>
+function createCORSRequest(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
 
-<script>
+    // Check if the XMLHttpRequest object has a "withCredentials" property.
+    // "withCredentials" only exists on XMLHTTPRequest2 objects.
+    xhr.open(method, url, true);
+
+  } else if (typeof XDomainRequest != "undefined") {
+
+    // Otherwise, check if XDomainRequest.
+    // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+
+  } else {
+
+    // Otherwise, CORS is not supported by the browser.
+    xhr = null;
+
+  }
+  return xhr;
+}
+
 function el(element, className){
 	return element.getElementsByClassName(className)[0];
 }
@@ -52,8 +75,22 @@ function getQuote(quoteElement){
 
 function get(){
 	var url = document.getElementById("text").value
-	var htmlString;
-	loadXMLDoc(url, htmlString);
+	var htmlString; // = loadXMLDoc(url);
+	
+	var xhr = createCORSRequest('GET', url);
+	if (!xhr) {
+		throw new Error('CORS not supported');
+	}
+	xhr.onload = function() {
+		var responseText = xhr.responseText;
+		console.log(responseText);
+		htmlString = responseText;
+	};
+
+	xhr.onerror = function() {
+		console.log('There was an error!');
+	};
+	
 	var htmlEl = document.createElement("html");
 	htmlEl.innerHTML = htmlString;
 	var quoteEls = html.els("quote");
