@@ -28,14 +28,39 @@ function loadXMLDoc(url, out){
 <textarea id="textarea"></textarea>
 
 <script>
+function el(element, className){
+	return element.getElementsByClassName(className)[0];
+}
+
+function els(element, className){
+	return element.getElementsByClassName(className);
+}
+
+function getQuote(quoteElement){
+	var quoteAuthorArray = [];
+	var raw = quoteElement.el("quoteDetails").el("quoteText").innerText;
+	raw = raw.replace(/“|”/g, '').split("\n");
+	for(var i=0; i<raw.length; i++){
+		var rawi = raw[i].trim();
+		if(rawi != ""){
+			quoteAuthorArray.push(rawi);
+		}
+	}
+	
+	return quoteAuthorArray;
+}
+
 function get(){
 	var url = document.getElementById("text").value
 	var htmlString;
 	loadXMLDoc(url, htmlString);
 	var htmlEl = document.createElement("html");
 	htmlEl.innerHTML = htmlString;
-	var quoteEls = html.getElementsByClassName("quote");
-	
+	var quoteEls = html.els("quote");
+	for(var i=0; i<quoteEls.length; i++){
+		var quoteEl = quoteEls[i];
+		var quoteString = getQuote(quoteEl);
+	}
 }
 </script>
 
