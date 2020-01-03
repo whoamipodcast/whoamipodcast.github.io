@@ -132,7 +132,8 @@ header: fixed
 			</div>
 			<h3 style="width: 60%; float: left; text-align: center;">
 {% for post in posts %}{% if post.type == "episode" %}{% if post.epnumber == page.epnumber %}{% if post.section == 0 %}<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;Intro&nbsp;</a>{% else %}
-|<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;{{ post.section }}&nbsp;</a>{% endif %}{% endif %}{% endif %}{% endfor %}
+|
+<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;{{ post.section }}&nbsp;</a>{% endif %}{% endif %}{% endif %}{% endfor %}
 			</h3>
 			<div style="width: 20%; float: left; text-align: right; white-space: nowrap;">
 			  &nbsp;
