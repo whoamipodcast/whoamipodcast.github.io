@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: whoamipodcast.com
+Token: b3af2cb93b69e629d8da8c453a20b0aeef46067516600571a021cdd2f82cde34
