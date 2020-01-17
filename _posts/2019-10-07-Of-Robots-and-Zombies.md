@@ -7,7 +7,7 @@ section: 1
 description: In this episode Steven and William share their excitement for science-fiction as it pertains to self-awareness, free will and the difference between man and machine, if there is any. Will there ever be conscious
 image: /images/ep02banner.png
 audio: no
-video: no
+video: SHz85Ugq3Bg
 categories: [artificial intelligence, consciousness]
 tags: [Isaac Asimov, robotics]
 comments: true
