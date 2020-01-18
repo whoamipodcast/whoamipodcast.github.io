@@ -1,7 +1,7 @@
 ---
 layout: post
 type: episode
-title: Parenting: What is Right and Wrong?
+title: Parenting - What is Right and Wrong?
 epnumber: 5
 section: 0
 description: As a young person enters the new adventure of becoming a parent, they are confronted with challenges they can never be truly prepared for, no matter how much knowledge they acquired beforehand. Making mistakes and learning from them in practise seems to be the only way for us to progress, be it as children or as parents.
