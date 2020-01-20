@@ -121,7 +121,7 @@ header: fixed
 		  <!-- transcript -->
           <div>
 		    <h3 class="boldh3">Transcript{% if page.section == 0 %} (Introduction){% else %} (continued){% endif %}:</h3>
-		    {{ content | replace: '<<<', '<div style="text-align: center; margin-bottom: 15px;"><img style="width: 50%;" src="/images/insertable/' | replace: '>>>', '"></img></div>' }}
+		    {{ content | replace: '#IMG ', '<div style="text-align: center; margin-bottom: 15px;"><img style="width: 50%;" src="/images/insertable/' | replace: ' IMG#', '"></img></div>' }}
 		  </div>
 		  <!-- previous / next section / episode -->
 		  <div>
