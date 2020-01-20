@@ -7,9 +7,14 @@
         </div>
 
         <div class="row">
+{% assign amount = 0 %}
 {% for post in site.posts %}
 {% if post.type == "episode" %}
 {% if post.section == 0 %}
+  {% assign amount = amount + 1 %}
+  {% if amount >= 3 %}
+    {% break %}
+  {% endif %}
 		  <div class="col-md-4">
 			<div class="latestepisodes">
 			  <div>
