@@ -47,6 +47,8 @@ gonna actually advance us in any
 conscious or physical way". It's just "hey
 we're here now, let's keep going".</p>
 
+<<<John McAfee>>>
+
 <p><b>William:</b> 
 Right. We have values and goals, like
 everyone for themselves, but also
