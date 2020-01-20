@@ -25,6 +25,8 @@ Who is actually, what safe parameters
 are there out there, but actually stop us
 going too far, if there is a thing?</p>
 
+#IMG Elon Musk IMG#
+
 <p><b>William:</b> 
 Yeah, and often
 you don't know what is too far until

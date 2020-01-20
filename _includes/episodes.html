@@ -12,7 +12,7 @@
 {% if post.type == "episode" %}
 {% if post.section == 0 %}
   {% assign amount = amount | plus:1 %}
-  {% if amount >= 3 %}
+  {% if amount > 3 %}
     {% break %}
   {% endif %}
 		  <div class="col-md-4">

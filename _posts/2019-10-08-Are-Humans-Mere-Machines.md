@@ -53,6 +53,8 @@ machine.
 <p><b>Steven:</b> Ok. Yeah, I don't know what I personally believe, but I'm just throwing in different viewpoints.
 </p>
 
+#IMG Stephen Hawking IMG#
+
 <p><b>William:</b> No, it's important that we
 mention especially the questions that
 a lot of people have. And this is a

@@ -121,7 +121,7 @@ header: fixed
 		  <!-- transcript -->
           <div>
 		    <h3 class="boldh3">Transcript{% if page.section == 0 %} (Introduction){% else %} (continued){% endif %}:</h3>
-		    {{ content | replace: '#IMG ', '<div style="text-align: center; margin-bottom: 15px;"><img style="width: 50%;" src="/images/insertable/' | replace: ' IMG#', '"></img></div>' }}
+		    {{ content | replace: '#IMG ', '<div style="text-align: center; margin-bottom: 15px;"><img style="width: 50%;" src="/images/insertable/' | replace: ' IMG#', '".jpg></div>' }}
 		  </div>
 		  <!-- previous / next section / episode -->
 		  <div>
@@ -145,10 +145,15 @@ header: fixed
 		  <!-- related posts -->
 		  <h3 class="boldh3">Other Episodes:</h3>
           <div class="row">
+{% assign amount = 0 %}
 {% for post in site.posts %}
 {% if post.type == "episode" %}
 {% if post.epnumber != page.epnumber %}
 {% if post.section == 0 %}
+{% assign amount = amount | plus:1 %}
+  {% if amount > 6 %}
+    {% break %}
+  {% endif %}
 		    <div class="col-md-4">
 			<div class="latestepisodes">
 			  <div>
