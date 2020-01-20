@@ -7,7 +7,7 @@ section: 1
 description: Human sexuality begins to emerge at an early age. Our gender identity takes form and we become involved in complex dynamics, at first with our parents, and later with society in general.
 image: /images/ep04banner.png
 audio: no
-video: no
+video: UfBpVVhbkiw
 categories: [sexuality, attraction]
 tags: [Oedipus, transgender, parenting]
 comments: true
