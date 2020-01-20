@@ -416,6 +416,8 @@ people just bound together. But it
 has to be the extreme for some reason.
 For some reason at extreme.</p>
 
+<div class="insertable" id="Yanis Varoufakis"></div>
+
 <p><b>William:</b> 
 Suddenly
 we realize that "Oh, we actually have a
