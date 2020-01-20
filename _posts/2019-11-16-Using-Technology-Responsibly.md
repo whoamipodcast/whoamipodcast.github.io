@@ -7,7 +7,7 @@ section: 1
 description: What influence does technology have on the fabric of society? Is it a curse or an opportunity for progress? Today William and Steven discuss the effects that artificial has had and might yet have, the dangers and how to ensure that life with machines runs harmoniously with common values.
 image: /images/ep03banner.jpg
 audio: no
-video: no
+video: b5AmLemE8rk
 categories: [technology, society]
 tags: [John McAfee, anarchy, influence]
 comments: true
@@ -150,7 +150,7 @@ promise.</p>
 
 <p><b>Steven:</b> 
 Yeah, there's no one regulating
-the regulator's</p>
+the regulators.</p>
 
 <p><b>William:</b> 
 Right. And so anarchists don't
