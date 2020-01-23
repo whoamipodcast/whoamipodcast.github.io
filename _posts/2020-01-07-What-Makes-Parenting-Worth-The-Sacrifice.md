@@ -136,7 +136,7 @@ such a wrong word to use; "optimum"
 maybe.
 </p>
 
-<div class="insertable" id="Gabor Mate"></div>
+<div class="insertable" id="Gabor Mate.jpg"></div>
 
 <p><b>William:</b> I think I get your point. Obviously
 you can prepare and avoid huge
@@ -185,7 +185,7 @@ than trying too hard to correct other
 people.
 </p>
 
-<div class="insertable" id="Aaron Mate"></div>
+<div class="insertable" id="Aaron Mate.jpg"></div>
 
 <p><b>Steven:</b> Yes. You mentioned obviously
 loving. And parenting is very much a, I

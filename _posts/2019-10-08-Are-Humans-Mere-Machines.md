@@ -53,7 +53,7 @@ machine.
 <p><b>Steven:</b> Ok. Yeah, I don't know what I personally believe, but I'm just throwing in different viewpoints.
 </p>
 
-<div class="insertable" id="Stephen Hawking"></div>
+<div class="insertable" id="Stephen Hawking.jpg"></div>
 
 <p><b>William:</b> No, it's important that we
 mention especially the questions that

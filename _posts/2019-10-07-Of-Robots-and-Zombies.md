@@ -37,6 +37,8 @@ looking into really old texts. But anyway,
 that's a tangent.
 </p>
 
+<div class="insertable" id="Isaac Asimov.jpg"></div>
+
 <p><b>Steven:</b> You go ahead. Because, again, I
 haven't read as much Asimov as I
 would like. So hearing what it's about
@@ -89,6 +91,8 @@ Harrison Ford.
 
 <p><b>Steven:</b> Bladerunner.
 </p>
+
+<div class="insertable" id="Blade Runner.jpg"></div>
 
 <p><b>William:</b> Yeah, where he thinks
 he has the test to know whether someone
@@ -287,6 +291,8 @@ It's worth watching. It's about the
 dude's, the young adult,
 his, I guess, discovery.
 </p>
+
+<div class="insertable" id="Alan Turing.jpg"></div>
 
 <p><b>William:</b> The Turing test is still around. It's I
 mean... Turing has been dead for over 50

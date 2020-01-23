@@ -317,6 +317,8 @@ the feminine ideology
 onto their children, their sons.
 </p>
 
+<div class="insertable" id="Oedipus.jpg"></div>
+
 <p><b>William:</b> Let me get back to the Oedipus thing.
 I was at the stage
 of becoming a separate individual. But I
@@ -361,6 +363,8 @@ Like all things, I never try to say it
 is this way or it is that way. It is for
 some people or others, or whatever.
 </p>
+
+<div class="insertable" id="Sigmund Freud.jpg"></div>
 
 <p><b>William:</b> I wonder
 whether Oedipus would like the way we

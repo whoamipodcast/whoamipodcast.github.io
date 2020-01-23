@@ -140,6 +140,8 @@ The channels, the platform's just
 love controversy and fighting.
 </p>
 
+<div class="insertable" id="Joe Rogan.png"></div>
+
 <p><b>Steven:</b> And it's
 all so quick, it's all so fast. You've got to 
 answer things in two seconds. As I was
@@ -149,6 +151,8 @@ they had Bernie Sanders on.
 
 <p><b>William:</b> I saw that.
 </p>
+
+<div class="insertable" id="Bernie Sanders.jpg"></div>
 
 <p><b>Steven:</b> So you saw that as well. It was an amazing discussion.
 And he was discussing, he was
@@ -164,6 +168,8 @@ too fast.
 don't get time to actually discuss in
 a nice way your policies.
 </p>
+
+<div class="insertable" id="Jordan Peterson.jpg"></div>
 
 <p><b>William:</b> The nuances. There's no room for nuances.
 And Bernie only had one hour time for

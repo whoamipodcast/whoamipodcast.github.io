@@ -47,7 +47,7 @@ gonna actually advance us in any
 conscious or physical way". It's just "hey
 we're here now, let's keep going".</p>
 
-<div class="insertable" id="John McAfee"></div>
+<div class="insertable" id="John McAfee.jpg"></div>
 
 <p><b>William:</b> 
 Right. We have values and goals, like

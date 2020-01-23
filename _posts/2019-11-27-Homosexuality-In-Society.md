@@ -253,7 +253,7 @@ being themselves. And they are being
 allowed to be themselves. And then you
 get many men who aren't that way, the gay.
 You know, they're quite
-happy in their jeans t-shirt, doing
+happy in their jeans and t-shirt, doing
 whatever. There's
 no "this can define if"... No outwardly
 thing can define. It can tell people.

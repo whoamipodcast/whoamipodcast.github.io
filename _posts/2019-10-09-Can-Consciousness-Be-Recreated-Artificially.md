@@ -236,6 +236,8 @@ the necessity just... they're like "this is
 good now. I love it."
 </p>
 
+<div class="insertable" id="Marshmallow Experiment.jpg"></div>
+
 <p><b>William:</b> Is it important for
 the test that you leave the room?
 </p>
@@ -442,6 +444,8 @@ theory before you can recreate them.
 <p><b>Steven:</b> Definitely.
 </p>
 
+<div class="insertable" id="David Hilbert.jpg"></div>
+
 <p><b>William:</b> David Hilbert, at the turn of
 the century came up with, I don't know,
 15 problems or so that he formulated for
@@ -456,6 +460,8 @@ Sorry?
 
 <p><b>Steven:</b> I think I've heard of those.
 </p>
+
+<div class="insertable" id="Kurt Goedel.jpg"></div>
 
 <p><b>William:</b> Good. And I think maybe a third of them
 are solved, and that's about it. But one

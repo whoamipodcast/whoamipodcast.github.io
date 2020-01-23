@@ -273,6 +273,8 @@ nothing really. And you should be able to apply in a
 practical way yourself.
 </p>
 
+<div class="insertable" id="Sigmund Freud.jpg"></div>
+
 <p><b>William:</b> I have
 another question about Freud. He said
 that our psyche is made up of three

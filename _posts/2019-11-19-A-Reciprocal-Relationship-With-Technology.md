@@ -46,6 +46,8 @@ death over a period of years, it's the
 same to me." It's the same kind of
 violence.</p>
 
+<div class="insertable" id="Mahatma Gandhi.jpg"></div>
+
 <p><b>Steven:</b> 
 I think that's how I look at it
 as well.</p>
@@ -340,6 +342,8 @@ you pronounce his name?
 "Joaquin Phoenix"? And they've gone back to a
 sort of 1800 sort of lifestyle.</p>
 
+<div class="insertable" id="Joaquin Phoenix.jpg"></div>
+
 <p><b>William:</b> 
 Like the
 amish?</p>
@@ -416,7 +420,7 @@ people just bound together. But it
 has to be the extreme for some reason.
 For some reason at extreme.</p>
 
-<div class="insertable" id="Yanis Varoufakis"></div>
+<div class="insertable" id="Yanis Varoufakis.jpg"></div>
 
 <p><b>William:</b> 
 Suddenly

@@ -25,7 +25,7 @@ Who is actually, what safe parameters
 are there out there, but actually stop us
 going too far, if there is a thing?</p>
 
-<div class="insertable" id="Elon Musk"></div>
+<div class="insertable" id="Elon Musk.jpg"></div>
 
 <p><b>William:</b> 
 Yeah, and often
@@ -121,6 +121,8 @@ not necessary.</p>
 
 <p><b>Steven:</b> 
 Whoever gets there first will have the power and therefore have the conrol</p>
+
+<div class="insertable" id="Julian Assange.jpg"></div>
 
 <p><b>William:</b> 
 Yeah. Julian Assange has said the the more

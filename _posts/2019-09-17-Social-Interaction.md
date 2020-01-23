@@ -81,6 +81,8 @@ absolutely comeback in the last
 four or five years.
 </p>
 
+<div class="insertable" id="Dungeons and Dragons.jpg"></div>
+
 <p><b>William:</b> The pen and paper
 version in person?
 </p>

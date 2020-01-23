@@ -32,6 +32,8 @@ There's so many different words used and
 actions.
 </p>
 
+<div class="insertable" id="Dune.jpg"></div>
+
 <p><b>William:</b> It's not just names, it's
 actually vocabulary.
 </p>
@@ -341,6 +343,8 @@ what applies to me? How do I feel
 about what I am, who I am, in relation to
 the world, other people, the environment.
 </p>
+
+<div class="insertable" id="Temple of Delphi.png"></div>
 
 <p><b>Steven:</b> The Greeks had it good,
 with all their philosophy. It
