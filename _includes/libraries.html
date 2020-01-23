@@ -29,10 +29,10 @@
 		var insertable = insertables[i];
 		var name = insertable.id;
 		var image = document.createElement("img");
-		image.setAttribute("src", "/images/insertable/" + name + ".jpg");
+		image.setAttribute("src", "/images/insertable/" + name);
 		insertable.appendChild(image);
 		var caption = document.createElement("h4");
-		caption.innerText = name;
+		caption.innerText = name.substr(name.lastIndexOf("."));
 		insertable.appendChild(caption);
 	}
   </script>
