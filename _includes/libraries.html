@@ -32,7 +32,7 @@
 		image.setAttribute("src", "/images/insertable/" + name);
 		insertable.appendChild(image);
 		var caption = document.createElement("h4");
-		caption.innerText = name.substr(name.lastIndexOf("."));
+		caption.innerText = name.substr(0, name.lastIndexOf("."));
 		insertable.appendChild(caption);
 	}
   </script>
