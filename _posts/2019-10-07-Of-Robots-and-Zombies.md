@@ -92,7 +92,7 @@ Harrison Ford.
 <p><b>Steven:</b> Bladerunner.
 </p>
 
-<div class="insertable" id="Blade Runner.jpg"></div>
+<div class="insertable" id="Blade Runner.png"></div>
 
 <p><b>William:</b> Yeah, where he thinks
 he has the test to know whether someone
