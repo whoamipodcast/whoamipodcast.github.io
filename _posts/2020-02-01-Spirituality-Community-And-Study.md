@@ -5,7 +5,7 @@ title: Spirituality, Community & Study
 epnumber: 6
 section: 1
 description: William and Steven speak openly about the faith they were raised in and how they have personally identified with it. Religion can provide inner strength, a sense of belonging and community, a purpose in life, and a path to transcendence.
-image: /images/ep06banner.png
+image: /images/ep06banner.jpg
 audio: no
 video: kgiXXz8Fkg0
 categories: [religion, faith]
