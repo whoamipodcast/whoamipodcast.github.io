@@ -9,7 +9,7 @@ image: /images/ep06banner.jpg
 audio: no
 video: Lk69pzmKnng
 categories: [religion, faith]
-tags: [hmm]
+tags: [community, hipocrisy, purpose of life]
 comments: true
 ---
 <p><b>William:</b> Welcome back, everyone.
