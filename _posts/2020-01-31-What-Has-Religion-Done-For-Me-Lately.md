@@ -13,7 +13,7 @@ tags: [hmm]
 comments: true
 ---
 <p><b>William:</b> Welcome back, everyone.
-We are still Stephen and William, and
+We are still Steven and William, and
 today we are talking about religion. We
 noticed in past episodes that mentions
 of God and faith have come up from time
