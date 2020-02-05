@@ -461,8 +461,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro {
   width: 100%;
-  height: 100vh;
-  background: url(/images/david-marcu-78A265wPiO4-unsplash.jpg) top center;
+  height: 80vh;
+  background: url(/images/introbanner.min.jpg) top center;
   background-size: cover;
   overflow: hidden;
   position: relative;
