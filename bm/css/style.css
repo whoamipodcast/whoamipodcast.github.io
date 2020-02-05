@@ -461,8 +461,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro {
   width: 100%;
-  height: 80vh;
-  background: url(/images/introbanner.min.jpg) top center;
+  height: 50vh;
+  background: url(/images/introbanner.min.jpg) bottom center;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -1560,9 +1560,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (min-width: 1024px) {
-  #intro {
+  /*#intro {
     background-attachment: fixed;
-  }
+  }*/
 
   #about {
     background-attachment: fixed;
