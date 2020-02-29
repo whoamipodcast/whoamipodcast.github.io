@@ -107,11 +107,10 @@ header: fixed
 			<!-- list of sections -->
 			<div>
 			  <h3 class="boldh3">Sections in this Episode:</h3>
-			  <div>
-				Section 1: <a href="https://www.youtube.com/watch?v=RuQiZD0Lzk0" class="venobox" data-vbtype="video" data-autoplay="true">asdiu asd</a>
-			  </div>
-			</div>
-{% endif %}
+			  <div>This Introduction</div>
+			  {% for post in posts %}{% if post.type == "episode" %}{% if post.epnumber == page.epnumber %}
+			  <div><a href="{{ site.baseurl }}{{ post.url }}">Section {{ post.section }}: {{ post.title }}</a> ( <a href="https://www.youtube.com/watch?v={{ post.video }}" class="venobox" data-vbtype="video" data-autoplay="true"><i class="fa fa-youtube-play" style="font-size: 16pt;"></i> Excerpt )
+			  {% endif %}{% endif %}{% endfor %}
 {% if page.video %}		  
             <!-- video -->
             <div>
