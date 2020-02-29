@@ -108,9 +108,10 @@ header: fixed
 			<div>
 			  <h3 class="boldh3">Sections in this Episode:</h3>
 			  <div>This Introduction</div>
-			  {% for post in posts %}{% if post.type == "episode" %}{% if post.epnumber == page.epnumber %}
-			  <div><a href="{{ site.baseurl }}{{ post.url }}">Section {{ post.section }}: {{ post.title }}</a> ( <a href="https://www.youtube.com/watch?v={{ post.video }}" class="venobox" data-vbtype="video" data-autoplay="true"><i class="fa fa-youtube-play" style="font-size: 16pt;"></i> Excerpt )
-			  {% endif %}{% endif %}{% endfor %}
+			  {% for post in posts %}{% if post.type == "episode" %}{% if post.epnumber == page.epnumber %}{% if post.section != 0 %}
+			  <div><a href="{{ site.baseurl }}{{ post.url }}">Section {{ post.section }}: {{ post.title }}</a> ( <a href="https://www.youtube.com/watch?v={{ post.video }}" class="venobox" data-vbtype="video" data-autoplay="true"><i class="fa fa-youtube-play" style="font-size: 16pt;"></i> Excerpt )</div>
+			  {% endif %}{% endif %}{% endif %}{% endfor %}
+		    </div>
 {% endif %}
 {% if page.video %}		  
             <!-- video -->
