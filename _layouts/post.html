@@ -111,6 +111,7 @@ header: fixed
 			  {% for post in posts %}{% if post.type == "episode" %}{% if post.epnumber == page.epnumber %}
 			  <div><a href="{{ site.baseurl }}{{ post.url }}">Section {{ post.section }}: {{ post.title }}</a> ( <a href="https://www.youtube.com/watch?v={{ post.video }}" class="venobox" data-vbtype="video" data-autoplay="true"><i class="fa fa-youtube-play" style="font-size: 16pt;"></i> Excerpt )
 			  {% endif %}{% endif %}{% endfor %}
+{% endif %}
 {% if page.video %}		  
             <!-- video -->
             <div>
