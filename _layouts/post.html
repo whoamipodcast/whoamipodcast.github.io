@@ -107,10 +107,12 @@ header: fixed
 			<!-- list of sections -->
 			<div>
 			  <h3 class="boldh3">Sections in this Episode:</h3>
-			  <div>This Introduction</div>
+			  <table border="0">
+			  <tr><td><i class="fa fa-circle" style="font-size:8pt;"></i>&nbsp;&nbsp;This Introduction</td><td></td></tr>
 			  {% for post in posts %}{% if post.type == "episode" %}{% if post.epnumber == page.epnumber %}{% if post.section != 0 %}
-			  <div><a href="{{ site.baseurl }}{{ post.url }}">Section {{ post.section }}: {{ post.title }}</a> ( <a href="https://www.youtube.com/watch?v={{ post.video }}" class="venobox" data-vbtype="video" data-autoplay="true"><i class="fa fa-youtube-play" style="font-size: 16pt;"></i> Excerpt )</div>
+			  <tr><td><i class="fa fa-circle" style="font-size:8pt;"></i>&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">Parents are Under-Assisted and Under-Appreciated</a></td><td><span style="white-space: nowrap;">&nbsp;( <a href="https://www.youtube.com/watch?v={{ post.video }}" class="venobox vbox-item" data-vbtype="video" data-autoplay="true"><i class="fa fa-youtube-play" style="font-size: 16pt;"></i> Excerpt )</a></span></td></tr>
 			  {% endif %}{% endif %}{% endif %}{% endfor %}
+			  </table>
 		    </div>
 {% endif %}
 {% if page.video %}		  
