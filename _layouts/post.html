@@ -103,6 +103,15 @@ header: fixed
 			</div>
 			<!-- description -->
 			<p>{{ page.description }}</p>
+{% if page.section == 0 %}
+			<!-- list of sections -->
+			<div>
+			  <h3 class="boldh3">Sections in this Episode:</h3>
+			  <div>
+				Section 1: <a href="https://www.youtube.com/watch?v=RuQiZD0Lzk0" class="venobox" data-vbtype="video" data-autoplay="true">asdiu asd</a>
+			  </div>
+			</div>
+{% endif %}
 {% if page.video %}		  
             <!-- video -->
             <div>
