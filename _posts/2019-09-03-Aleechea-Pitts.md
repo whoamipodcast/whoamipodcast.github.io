@@ -1,6 +1,5 @@
 ---
-layout: post
-type: [speaker]
+layout: speaker
 name: Aleechea Pitts
 image: /images/speakers/AleecheaPitts.jpg
 title: Police Chaplain

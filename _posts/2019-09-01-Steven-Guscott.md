@@ -1,6 +1,5 @@
 ---
 layout: post
-type: [host, speaker]
 name: Steven Guscott
 image: /images/speakers/Steven540x720.min.jpg
 title: Co-Host of the Podcast

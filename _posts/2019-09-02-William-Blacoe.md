@@ -1,6 +1,5 @@
 ---
-layout: post
-type: [host, speaker]
+layout: speaker
 name: William Blacoe
 image: /images/speakers/William540x720.min.jpg
 title: Co-Host of the Podcast
