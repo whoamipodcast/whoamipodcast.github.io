@@ -1,5 +1,6 @@
 ---
-layout: speaker
+layout: post
+type: speaker
 title: Aleechea Pitts
 image: /images/speakers/AleecheaPitts.jpg
 vocation: Police Chaplain

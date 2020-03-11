@@ -1,5 +1,6 @@
 ---
-layout: speaker
+layout: post
+type: speaker
 title: William Blacoe
 image: /images/speakers/William540x720.min.jpg
 vocation: Co-Host of the Podcast
