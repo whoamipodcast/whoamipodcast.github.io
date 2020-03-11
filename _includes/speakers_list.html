@@ -5,7 +5,8 @@
           <p>Get to know the speakers on our podcast.</p>
         </div>
         <div class="row">		
-{% for post in site.speakers %}
+{% for post in site.posts %}
+  {% if post.type contains "speaker" %}
 		  <div class="col-md-4">
             <div class="speaker">
 			  <a href="{{ site.baseurl }}{{ post.url }}">
@@ -34,8 +35,8 @@
               </div>
             </div>
           </div>
+  {% endif %}
 {% endfor %}
         </div>
       </div>
-
     </section>
