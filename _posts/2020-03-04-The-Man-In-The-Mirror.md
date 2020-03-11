@@ -4,7 +4,7 @@ type: episode
 title: The Man in the Mirror
 epnumber: 7
 section: 3
-description: Aleechia Pitts is a police chaplain. In this episode she tells us about her path to finding her personal identity in serving others and praising God through writing self-help books, giving workshops, singing, playing music and preaching the gospel of Christ. Her path has been illuminated by a figurative voice that guides her everyday decision-making and provides her life with peace and fulfillment.
+description: Aleechea Pitts is a police chaplain. In this episode she tells us about her path to finding her personal identity in serving others and praising God through writing self-help books, giving workshops, singing, playing music and preaching the gospel of Christ. Her path has been illuminated by a figurative voice that guides her everyday decision-making and provides her life with peace and fulfillment.
 image: /images/ep07banner.jpg
 audio: no
 video: no
@@ -35,7 +35,7 @@ control over your own path, or does it
 ever get difficult like that?
 </p>
 
-<p><b>Aleechia:</b> Oh, most
+<p><b>Aleechea:</b> Oh, most
 definitely. I can tell you, before I was
 where I am now
 I had a dry season. And I began to
@@ -96,7 +96,7 @@ But is the new one you're
 writing in a similar vein?
 </p>
 
-<p><b>Aleechia:</b> It's in a
+<p><b>Aleechea:</b> It's in a
 similar vein to say that it's a self-help
 book. But this is not the same
 category. The book that I'm working
@@ -117,7 +117,7 @@ general to be more accepting, more loving
 of them?
 </p>
 
-<p><b>Aleechia:</b> One: don't be pre-judgmental. And again, we just
+<p><b>Aleechea:</b> One: don't be pre-judgmental. And again, we just
 really need to get to take the time to
 really meet people. Their sexual
 orientation doesn't make them...
@@ -156,7 +156,7 @@ need to change about ourselves to be
 more open in that way?
 </p>
 
-<p><b>Aleechia:</b> Well, the first
+<p><b>Aleechea:</b> Well, the first
 question I always propose is this: "If you
 were the offender and you did X, Y & Z,
 would you want someone to forgive you?"
@@ -176,7 +176,7 @@ big one. That can help you in so many
 ways.
 </p>
 
-<p><b>Aleechia:</b> Yes.
+<p><b>Aleechea:</b> Yes.
 </p>
 
 <p><b>William:</b> Sometimes we don't realize just
@@ -189,7 +189,7 @@ only because of their own volition, isn't
 it.
 </p>
 
-<p><b>Aleechia:</b> Yes.
+<p><b>Aleechea:</b> Yes.
 </p>
 
 <p><b>William:</b> So if I want to improve myself to
@@ -199,7 +199,7 @@ do?
 
 <div class="insertable" id="Michael Jackson.jpg"></div>
 
-<p><b>Aleechia:</b> Basically, again, looking inward. We
+<p><b>Aleechea:</b> Basically, again, looking inward. We
 like to point out what's wrong in other
 people instead of looking, as Michael
 says, at the man in the mirror. You know the song
@@ -215,7 +215,7 @@ fault. You may have a part in it, too.
 
 <p><b>William:</b> </p>
 
-<p><b>Aleechia:</b> Okay, let me ask you what you think
+<p><b>Aleechea:</b> Okay, let me ask you what you think
 about this this rule I try to live by:
 "A good person is someone who lives by
 their values and always strives to
@@ -306,7 +306,7 @@ That's where it really counts. That's
 where it really counts.
 </p>
 
-<p><b>Aleechia:</b> Yeah. So we need to do our best to be
+<p><b>Aleechea:</b> Yeah. So we need to do our best to be
 aware of any inner conflicts that we
 might have that way. Because like that
 child that got caught, we do the same:
@@ -362,7 +362,7 @@ you do the right thing, the easier it is
 to do the right thing.
 </p>
 
-<p><b>Aleechia:</b> Yeah, that's true.
+<p><b>Aleechea:</b> Yeah, that's true.
 Wow, thank you.
 You have an e-book on your homepage that
 talks about apologizing. And I think this
@@ -373,7 +373,7 @@ forgiveness.
 <p><b>William:</b> Yes.
 </p>
 
-<p><b>Aleechia:</b> Why can it be difficult
+<p><b>Aleechea:</b> Why can it be difficult
 for adults to, or for children as well,
 to apologize, and what is that
 blockade in our mind that makes it
@@ -389,7 +389,7 @@ And I have a right to not apologize to
 you. But a lot of that is pride, too.
 </p>
 
-<p><b>Aleechia:</b> Yeah.
+<p><b>Aleechea:</b> Yeah.
 So I see a motive here: that you need to
 become more aware of your behavior,
 what's going on on the inside, what's
@@ -408,7 +408,7 @@ for that.
 <p><b>William:</b> Thank you.
 </p>
 
-<p><b>Aleechia:</b> Are there any
+<p><b>Aleechea:</b> Are there any
 final things you want to
 mention about these concepts or
 your books?

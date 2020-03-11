@@ -4,7 +4,7 @@ type: episode
 title: A Still Small Voice
 epnumber: 7
 section: 2
-description: Aleechia Pitts is a police chaplain. In this episode she tells us about her path to finding her personal identity in serving others and praising God through writing self-help books, giving workshops, singing, playing music and preaching the gospel of Christ. Her path has been illuminated by a figurative voice that guides her everyday decision-making and provides her life with peace and fulfillment.
+description: Aleechea Pitts is a police chaplain. In this episode she tells us about her path to finding her personal identity in serving others and praising God through writing self-help books, giving workshops, singing, playing music and preaching the gospel of Christ. Her path has been illuminated by a figurative voice that guides her everyday decision-making and provides her life with peace and fulfillment.
 image: /images/ep07banner.jpg
 audio: no
 video: no
@@ -26,7 +26,7 @@ take any difficult decision-making
 on your own part?
 </p>
 
-<p><b>Aleechia:</b> Well, and I have to
+<p><b>Aleechea:</b> Well, and I have to
 keep going back to this, William, because
 I'm a Christian. Okay so with me being a
 Christian, my relationship with God is
@@ -52,7 +52,7 @@ people would like more of in their life,
 but they don't quite know how to.
 </p>
 
-<p><b>Aleechia:</b> Well, I
+<p><b>Aleechea:</b> Well, I
 think it's... One thing that you have
 to do: you almost kind of gotta like
 quiet your spirit down, kind of like shut
@@ -67,7 +67,7 @@ uncomfortable with it just being quiet.
 <p><b>William:</b> Right.
 </p>
 
-<p><b>Aleechia:</b> And so sometimes you just kind of,
+<p><b>Aleechea:</b> And so sometimes you just kind of,
 in a sense you have to just still away.
 And sometimes it's not all about much
 talking but just meditation. Meditation.
@@ -119,7 +119,7 @@ special when it does happen. So for
 me it's not an everyday occurrence.
 </p>
 
-<p><b>Aleechia:</b> No,
+<p><b>Aleechea:</b> No,
 it's not every everyday occurrence.
 Actually I've only heard God speak to me
 once audibly. Okay and it basically
@@ -157,7 +157,7 @@ want him to speak to you, read in the
 scriptures.
 </p>
 
-<p><b>Aleechia:</b> Yes, yes.
+<p><b>Aleechea:</b> Yes, yes.
 </p>
 
 <p><b>William:</b> So those are some of
@@ -170,7 +170,7 @@ church? What kind of groups can you go to
 to have an impact on people?
 </p>
 
-<p><b>Aleechia:</b> Well, as I
+<p><b>Aleechea:</b> Well, as I
 said earlier, I work with the police
 department as... I am the first
 Afro-American female police chaplain for
@@ -237,7 +237,7 @@ what does that mean?
 
 <div class="insertable" id="James Cleveland.png"></div>
 
-<p><b>Aleechia:</b> Just a singer.
+<p><b>Aleechea:</b> Just a singer.
 That terminology is really used like in
 churches. But one of the singers
 that I really admire, she works with the
@@ -267,7 +267,7 @@ you know.
 what you feel yourself, right?
 </p>
 
-<p><b>Aleechia:</b> Yes.
+<p><b>Aleechea:</b> Yes.
 </p>
 
 <p><b>William:</b> Yeah, that's a good point for not
@@ -280,17 +280,17 @@ that inspiration that you were
 mentioning?
 </p>
 
-<p><b>Aleechia:</b> Well, again, I have to go to
+<p><b>Aleechea:</b> Well, again, I have to go to
 scripture, and I'm glad you allow me to
 do this because what I tell people: "Yes,
-Aleechia is human. Yes, Aleechia is a reverend.
-But you also have to remember, Aleechia is
+Aleechea is human. Yes, Aleechea is a reverend.
+But you also have to remember, Aleechea is
 a Christian." So that is a part of who I
 am. Let me share this before I
 answer your question: There was a friend of
 mine, and she said she wanted to talk to
 me. She said, "But I don't want to talk to
-the pastor. I'm gonna talk to Aleechia. Okay?
+the pastor. I'm gonna talk to Aleechea. Okay?
 And so I broke that down to her and said,
 "Well, you got to remember: Even if I take
 the pastor part and put that aside, your
@@ -348,7 +348,7 @@ so much to gain from the Bible. But it
 can be cryptic for a lot of people.
 </p>
 
-<p><b>Aleechia:</b> And
+<p><b>Aleechea:</b> And
 William, let me make this disclaimer: I don't understand
 everything that's in there, you know.
 And some things God, he... the scripture even

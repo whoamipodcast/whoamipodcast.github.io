@@ -4,7 +4,7 @@ type: episode
 title: Finding Yourself by Losing Yourself
 epnumber: 7
 section: 1
-description: Aleechia Pitts is a police chaplain. In this episode she tells us about her path to finding her personal identity in serving others and praising God through writing self-help books, giving workshops, singing, playing music and preaching the gospel of Christ. Her path has been illuminated by a figurative voice that guides her everyday decision-making and provides her life with peace and fulfillment.
+description: Aleechea Pitts is a police chaplain. In this episode she tells us about her path to finding her personal identity in serving others and praising God through writing self-help books, giving workshops, singing, playing music and preaching the gospel of Christ. Her path has been illuminated by a figurative voice that guides her everyday decision-making and provides her life with peace and fulfillment.
 image: /images/ep07banner.jpg
 audio: no
 video: no
@@ -16,7 +16,7 @@ comments: true
 time these days?
 </p>
 
-<p><b>Aleechia:</b> Well, working. Writing: working on my fourth book
+<p><b>Aleechea:</b> Well, working. Writing: working on my fourth book
 currently. And in-between that preaching,
 singing and playing. So pretty much my
 time I have to really be disciplined in
@@ -26,14 +26,14 @@ taking advantage of the downtime that I have.
 <p><b>William:</b> And what entails playing?
 </p>
 
-<p><b>Aleechia:</b> I'm a
+<p><b>Aleechea:</b> I'm a
 keyboardist.
 </p>
 
 <p><b>William:</b> Yes. I saw something about musician.
 </p>
 
-<p><b>Aleechia:</b> I'm
+<p><b>Aleechea:</b> I'm
 a keyboardist and a drummer. But my love
 is for the keyboard. When people call me
 to different services, I mean I played
@@ -49,7 +49,7 @@ or just trying to connect in general,
 isn't it.
 </p>
 
-<p><b>Aleechia:</b> Absolutely, even when I recently...
+<p><b>Aleechea:</b> Absolutely, even when I recently...
 I've been going around, speaking at
 Rotary clubs. And so this one particular
 club that I went to, I opened up with a
@@ -69,7 +69,7 @@ lot, preaching and speaking? Like what
 radius are we talking?
 </p>
 
-<p><b>Aleechia:</b> All over, as
+<p><b>Aleechea:</b> All over, as
 far as Virginia. My desire is eventually
 to come off my full-time job and just do
 a speaking tour. My desire. And I believe
@@ -82,7 +82,7 @@ What inspires you to do this kind
 of work?
 </p>
 
-<p><b>Aleechia:</b> God inspired, simply God inspired.
+<p><b>Aleechea:</b> God inspired, simply God inspired.
 He gives me an unction, or he gives me
 direction. There's a scripture that says,
 "You will hear the still small voice
@@ -111,7 +111,7 @@ realize what makes them them, like how
 they can be their own person.
 </p>
 
-<p><b>Aleechia:</b> Yes.
+<p><b>Aleechea:</b> Yes.
 </p>
 
 <p><b>William:</b> What kind of path
@@ -120,13 +120,13 @@ this purpose in your life? What led up to
 this?
 </p>
 
-<p><b>Aleechia:</b> Really, self-acceptance is a big one.
+<p><b>Aleechea:</b> Really, self-acceptance is a big one.
 Self-acceptance. As a child I never
 really kind of fit in. I was just always
 different, no matter how much I tried to
 fit in. And it came to a point, maybe like
 my early 20s, that I really began to
-accept who Aleechia was, and not only
+accept who Aleechea was, and not only
 accept who I was, like who I was and
 loved who I was. And so I made a resolve
 that anybody that comes in my life, you

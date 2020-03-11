@@ -4,10 +4,10 @@ type: episode
 title: Jesus, Take the Wheel
 epnumber: 7
 section: 0
-description: Aleechia Pitts is a police chaplain. In this episode she tells us about her path to finding her personal identity in serving others and praising God through writing self-help books, giving workshops, singing, playing music and preaching the gospel of Christ. Her path has been illuminated by a figurative voice that guides her everyday decision-making and provides her life with peace and fulfillment.
+description: Aleechea Pitts is a police chaplain. In this episode she tells us about her path to finding her personal identity in serving others and praising God through writing self-help books, giving workshops, singing, playing music and preaching the gospel of Christ. Her path has been illuminated by a figurative voice that guides her everyday decision-making and provides her life with peace and fulfillment.
 image: /images/ep07banner.jpg
-audio: s1!e9d2f
-video: 
+audio: no
+video: https://youtu.be/gghWwb1Rxrc
 categories: [faith, divine guidance]
 tags: []
 comments: true
@@ -25,7 +25,7 @@ You are a police chaplain in
 New Jersey.
 </p>
 
-<p><b>Aleechia:</b> Yes.
+<p><b>Aleechea:</b> Yes.
 </p>
 
 <p><b>William:</b> And I also saw something on the
@@ -33,6 +33,6 @@ homepage about being an adjunct
 professor. Is that still current?
 </p>
 
-<p><b>Aleechia:</b> No, that
+<p><b>Aleechea:</b> No, that
 is not still current.
 </p>
