@@ -1,8 +1,8 @@
 ---
 layout: speaker
-name: William Blacoe
+title: William Blacoe
 image: /images/speakers/William540x720.min.jpg
-title: Co-Host of the Podcast
+vocation: Co-Host of the Podcast
 facebook: williamblacoe
 twitter: WilliamBlacoe
 linkedin: wblacoe

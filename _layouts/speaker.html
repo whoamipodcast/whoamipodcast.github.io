@@ -1,13 +1,17 @@
 ---
 layout: default
-permalink: /:name/
+header: fixed
 ---
+  <header id="header" class="header-fixed">
+{% include header.html %}
+  </header>
+  
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
         <div class="section-header">
 		  <h2>Speaker Details</h2>
-          <p>{{ page.title }}</p>
+          <p>{{ page.vocation }}</p>
         </div>
 
         <div class="row">

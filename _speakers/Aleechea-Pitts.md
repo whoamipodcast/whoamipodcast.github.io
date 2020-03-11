@@ -1,8 +1,8 @@
 ---
 layout: speaker
-name: Aleechea Pitts
+title: Aleechea Pitts
 image: /images/speakers/AleecheaPitts.jpg
-title: Police Chaplain
+vocation: Police Chaplain
 facebook: pastor.pitts1
 linkedin: aleecheapitts
 instagram: revaleechea

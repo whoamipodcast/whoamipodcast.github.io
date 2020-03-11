@@ -1,8 +1,8 @@
 ---
 layout: post
-name: Steven Guscott
+title: Steven Guscott
 image: /images/speakers/Steven540x720.min.jpg
-title: Co-Host of the Podcast
+vocation: Co-Host of the Podcast
 facebook: steve.guscott.7
 ---
 Steven lives in Gloucester, England, UK. In his teens he enjoyed philosophical and religious discussions with friends and teachers alike. Absorbing any medium of fictional stories also became a great source of enjoyment, while broadening his perspective through vicarious experience.
