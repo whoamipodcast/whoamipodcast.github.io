@@ -213,9 +213,7 @@ sometimes it's not always one person's
 fault. You may have a part in it, too.
 </p>
 
-<p><b>William:</b> </p>
-
-<p><b>Aleechea:</b> Okay, let me ask you what you think
+<p><b>William:</b> Okay, let me ask you what you think
 about this this rule I try to live by:
 "A good person is someone who lives by
 their values and always strives to
@@ -233,7 +231,7 @@ those values right. So does that go along
 with what you're saying?
 </p>
 
-<p><b>William:</b> I would say to a
+<p><b>Aleechea:</b> I would say to a
 certain extent. But we have to be
 careful, and it's something you already
 have said when you say "values". Because
@@ -306,7 +304,7 @@ That's where it really counts. That's
 where it really counts.
 </p>
 
-<p><b>Aleechea:</b> Yeah. So we need to do our best to be
+<p><b>William:</b> Yeah. So we need to do our best to be
 aware of any inner conflicts that we
 might have that way. Because like that
 child that got caught, we do the same:
@@ -319,7 +317,7 @@ that process and stay as much like a
 child as possible?
 </p>
 
-<p><b>William:</b> I think it's a matter
+<p><b>Aleechea:</b> I think it's a matter
 of really thinking about what you do
 before you do it.
 Because, you know,
@@ -362,7 +360,7 @@ you do the right thing, the easier it is
 to do the right thing.
 </p>
 
-<p><b>Aleechea:</b> Yeah, that's true.
+<p><b>William:</b> Yeah, that's true.
 Wow, thank you.
 You have an e-book on your homepage that
 talks about apologizing. And I think this
@@ -370,17 +368,17 @@ is also closely related to the topic of
 forgiveness.
 </p>
 
-<p><b>William:</b> Yes.
+<p><b>Aleechea:</b> Yes.
 </p>
 
-<p><b>Aleechea:</b> Why can it be difficult
+<p><b>William:</b> Why can it be difficult
 for adults to, or for children as well,
 to apologize, and what is that
 blockade in our mind that makes it
 difficult for us?
 </p>
 
-<p><b>William:</b> One is entitlement.
+<p><b>Aleechea:</b> One is entitlement.
 I'm entitled to feel how I feel.
 I'm stuck with the way I feel. And that's
 what makes it hard to apologize, that
@@ -389,7 +387,7 @@ And I have a right to not apologize to
 you. But a lot of that is pride, too.
 </p>
 
-<p><b>Aleechea:</b> Yeah.
+<p><b>William:</b> Yeah.
 So I see a motive here: that you need to
 become more aware of your behavior,
 what's going on on the inside, what's
@@ -405,16 +403,16 @@ lot, and I've learned a lot. So thank you
 for that.
 </p>
 
-<p><b>William:</b> Thank you.
+<p><b>Aleechea:</b> Thank you.
 </p>
 
-<p><b>Aleechea:</b> Are there any
+<p><b>William:</b> Are there any
 final things you want to
 mention about these concepts or
 your books?
 </p>
 
-<p><b>William:</b> Well, the only thing, the
+<p><b>Aleechea:</b> Well, the only thing, the
 thought that I would leave to your
 audience is really for encouragement,
 and that is: Your life is what you make
