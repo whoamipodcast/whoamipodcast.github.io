@@ -78,7 +78,7 @@ header: fixed
 				  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon_filled.png"></a>{% endif %}
 				  &nbsp;
 				</div>
-                <h3 style="width: 60%; float: left; text-align: center;"><a class="episodelink" href="{{ site.baseurl }}{{ thiseppost.url }}">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }}</a> {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
+                <h3 style="width: 60%; float: left; text-align: center;"><a class="episodelink" href="{{ site.baseurl }}{{ pep.url }}">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }}</a> {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}</h3>
 				<div style="width: 20%; float: left; text-align: right; white-space: nowrap;">
 				  &nbsp;
 				  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon_filled.png"></a>{% endif %}
