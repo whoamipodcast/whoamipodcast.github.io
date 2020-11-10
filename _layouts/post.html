@@ -152,7 +152,12 @@ header: fixed
 			{% if s != "" %}{% if sn > 0 %}<div style="width: 100%; font-size: 16pt; text-align: right; margin-bottom: 30px; text-decoration: underline;"><a href="{{ site.baseurl }}{{ s }}">&raquo; Continue Reading &raquo;</a></div>{% endif %}{% endif %}
 		  </div>
 		  <script>
-			document.getElementById("transcript").style.display = "none";
+			var transcript = document.getElementById("transcript");
+			var text = transcript.innerText.length;
+			text = text.replace(/\s/g, "");
+			if(text.length <= 25){
+			  transcript.style.display = "none";
+		    }
 		  </script>
 		  <!-- previous / next section / episode -->
 		  <div>
