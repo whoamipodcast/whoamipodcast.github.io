@@ -77,12 +77,11 @@ header: fixed
 {% assign samount = 0 %}
 {% for post in posts %}
   {% if post.type == "episode" %}
-  {% if post.epnumber == page.epnumber %}
-	{% assign samount = samount | plus:1 %}
-  {% endif %}
+    {% if post.epnumber == page.epnumber %}
+	  {% assign samount = samount + 1 %}
+	{% endif %}
   {% endif %}
 {% endfor %}
-
 			    <div style="width: 20%; float: left; text-align: left; white-space: nowrap;">
 				  {% if ppep != "" %}<a href="{{ site.baseurl }}{{ ppep.url }}"><img class="backward" src="/images/fastforwardicon_filled.png"></a>{% endif %}
 				  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon_filled.png"></a>{% endif %}
@@ -113,7 +112,7 @@ header: fixed
 			</div>
 			<!-- description -->
 			<p>{{ page.description }}</p>
-{% if page.section == 0 %}{% if samount > 1 %}
+{% if page.section == 0 %}{% if s != "" %}{% if sn > 0 %}
 			<!-- list of sections -->
 			<div>
 			  <h3 class="boldh3">Sections in this Episode:</h3>
@@ -127,7 +126,7 @@ header: fixed
 			  {% endif %}{% endif %}{% endif %}{% endfor %}
 			  </table>
 		    </div>
-{% endif %}{% endif %}
+{% endif %}{% endif %}{% endif %}
 {% if page.video %}		  
             <!-- video -->
             <div>
@@ -160,11 +159,9 @@ header: fixed
 			  &nbsp;
 			</div>
 			<h3 style="width: 60%; float: left; text-align: center;">
-{% if samount > 1 %}
 {% for post in posts %}{% if post.type == "episode" %}{% if post.epnumber == page.epnumber %}{% if post.section == 0 %}<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;Intro&nbsp;</a>{% else %}
 |
-<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;{{ post.section }}&nbsp;</a>{% endif %}{% endif %}{% endfor %}
-{% endif %}
+<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;{{ post.section }}&nbsp;</a>{% endif %}{% endif %}{% endif %}{% endfor %}
 			</h3>
 			<div style="width: 20%; float: left; text-align: right; white-space: nowrap;">
 			  &nbsp;
@@ -176,13 +173,13 @@ header: fixed
 		  <!-- related posts -->
 		  <h3 class="boldh3">Other Episodes:</h3>
           <div class="row">
-{% assign eamount = 0 %}
+{% assign amount = 0 %}
 {% for post in site.posts %}
 {% if post.type == "episode" %}
 {% if post.epnumber != page.epnumber %}
 {% if post.section == 0 %}
-{% assign eamount = eamount | plus:1 %}
-  {% if eamount > 6 %}
+{% assign amount = amount | plus:1 %}
+  {% if amount > 6 %}
     {% break %}
   {% endif %}
 		    <div class="col-md-4">
