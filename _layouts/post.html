@@ -25,7 +25,7 @@ header: fixed
 {% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
 {% assign braked = 0 %}
 {% for post in posts %}
-  {% if post.type == "episode" and if post.section == 0 and braked == 0 %}
+  {% if post.type == "episode" and post.section == 0 and braked == 0 %}
     {% assign ppep = pep %}
 	{% assign pep = ep %}
 	{% assign ep = post %}
