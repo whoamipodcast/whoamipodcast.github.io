@@ -78,7 +78,7 @@ header: fixed
 {% for post in posts %}
   {% if post.type == "episode" %}
     {% if post.epnumber == page.epnumber %}
-	  {% assign samount = samount + 1 %}
+	  {% assign samount = samount | plus:1 %}
 	{% endif %}
   {% endif %}
 {% endfor %}
@@ -173,13 +173,13 @@ header: fixed
 		  <!-- related posts -->
 		  <h3 class="boldh3">Other Episodes:</h3>
           <div class="row">
-{% assign amount = 0 %}
+{% assign eamount = 0 %}
 {% for post in site.posts %}
 {% if post.type == "episode" %}
 {% if post.epnumber != page.epnumber %}
 {% if post.section == 0 %}
-{% assign amount = amount | plus:1 %}
-  {% if amount > 6 %}
+{% assign eamount = eamount | plus:1 %}
+  {% if eamount > 6 %}
     {% break %}
   {% endif %}
 		    <div class="col-md-4">
