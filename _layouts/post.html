@@ -42,6 +42,8 @@ header: fixed
   {% assign ep = "" %}
 {% endif %}
 
+{% debug %}
+
 {% assign pps = "" %}
 {% assign ps = "" %}
 {% assign s = "" %}
@@ -66,12 +68,16 @@ header: fixed
   {% assign sn = -1 %}
 {% endif %}
 
+{% debug %}
+
 {% assign samount = 0 %}
 {% for post in posts %}
   {% if post.type == "episode" and post.epnumber == page.epnumber %}
 	{% assign samount = samount | plus:1 %}
   {% endif %}
 {% endfor %}
+
+{% debug %}
 			    <div style="width: 20%; float: left; text-align: left; white-space: nowrap;">
 				  {% if ppep != "" %}<a href="{{ site.baseurl }}{{ ppep.url }}"><img class="backward" src="/images/fastforwardicon_filled.png"></a>{% endif %}
 				  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon_filled.png"></a>{% endif %}
