@@ -25,15 +25,21 @@ header: fixed
 {% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
 {% assign braked = 0 %}
 {% for post in posts %}
-  {% if post.type == "episode" and post.section == 0 and braked == 0 %}
+  {% if post.type == "episode" %}
+  {% if post.section == 0 %}
+  {% if braked == 0 %}
     {% assign ppep = pep %}
 	{% assign pep = ep %}
 	{% assign ep = post %}
-	{% if pep != "" and pep.epnumber == page.epnumber %}
+	{% if pep != "" %}
+	{% if pep.epnumber == page.epnumber %}
 	  {% assign thiseppost = post %}
 	  {% assign braked = 1 %}
 	  {% break %}
 	{% endif %}
+	{% endif %}
+  {% endif %}
+  {% endif %}
   {% endif %}
 {% endfor %}
 {% if braked == 0 %}
@@ -48,7 +54,8 @@ header: fixed
 {% assign sn = -1 %}
 {% assign braked = 0 %}
 {% for post in posts %}
-  {% if post.type == "episode" and braked == 0 %}
+  {% if post.type == "episode" %}
+  {% if braked == 0 %}
     {% assign pps = ps %}
     {% assign ps = s %}
 	{% assign s = post.url %}
@@ -57,6 +64,7 @@ header: fixed
 	  {% assign braked = 1 %}
 	  {% break %}
 	{% endif %}
+  {% endif %}
   {% endif %}
 {% endfor %}
 {% if braked == 0 %}
@@ -68,8 +76,10 @@ header: fixed
 
 {% assign samount = 0 %}
 {% for post in posts %}
-  {% if post.type == "episode" and post.epnumber == page.epnumber %}
+  {% if post.type == "episode" %}
+  {% if post.epnumber == page.epnumber %}
 	{% assign samount = samount | plus:1 %}
+  {% endif %}
   {% endif %}
 {% endfor %}
 
@@ -103,7 +113,7 @@ header: fixed
 			</div>
 			<!-- description -->
 			<p>{{ page.description }}</p>
-{% if page.section == 0 and samount > 1 %}
+{% if page.section == 0 %}{% if samount > 1 %}
 			<!-- list of sections -->
 			<div>
 			  <h3 class="boldh3">Sections in this Episode:</h3>
@@ -117,7 +127,7 @@ header: fixed
 			  {% endif %}{% endif %}{% endif %}{% endfor %}
 			  </table>
 		    </div>
-{% endif %}
+{% endif %}{% endif %}
 {% if page.video %}		  
             <!-- video -->
             <div>
@@ -151,9 +161,9 @@ header: fixed
 			</div>
 			<h3 style="width: 60%; float: left; text-align: center;">
 {% if samount > 1 %}
-{% for post in posts %}{% if post.type == "episode" and post.epnumber == page.epnumber %}{% if post.section == 0 %}<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;Intro&nbsp;</a>{% else %}
+{% for post in posts %}{% if post.type == "episode" %}{% if post.epnumber == page.epnumber %}{% if post.section == 0 %}<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;Intro&nbsp;</a>{% else %}
 |
-<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;{{ post.section }}&nbsp;</a>{% endif %}{% endfor %}
+<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;{{ post.section }}&nbsp;</a>{% endif %}{% endif %}{% endfor %}
 {% endif %}
 			</h3>
 			<div style="width: 20%; float: left; text-align: right; white-space: nowrap;">
@@ -168,7 +178,9 @@ header: fixed
           <div class="row">
 {% assign eamount = 0 %}
 {% for post in site.posts %}
-{% if post.type == "episode" and post.epnumber != page.epnumber and post.section == 0 %}
+{% if post.type == "episode" %}
+{% if post.epnumber != page.epnumber %}
+{% if post.section == 0 %}
 {% assign eamount = eamount | plus:1 %}
   {% if eamount > 6 %}
     {% break %}
@@ -195,6 +207,8 @@ header: fixed
 			  <div class="clearboth"></div>
 			</div>
 		    </div>
+{% endif %}
+{% endif %}
 {% endif %}
 {% endfor %}
           </div>
