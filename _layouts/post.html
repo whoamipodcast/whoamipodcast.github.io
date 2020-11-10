@@ -25,21 +25,15 @@ header: fixed
 {% assign posts = site.posts | sort: 'section' | sort: 'epnumber' %}
 {% assign braked = 0 %}
 {% for post in posts %}
-  {% if post.type == "episode" %}
-  {% if post.section == 0 %}
-  {% if braked == 0 %}
+  {% if post.type == "episode" and if post.section == 0 and braked == 0 %}
     {% assign ppep = pep %}
 	{% assign pep = ep %}
 	{% assign ep = post %}
-	{% if pep != "" %}
-	{% if pep.epnumber == page.epnumber %}
+	{% if pep != "" and pep.epnumber == page.epnumber %}
 	  {% assign thiseppost = post %}
 	  {% assign braked = 1 %}
 	  {% break %}
 	{% endif %}
-	{% endif %}
-  {% endif %}
-  {% endif %}
   {% endif %}
 {% endfor %}
 {% if braked == 0 %}
@@ -54,8 +48,7 @@ header: fixed
 {% assign sn = -1 %}
 {% assign braked = 0 %}
 {% for post in posts %}
-  {% if post.type == "episode" %}
-  {% if braked == 0 %}
+  {% if post.type == "episode" and braked == 0 %}
     {% assign pps = ps %}
     {% assign ps = s %}
 	{% assign s = post.url %}
@@ -65,7 +58,6 @@ header: fixed
 	  {% break %}
 	{% endif %}
   {% endif %}
-  {% endif %}
 {% endfor %}
 {% if braked == 0 %}
   {% assign pps = ps %}
@@ -73,6 +65,13 @@ header: fixed
   {% assign s = "" %}
   {% assign sn = -1 %}
 {% endif %}
+
+{% assign samount = 0 %}
+{% for post in posts %}
+  {% if post.type == "episode" and post.epnumber == page.epnumber %}
+	{% assign samount = samount | plus:1 %}
+  {% endif %}
+{% endfor %}
 			    <div style="width: 20%; float: left; text-align: left; white-space: nowrap;">
 				  {% if ppep != "" %}<a href="{{ site.baseurl }}{{ ppep.url }}"><img class="backward" src="/images/fastforwardicon_filled.png"></a>{% endif %}
 				  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon_filled.png"></a>{% endif %}
@@ -103,7 +102,7 @@ header: fixed
 			</div>
 			<!-- description -->
 			<p>{{ page.description }}</p>
-{% if page.section == 0 %}
+{% if page.section == 0 and samount > 1 %}
 			<!-- list of sections -->
 			<div>
 			  <h3 class="boldh3">Sections in this Episode:</h3>
@@ -136,6 +135,7 @@ header: fixed
 			  </div>
 		  </div>
 {% endif %}
+{% if content != "" %}
 		  <!-- transcript -->
           <div>
 		    <h3 class="boldh3">Transcript{% if page.section == 0 %} (Introduction){% else %} (continued){% endif %}:</h3>
@@ -149,10 +149,13 @@ header: fixed
 			  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon_filled.png"></a>{% endif %}
 			  &nbsp;
 			</div>
+{% endif %}
 			<h3 style="width: 60%; float: left; text-align: center;">
-{% for post in posts %}{% if post.type == "episode" %}{% if post.epnumber == page.epnumber %}{% if post.section == 0 %}<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;Intro&nbsp;</a>{% else %}
+{% if samount > 1 %}
+{% for post in posts %}{% if post.type == "episode" and post.epnumber == page.epnumber %}{% if post.section == 0 %}<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;Intro&nbsp;</a>{% else %}
 |
-<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;{{ post.section }}&nbsp;</a>{% endif %}{% endif %}{% endif %}{% endfor %}
+<a class="episodelink" href="{{ site.baseurl }}{{ post.url }}">&nbsp;{{ post.section }}&nbsp;</a>{% endif %}{% endfor %}
+{% endif %}
 			</h3>
 			<div style="width: 20%; float: left; text-align: right; white-space: nowrap;">
 			  &nbsp;
@@ -164,13 +167,11 @@ header: fixed
 		  <!-- related posts -->
 		  <h3 class="boldh3">Other Episodes:</h3>
           <div class="row">
-{% assign amount = 0 %}
+{% assign eamount = 0 %}
 {% for post in site.posts %}
-{% if post.type == "episode" %}
-{% if post.epnumber != page.epnumber %}
-{% if post.section == 0 %}
-{% assign amount = amount | plus:1 %}
-  {% if amount > 6 %}
+{% if post.type == "episode" and post.epnumber != page.epnumber and post.section == 0 %}
+{% assign eamount = eamount | plus:1 %}
+  {% if eamount > 6 %}
     {% break %}
   {% endif %}
 		    <div class="col-md-4">
@@ -195,8 +196,6 @@ header: fixed
 			  <div class="clearboth"></div>
 			</div>
 		    </div>
-{% endif %}
-{% endif %}
 {% endif %}
 {% endfor %}
           </div>
