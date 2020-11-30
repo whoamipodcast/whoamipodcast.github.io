@@ -8,7 +8,7 @@ description: Aleechea Pitts is a police chaplain. In this episode she tells us a
 image: /images/ep07banner.jpg
 audio: s1!9ba23
 video: gghWwb1Rxrc
-transcript: yes
+transcript: 1
 categories: [faith, divine guidance]
 tags: [interview]
 comments: true

@@ -8,7 +8,7 @@ description: William and Dr. Kade Roundy from Texas discuss the range of perspec
 image: /images/ep10banner.jpg
 audio: s1!733d7
 video: 3fFM8oSW1Ig
-transcript: 1
+transcript: 0
 categories: [socialism, libertarianism]
 tags: [interview]
 comments: true

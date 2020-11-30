@@ -8,7 +8,7 @@ description: In their first podcast episode Steven and William discuss their mot
 image: /images/ep01banner.png
 audio: s1!5d7fe6339b9e8833c726708687b736a6f19a9755
 video: w8Gc1lpY7uQ
-transcript: yes
+transcript: 1
 categories: [art, media]
 tags: [communication, games, writing, creativity]
 comments: true

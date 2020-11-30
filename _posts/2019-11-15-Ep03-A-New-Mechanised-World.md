@@ -8,7 +8,7 @@ description: What influence does technology have on the fabric of society? Is it
 image: /images/ep03banner.jpg
 audio: s1!fdde7
 video: IsxIVw9--cQ
-transcript: yes
+transcript: 1
 categories: [technology, society]
 tags: [artificial intelligence, values, regulation]
 comments: true

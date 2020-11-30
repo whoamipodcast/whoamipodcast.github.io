@@ -8,7 +8,7 @@ description: William and Steven speak openly about the faith they were raised in
 image: /images/ep06banner.jpg
 audio: s1!e9d2f
 video: Lk69pzmKnng
-transcript: yes
+transcript: 1
 categories: [religion, faith]
 tags: [community, hipocrisy, purpose of life]
 comments: true

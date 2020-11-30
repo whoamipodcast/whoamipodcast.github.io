@@ -8,7 +8,7 @@ description: Continuing the topic of mental health, William and Steven talk abou
 image: /images/ep09banner.jpg
 audio: s1!93b1f
 video: NA0uV6H-D5E
-transcript: no
+transcript: 0
 categories: [mental health, anxiety]
 tags: []
 comments: true
