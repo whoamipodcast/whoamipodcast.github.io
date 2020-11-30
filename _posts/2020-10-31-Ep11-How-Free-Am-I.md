@@ -8,7 +8,7 @@ description: Today we discuss the concept of freedom, including questions around
 image: /images/ep11banner.jpg
 audio: s1!27a4e
 video: TywGSOGI318
-transcript: no
+transcript: 0
 categories: [freedom, control, autonomy]
 tags: []
 comments: true
