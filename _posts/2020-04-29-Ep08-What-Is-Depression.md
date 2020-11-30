@@ -8,6 +8,7 @@ description: One topic that has affected Steven and William personally is that o
 image: /images/ep08banner.jpg
 audio: s1!ca05e
 video: hHaxobobLJI
+transcript: yes
 categories: [mental health, depression]
 tags: []
 comments: true

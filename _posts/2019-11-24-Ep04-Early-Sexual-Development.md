@@ -8,6 +8,7 @@ description: Human sexuality begins to emerge at an early age. Our gender identi
 image: /images/ep04banner.png
 audio: s1!75b0b
 video: 34bNoHKsMww
+transcript: yes
 categories: [sexuality, childhood]
 tags: [Sigmund Freud, biology, psychology]
 comments: true
