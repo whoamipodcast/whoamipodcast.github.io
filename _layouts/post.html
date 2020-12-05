@@ -149,7 +149,11 @@ header: fixed
 {% if cnt != "" %}
 		  <!-- transcript -->
           <div id="transcript">
+				{% if post.transcript > 0 %}
 		    <h3 class="boldh3">Transcript{% if page.section == 0 %} (Introduction){% else %} (continued){% endif %}:</h3>
+				{% else %}
+				<h3 class="boldh3">Notes:</h3>
+				{% endif %}
 		    {{ content }}
 			{% if s != "" %}{% if sn > 0 %}<div style="width: 100%; font-size: 16pt; text-align: right; margin-bottom: 30px; text-decoration: underline;"><a href="{{ site.baseurl }}{{ s }}">&raquo; Continue Reading &raquo;</a></div>{% endif %}{% endif %}
 		  </div>
