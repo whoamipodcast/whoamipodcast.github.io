@@ -106,7 +106,7 @@ header: fixed
 				<a href="#">{{ page.categories | join: ', ' }}</a>
   		      </span>
 			  <span>
-				{% if page.tags != "" %}
+				{% if page.tags.size > 0 %}
 				<i class="fa fa-tags"></i>
 				<a href="#">{{ page.tags | join: ', ' }}</a>
 				{% endif %}
