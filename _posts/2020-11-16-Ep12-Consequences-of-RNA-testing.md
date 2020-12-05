@@ -16,7 +16,7 @@ comments: true
 One of several interviews between Brian Rose and David Icke:<br>
 <a href="https://www.bitchute.com/video/UBISxAZJnA78/">https://www.bitchute.com/video/UBISxAZJnA78/</a>
 
-David Icke on un-isolated, computer-generated RNA sequence for Covid-19 testing:<br>
+David Icke on un-isolated, partially computer-generated RNA sequence used for Covid-19 testing:<br>
 <a href="https://www.bitchute.com/video/Ae4A8zjy1Kdi/">https://www.bitchute.com/video/Ae4A8zjy1Kdi/</a>
 
 PCR method used for Covid-19 testing:<br>
