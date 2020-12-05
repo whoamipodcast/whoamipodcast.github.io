@@ -13,3 +13,16 @@ categories: [covid-19, science, decision-making]
 tags: []
 comments: true
 ---
+<h3 class="boldh3">Notes:</h3>
+
+One of several interviews between Brian Rose and David Icke:
+https://www.bitchute.com/video/UBISxAZJnA78/
+
+David Icke on un-isolated, computer-generated RNA sequence for Covid-19 testing:
+https://www.bitchute.com/video/Ae4A8zjy1Kdi/
+
+PCR method used for Covid-19 testing:
+https://en.wikipedia.org/wiki/COVID-19_testing#Detection_of_the_virus
+
+Type 1 and type 2 errors:
+https://en.wikipedia.org/wiki/Type_I_and_type_II_errors
