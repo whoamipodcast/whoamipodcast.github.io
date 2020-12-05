@@ -87,7 +87,7 @@ header: fixed
 				  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon_filled.png"></a>{% endif %}
 				  &nbsp;
 				</div>
-                <h3 style="width: 60%; float: left; text-align: center;"><a class="episodelink" href="{{ site.baseurl }}{{ pep.url }}">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }}</a>{% if samount > 0 %} {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}{% endif %}</h3>
+                <h3 style="width: 60%; float: left; text-align: center;"><a class="episodelink" href="{{ site.baseurl }}{{ pep.url }}">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }}</a>{% if samount > 1 %} {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}{% endif %}</h3>
 				<div style="width: 20%; float: left; text-align: right; white-space: nowrap;">
 				  &nbsp;
 				  {% if s != "" %}<a href="{{ site.baseurl }}{{ s }}"><img class="forward" src="/images/forwardicon_filled.png"></a>{% endif %}
@@ -106,8 +106,10 @@ header: fixed
 				<a href="#">{{ page.categories | join: ', ' }}</a>
   		      </span>
 			  <span>
+				{% if page.tags != "" %}
 				<i class="fa fa-tags"></i>
 				<a href="#">{{ page.tags | join: ', ' }}</a>
+				{% endif %}
 			  </span>
 			</div>
 			<!-- description -->
@@ -149,7 +151,7 @@ header: fixed
 {% if cnt != "" %}
 		  <!-- transcript -->
           <div id="transcript">
-				{% if post.transcript > 0 %}
+				{% if page.transcript > 0 %}
 		    <h3 class="boldh3">Transcript{% if page.section == 0 %} (Introduction){% else %} (continued){% endif %}:</h3>
 				{% else %}
 				<h3 class="boldh3">Notes:</h3>
