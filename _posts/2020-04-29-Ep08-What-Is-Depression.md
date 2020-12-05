@@ -5,7 +5,7 @@ title: What Is Depression?
 epnumber: 8
 section: 0
 description: One topic that has affected Steven and William personally is that of mental health. In this episode they share their personal experiences of suffering, learning, developing and coping.
-image: /images/ep08banner.jpg
+image: /images/banners/ep08banner.jpg
 audio: s1!ca05e
 video: hHaxobobLJI
 transcript: 1

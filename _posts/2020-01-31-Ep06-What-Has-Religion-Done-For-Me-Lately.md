@@ -5,7 +5,7 @@ title: What Has Religion Done For Me Lately?
 epnumber: 6
 section: 0
 description: William and Steven speak openly about the faith they were raised in and how they have personally identified with it. Religion can provide inner strength, a sense of belonging and community, a purpose in life, and a path to transcendence.
-image: /images/ep06banner.jpg
+image: /images/banners/ep06banner.jpg
 audio: s1!e9d2f
 video: Lk69pzmKnng
 transcript: 1
