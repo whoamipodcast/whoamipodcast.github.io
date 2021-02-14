@@ -277,8 +277,7 @@ header: fixed
 							<h3 style="margin-top: 20px; margin-bottom: 5px;">Appearances:</h3>
 							{% for post in posts %}
 							{% if post.type == "episode" %}
-							<a href="{{ site.baseurl }}{{ post.url }}">Ep. {{ post.epnumber }}</a>
-							{% unless forloop.last %},{% endunless %}
+							<a href="{{ site.baseurl }}{{ post.url }}">Ep. {{ post.epnumber }}</a>,&nbsp;
 							{% endif %}
 							{% endfor %}
             </div>
