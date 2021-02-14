@@ -6,7 +6,7 @@
         </div>
         <div class="row">		
 {% for post in site.posts %}
-  {% if page.type contains "speaker" %}
+  {% if post.type contains "speaker" %}
 		  <div class="col-md-4">
             <div class="speaker">
 			  <a href="{{ site.baseurl }}{{ post.url }}">
