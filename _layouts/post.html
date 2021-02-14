@@ -276,6 +276,7 @@ header: fixed
 {{ content }}
 							<h3 style="margin-top: 20px; margin-bottom: 5px;">Appearances:</h3>
 							{% for post in posts %}
+							<div>{{ post.title }}</div>
 							{% if post.type == "episode" %}
 							{% if post.section == 0 %}
 							{% if post.speakers contains page.title %}
