@@ -9,7 +9,7 @@ image: /images/banners/ep17banner.jpg
 audio: s1!7c44e
 video: 6R2fufB_Upk
 transcript: 0
-speakers [William Blacoe, Steven Guscott]
+speakers: [William Blacoe, Steven Guscott]
 categories: [money, abundance, mindset]
 tags: []
 comments: true
