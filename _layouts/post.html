@@ -227,12 +227,12 @@ header: fixed
 		
 		<!-- right column -->
 		<div class="col-md-3">
-			<div style="font-size:18pt; padding: 10px;">In this episode:</div>
+			<div style="font-size:18pt; text-decoration: underline; margin-top: 20px;">In this episode:</div>
 {% for post in posts %}
 {% if post.type contains "speaker" %}
 {% if page.speakers contains post.title %}
 			<a href="{{ site.baseurl }}{{ post.url }}" style="width: inherit; height: auto;">
-				<img src="{{ post.image }}" style="width: inherit; height: auto;">
+				<img src="{{ post.image }}" style="width: inherit; height: auto; margin-top: 20px;">
 				<div style="font-size: 16pt; text-align: center;">{{ post.title }}</div>
 			</a>
 {% endif %}
