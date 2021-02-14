@@ -244,7 +244,7 @@ header: fixed
       </div>
     </section>
   </main>
-{% elsif page.type == "speaker" or page.type == "host" %}
+{% elsif ["speaker", "host"] contains page.type %}
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
