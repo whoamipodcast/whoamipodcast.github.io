@@ -278,20 +278,21 @@ header: fixed
 							{% if page.type contains "host" %}
 							{% else %}
 							<h3 style="margin-top: 20px; margin-bottom: 5px;">Appearances:</h3>
+							{% assign appearances_array = "" | split: "/" %}
 							{% for post in posts %}
 							{% if post.type == "episode" %}
 							{% if post.section == 0 %}
 							{% if post.speakers contains page.title %}
-							<a href="{{ site.baseurl }}{{ post.url }}">Ep. {{ post.epnumber }}</a>
-							{% unless forloop.last %},&nbsp;{% endunless %}
+							{% capture link %}<a href="{{ site.baseurl }}{{ post.url }}">Ep. {{ post.epnumber }}</a>{% endcapture %}
+							{% assign appearances_array = appearances_array | push: link %}
 							{% endif %}
 							{% endif %}
 							{% endif %}
 							{% endfor %}
+							{{ appearances_array | join: ', ' }}
 							{% endif %}
             </div>
           </div>
-          
         </div>
       </div>
 
