@@ -9,6 +9,7 @@ image: /images/banners/ep11banner.jpg
 audio: s1!27a4e
 video: TywGSOGI318
 transcript: 0
+speakers: [William Blacoe, Steven Guscott]
 categories: [freedom, control, autonomy]
 tags: []
 comments: true

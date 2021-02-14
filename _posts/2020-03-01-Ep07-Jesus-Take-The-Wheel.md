@@ -9,6 +9,7 @@ image: /images/banners/ep07banner.jpg
 audio: s1!9ba23
 video: gghWwb1Rxrc
 transcript: 1
+speakers: [Aleechea Pitts, William Blacoe]
 categories: [faith, divine guidance]
 tags: [interview]
 comments: true

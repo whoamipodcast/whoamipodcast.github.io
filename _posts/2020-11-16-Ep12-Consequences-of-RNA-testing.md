@@ -9,6 +9,7 @@ image: /images/banners/ep12banner.jpg
 audio: s1!b9f24
 video: layjL9F8ZUo
 transcript: 0
+speakers: [William Blacoe, Steven Guscott]
 categories: [covid-19, science, decision-making]
 tags: []
 comments: true

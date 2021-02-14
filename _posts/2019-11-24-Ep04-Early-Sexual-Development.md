@@ -9,6 +9,7 @@ image: /images/banners/ep04banner.png
 audio: s1!75b0b
 video: 34bNoHKsMww
 transcript: 1
+speakers: [William Blacoe, Steven Guscott]
 categories: [sexuality, childhood]
 tags: [Sigmund Freud, biology, psychology]
 comments: true

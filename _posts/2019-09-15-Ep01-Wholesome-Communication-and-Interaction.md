@@ -9,6 +9,7 @@ image: /images/banners/ep01banner.png
 audio: s1!5d7fe6339b9e8833c726708687b736a6f19a9755
 video: w8Gc1lpY7uQ
 transcript: 1
+speakers: [William Blacoe, Steven Guscott]
 categories: [art, media]
 tags: [communication, games, writing, creativity]
 comments: true

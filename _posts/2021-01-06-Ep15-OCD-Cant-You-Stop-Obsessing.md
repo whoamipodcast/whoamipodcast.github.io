@@ -9,6 +9,7 @@ image: /images/banners/ep15banner.jpg
 audio: s1!f61ce
 video: 3ZThpOXjO0I
 transcript: 0
+speakers: [William Blacoe, Steven Guscott]
 categories: [OCD, anxiety, self-development]
 tags: []
 comments: true

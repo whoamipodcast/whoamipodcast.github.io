@@ -9,6 +9,7 @@ image: /images/banners/ep16banner.jpg
 audio: s1!6205c#t=1
 video: quqT7sLlfIY
 transcript: 0
+speakers: [Craig Irving, William Blacoe]
 categories: [fascism, current events, global trends]
 tags: []
 comments: true

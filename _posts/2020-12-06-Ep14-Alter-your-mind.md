@@ -9,6 +9,7 @@ image: /images/banners/ep14banner.jpg
 audio: s1!6b27a
 video: MQni7kCLUcQ
 transcript: 0
+speakers: [Mr. INTP, William Blacoe]
 categories: [identity, epistemology, perception]
 tags: []
 comments: true

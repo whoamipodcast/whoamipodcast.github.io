@@ -9,6 +9,7 @@ image: /images/banners/ep13banner.jpg
 audio: s1!08f4c
 video: Mh27lAKp-0U
 transcript: 0
+speakers: [William Blacoe, Steven Guscott]
 categories: [choice, freedom, illusion]
 tags: []
 comments: true

@@ -9,6 +9,7 @@ image: /images/banners/ep10banner.jpg
 audio: s1!733d7
 video: 3fFM8oSW1Ig
 transcript: 0
+speakers: [Kade Roundy, William Blacoe]
 categories: [socialism, libertarianism]
 tags: [interview]
 comments: true

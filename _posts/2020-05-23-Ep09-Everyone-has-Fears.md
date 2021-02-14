@@ -9,6 +9,7 @@ image: /images/banners/ep09banner.jpg
 audio: s1!93b1f
 video: NA0uV6H-D5E
 transcript: 0
+speakers: [William Blacoe, Steven Guscott]
 categories: [mental health, anxiety]
 tags: []
 comments: true

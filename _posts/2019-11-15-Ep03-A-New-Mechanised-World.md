@@ -9,6 +9,7 @@ image: /images/banners/ep03banner.jpg
 audio: s1!fdde7
 video: IsxIVw9--cQ
 transcript: 1
+speakers: [William Blacoe, Steven Guscott]
 categories: [technology, society]
 tags: [artificial intelligence, values, regulation]
 comments: true

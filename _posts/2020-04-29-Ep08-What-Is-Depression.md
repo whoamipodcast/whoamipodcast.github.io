@@ -9,6 +9,7 @@ image: /images/banners/ep08banner.jpg
 audio: s1!ca05e
 video: hHaxobobLJI
 transcript: 1
+speakers: [William Blacoe, Steven Guscott]
 categories: [mental health, depression]
 tags: []
 comments: true
