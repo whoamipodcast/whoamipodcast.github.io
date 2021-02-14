@@ -225,17 +225,19 @@ header: fixed
 {% include disqus.html %}
 		</div>
 		
-        <!-- right column -->
-        <div class="col-md-3">
-		  <!--TODO:
-		  involved speakers and their profile photos
-		  subscribe to newsletter
-		  ad
-		  recent posts
-		  ad
-		  most popular categories
-		  ad
-		  most popular tags-->
+		<!-- right column -->
+		<div class="col-md-3">
+			<div style="font-size:18pt; padding: 10px;">In this episode:</div>
+{% for post in posts %}
+{% if post.type contains "speaker" %}
+{% if page.speakers contains post.title %}
+			<a href="{{ site.baseurl }}{{ post.url }}" style="width: inherit; height: auto;">
+				<img src="{{ post.image }}" style="width: inherit; height: auto;">
+				<div style="font-size: 16pt; text-align: center;">{{ post.title }}</div>
+			</a>
+{% endif %}
+{% endif %}
+{% endfor %}
 		</div>
 		
 	  <!-- end row -->
