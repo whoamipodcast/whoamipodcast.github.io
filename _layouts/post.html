@@ -275,6 +275,8 @@ header: fixed
   {% endif %}
               </div>
 {{ content }}
+							{% if page.type contains "host" %}
+							{% else %}
 							<h3 style="margin-top: 20px; margin-bottom: 5px;">Appearances:</h3>
 							{% assign appearances_array = "" | split: "/" %}
 							{% for post in posts %}
@@ -288,6 +290,7 @@ header: fixed
 							{% endif %}
 							{% endfor %}
 							{{ appearances_array | join: ', ' }}
+							{% endif %}
             </div>
           </div>
         </div>
