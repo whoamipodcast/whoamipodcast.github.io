@@ -274,6 +274,13 @@ header: fixed
   {% endif %}
               </div>
 {{ content }}
+							<h3 style="margin-top: 20px; margin-bottom: 5px;">Appearances:</h3>
+							{% for post in posts %}
+							{% if post.type == "episode" %}
+							<a href="{{ site.baseurl }}{{ post.url }}">Ep. {{ post.epnumber }}</a>
+							{% unless forloop.last %},{% endunless %}
+							{% endif %}
+							{% endfor %}
             </div>
           </div>
           
