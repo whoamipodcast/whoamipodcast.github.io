@@ -2,7 +2,7 @@
 layout: post
 type: speaker
 title: Kade Roundy
-image: /images/speakers/KadeRoundy.png
+image: /images/speakers/KadeRoundy.jpg
 vocation: Endodontist
 facebook: kaderoundy
 linkedin: kade-roundy-22a32232
