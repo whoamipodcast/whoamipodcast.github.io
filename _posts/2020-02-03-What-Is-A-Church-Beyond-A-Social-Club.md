@@ -5,9 +5,10 @@ title: What is a Church Beyond a Social Club?
 epnumber: 6
 section: 3
 description: William and Steven speak openly about the faith they were raised in and how they have personally identified with it. Religion can provide inner strength, a sense of belonging and community, a purpose in life, and a path to transcendence.
-image: /images/ep06banner.jpg
+image: /images/banners/ep06banner.jpg
 audio: no
 video: hU1OWPbevEA
+speakers: [William Blacoe, Steven Guscott]
 categories: [religion, faith]
 tags: [community, self-actualization, purpose]
 comments: true

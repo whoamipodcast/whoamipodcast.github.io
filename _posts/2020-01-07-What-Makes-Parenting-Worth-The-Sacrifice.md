@@ -5,9 +5,10 @@ title: What Makes Parenting Worth the Sacrifice?
 epnumber: 5
 section: 2
 description: As a young person enters the new adventure of becoming a parent, they are confronted with challenges they can never be truly prepared for, no matter how much knowledge they acquired beforehand. Making mistakes and learning from them in practise seems to be the only way for us to progress, be it as children or as parents.
-image: /images/ep05banner.png
+image: /images/banners/ep05banner.png
 audio: no
 video: GoJgcXOhj6k
+speakers: [William Blacoe, Steven Guscott]
 categories: [parenting, children]
 tags: [nobody is perfect, sacrifice]
 comments: true

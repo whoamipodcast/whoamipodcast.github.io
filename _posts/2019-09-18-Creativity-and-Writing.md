@@ -5,9 +5,10 @@ title: Creativity and Writing
 epnumber: 1
 section: 3
 description: In their first podcast episode Steven and William discuss their motivations for asking the age-old question 'Who am I?' and how best to go about their quest of exploring possible paths to an answer.
-image: /images/ep01banner.png
+image: /images/banners/ep01banner.png
 audio: no
 video: neETRHFH5IM
+speakers: [William Blacoe, Steven Guscott]
 categories: [creativity, learning]
 tags: [Dune, writing, stories]
 comments: true

@@ -5,9 +5,10 @@ title: Complex Processes in Childhood
 epnumber: 4
 section: 2
 description: Human sexuality begins to emerge at an early age. Our gender identity takes form and we become involved in complex dynamics, at first with our parents, and later with society in general.
-image: /images/ep04banner.png
+image: /images/banners/ep04banner.png
 audio: no
 video: EpZUx5kFcMM
+speakers: [William Blacoe, Steven Guscott]
 categories: [sexuality, childhood]
 tags: [stereo-types, childhood trauma, gender roles]
 comments: true

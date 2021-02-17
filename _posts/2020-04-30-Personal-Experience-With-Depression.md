@@ -5,9 +5,10 @@ title: Personal Experience With Depression
 epnumber: 8
 section: 1
 description: One topic that has affected Steven and William personally is that of mental health. In this episode they share their personal experiences of suffering, learning, developing and coping.
-image: /images/ep08banner.jpg
+image: /images/banners/ep08banner.jpg
 audio: no
-video: 
+video: no
+speakers: [William Blacoe, Steven Guscott]
 categories: [mental health, depression]
 tags: [symptoms, diagnose, recognize]
 comments: true

@@ -5,9 +5,10 @@ title: Is Hipocrisy a Religious Weakness, Or a Human One?
 epnumber: 6
 section: 2
 description: William and Steven speak openly about the faith they were raised in and how they have personally identified with it. Religion can provide inner strength, a sense of belonging and community, a purpose in life, and a path to transcendence.
-image: /images/ep06banner.jpg
+image: /images/banners/ep06banner.jpg
 audio: no
 video: 6yS1NZscUQw
+speakers: [William Blacoe, Steven Guscott]
 categories: [religion, faith]
 tags: [hipocrisy, apparel, appearance]
 comments: true

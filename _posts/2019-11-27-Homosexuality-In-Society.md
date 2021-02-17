@@ -5,9 +5,10 @@ title: Homosexuality in Society
 epnumber: 4
 section: 3
 description: Human sexuality begins to emerge at an early age. Our gender identity takes form and we become involved in complex dynamics, at first with our parents, and later with society in general.
-image: /images/ep04banner.png
+image: /images/banners/ep04banner.png
 audio: no
 video: 41PB-28vM8k
+speakers: [William Blacoe, Steven Guscott]
 categories: [sexuality]
 tags: [prejudice, non-binary, personal progress]
 comments: true

@@ -5,9 +5,10 @@ title: Are Humans Mere Machines?
 epnumber: 2
 section: 2
 description: In this episode Steven and William share their excitement for science-fiction as it pertains to self-awareness, free will and the difference between man and machine, if there is any. Will there ever be conscious
-image: /images/ep02banner.png
+image: /images/banners/ep02banner.png
 audio: no
 video: XK4HM5qcAuk
+speakers: [William Blacoe, Steven Guscott]
 categories: [consciousness, science]
 tags: [machines, Stephen Hawking, black swan, scientific discoveries]
 comments: true
