@@ -182,7 +182,26 @@ header: fixed
 			</div>
 		  </div>
 		  <div style="clear: both;"></div>
-		  <!-- related posts -->
+		</div>
+		<!-- left column ends -->
+		
+		<!-- right column -->
+		<div class="col-md-3">
+			<div style="font-size:18pt; text-decoration: underline; margin-top: 20px;">In this episode:</div>
+{% for post in posts %}
+{% if post.type contains "speaker" %}
+{% if page.speakers contains post.title %}
+			<a href="{{ site.baseurl }}{{ post.url }}" style="width: inherit; height: auto;">
+				<img src="{{ post.image }}" style="width: inherit; height: auto; margin-top: 20px;">
+				<div style="font-size: 16pt; text-align: center;">{{ post.title }}</div>
+			</a>
+{% endif %}
+{% endif %}
+{% endfor %}
+		</div>
+		<!-- right column ends -->
+		
+			<!-- related posts -->
 		  <h3 class="boldh3">Other Episodes:</h3>
           <div class="row">
 {% assign eamount = 0 %}
@@ -191,10 +210,10 @@ header: fixed
 {% if post.epnumber != page.epnumber %}
 {% if post.section == 0 %}
 {% assign eamount = eamount | plus:1 %}
-  {% if eamount > 6 %}
+  {% if eamount > 4 %}
     {% break %}
   {% endif %}
-		    <div class="col-md-4">
+		    <div class="col-md-3">
 			<div class="latestepisodes">
 			  <div>
 				<a href="{{ site.baseurl }}{{ post.url }}">
@@ -221,25 +240,10 @@ header: fixed
 {% endif %}
 {% endfor %}
           </div>
+					
 		  <!-- comments -->
 		  <h3 class="boldh3">Leave a Comment:</h3>
 {% include disqus.html %}
-		</div>
-		
-		<!-- right column -->
-		<div class="col-md-3">
-			<div style="font-size:18pt; text-decoration: underline; margin-top: 20px;">In this episode:</div>
-{% for post in posts %}
-{% if post.type contains "speaker" %}
-{% if page.speakers contains post.title %}
-			<a href="{{ site.baseurl }}{{ post.url }}" style="width: inherit; height: auto;">
-				<img src="{{ post.image }}" style="width: inherit; height: auto; margin-top: 20px;">
-				<div style="font-size: 16pt; text-align: center;">{{ post.title }}</div>
-			</a>
-{% endif %}
-{% endif %}
-{% endfor %}
-		</div>
 		
 	  <!-- end row -->
       </div>
