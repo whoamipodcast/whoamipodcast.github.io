@@ -9,6 +9,7 @@ image: /images/banners/ep06banner.jpg
 audio: no
 video: kgiXXz8Fkg0
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [religion, faith]
 tags: [spirituality, community, study]
 comments: true

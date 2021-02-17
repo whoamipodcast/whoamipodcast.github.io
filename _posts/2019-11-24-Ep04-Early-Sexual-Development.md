@@ -10,6 +10,7 @@ audio: s1!75b0b
 video: 34bNoHKsMww
 transcript: 1
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [sexuality, childhood]
 tags: [Sigmund Freud, biology, psychology]
 comments: true

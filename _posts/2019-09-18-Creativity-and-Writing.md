@@ -9,6 +9,7 @@ image: /images/banners/ep01banner.png
 audio: no
 video: neETRHFH5IM
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [creativity, learning]
 tags: [Dune, writing, stories]
 comments: true

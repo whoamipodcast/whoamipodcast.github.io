@@ -9,6 +9,7 @@ image: /images/banners/ep01banner.png
 audio: no
 video: -ER8sP5xg7c
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [communication]
 tags: [D&D, personalities, games, fun]
 comments: true

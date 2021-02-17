@@ -9,6 +9,7 @@ image: /images/banners/ep02banner.png
 audio: no
 video: XK4HM5qcAuk
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [consciousness, science]
 tags: [machines, Stephen Hawking, black swan, scientific discoveries]
 comments: true

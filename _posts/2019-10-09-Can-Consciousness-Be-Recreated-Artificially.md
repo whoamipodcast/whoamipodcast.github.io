@@ -9,6 +9,7 @@ image: /images/banners/ep02banner.png
 audio: no
 video: WWJyKCYnhjs
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [philosophy, purpose of life]
 tags: [artificial life, determinism, free will, Kurt Gödel]
 comments: true

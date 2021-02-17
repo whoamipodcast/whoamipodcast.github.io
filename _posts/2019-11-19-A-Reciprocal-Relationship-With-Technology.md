@@ -9,6 +9,7 @@ image: /images/banners/ep03banner.jpg
 audio: no
 video: avThzUpwswE
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [technology, regulation]
 tags: [new challenges, emergence, right and wrong]
 comments: true

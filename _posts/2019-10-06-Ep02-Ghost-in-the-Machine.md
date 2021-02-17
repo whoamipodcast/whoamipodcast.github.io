@@ -10,6 +10,7 @@ audio: s1!e5c487bb538175f43efdbd3a2dc17dbbe2f45f7f
 video: dvSkpgAuOq8
 transcript: 1
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [philosophy, artificial intelligence, sci-fi]
 tags: [self-awareness, robotics, mind-body problem]
 comments: true

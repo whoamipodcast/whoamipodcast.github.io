@@ -9,6 +9,7 @@ image: /images/banners/ep04banner.png
 audio: no
 video: UfBpVVhbkiw
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [sexuality, attraction]
 tags: [Oedipus, transgender, parenting]
 comments: true

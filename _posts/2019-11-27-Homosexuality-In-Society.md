@@ -9,6 +9,7 @@ image: /images/banners/ep04banner.png
 audio: no
 video: 41PB-28vM8k
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [sexuality]
 tags: [prejudice, non-binary, personal progress]
 comments: true

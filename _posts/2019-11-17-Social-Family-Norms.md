@@ -9,6 +9,7 @@ image: /images/banners/ep03banner.jpg
 audio: no
 video: fJl6926IZ6s
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [society, family]
 tags: [parenting, social norms, children]
 comments: true

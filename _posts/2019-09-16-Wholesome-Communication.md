@@ -8,6 +8,7 @@ description: In their first podcast episode Steven and William discuss their mot
 image: /images/banners/ep01banner.png
 video: u7wz6pyuRkI
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [communication, media]
 tags: [respect, listening, signalling]
 comments: true

@@ -9,6 +9,7 @@ image: /images/banners/ep08banner.jpg
 audio: no
 video: no
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [mental health, depression]
 tags: [symptoms, diagnose, recognize]
 comments: true

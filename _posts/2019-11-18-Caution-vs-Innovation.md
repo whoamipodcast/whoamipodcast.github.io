@@ -9,6 +9,7 @@ image: /images/banners/ep03banner.jpg
 audio: no
 video: hhCH4fstXw4
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [technology, progress, artificial intelligence]
 tags: [Mark Zuckerberg, Elon Musk, Julian Assange, encryption]
 comments: true

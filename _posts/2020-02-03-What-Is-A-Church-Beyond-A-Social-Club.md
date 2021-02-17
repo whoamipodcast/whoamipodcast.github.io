@@ -9,6 +9,7 @@ image: /images/banners/ep06banner.jpg
 audio: no
 video: hU1OWPbevEA
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [religion, faith]
 tags: [community, self-actualization, purpose]
 comments: true

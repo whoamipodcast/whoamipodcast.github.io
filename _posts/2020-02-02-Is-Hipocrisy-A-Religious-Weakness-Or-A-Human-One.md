@@ -9,6 +9,7 @@ image: /images/banners/ep06banner.jpg
 audio: no
 video: 6yS1NZscUQw
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [religion, faith]
 tags: [hipocrisy, apparel, appearance]
 comments: true

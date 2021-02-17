@@ -9,6 +9,7 @@ image: /images/banners/ep04banner.png
 audio: no
 video: EpZUx5kFcMM
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [sexuality, childhood]
 tags: [stereo-types, childhood trauma, gender roles]
 comments: true

@@ -9,6 +9,7 @@ image: /images/banners/ep02banner.png
 audio: no
 video: SHz85Ugq3Bg
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [artificial intelligence, consciousness]
 tags: [Isaac Asimov, robotics]
 comments: true

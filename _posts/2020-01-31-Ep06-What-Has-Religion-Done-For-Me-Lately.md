@@ -10,6 +10,7 @@ audio: s1!e9d2f
 video: Lk69pzmKnng
 transcript: 1
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [religion, faith]
 tags: [community, hipocrisy, purpose of life]
 comments: true

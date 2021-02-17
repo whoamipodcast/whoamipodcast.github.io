@@ -8,8 +8,8 @@ description: As a young person enters the new adventure of becoming a parent, th
 image: /images/banners/ep05banner.png
 audio: s1!f36d3
 video: RuQiZD0Lzk0
-transcript: 1
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [parenting, learning]
 tags: [empathy, family, ethics]
 comments: true

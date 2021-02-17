@@ -9,6 +9,7 @@ image: /images/banners/ep05banner.png
 audio: no
 video: NE0tpMQ4kKg
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [parenting, empathy]
 tags: [priorities, give and take, ethics]
 comments: true

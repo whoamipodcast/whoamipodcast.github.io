@@ -9,6 +9,7 @@ image: /images/banners/ep07banner.jpg
 audio: no
 video: no
 speakers: [Aleechea Pitts, William Blacoe]
+transcript: 1
 categories: [faith, divine guidance]
 tags: [inspiration, serenity, certainty]
 comments: true

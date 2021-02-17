@@ -9,6 +9,7 @@ image: /images/banners/ep03banner.jpg
 audio: no
 video: b5AmLemE8rk
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [technology, society]
 tags: [John McAfee, anarchy, influence]
 comments: true

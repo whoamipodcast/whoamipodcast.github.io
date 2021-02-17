@@ -9,6 +9,7 @@ image: /images/banners/ep05banner.png
 audio: no
 video: GoJgcXOhj6k
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [parenting, children]
 tags: [nobody is perfect, sacrifice]
 comments: true

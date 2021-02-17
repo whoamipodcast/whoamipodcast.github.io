@@ -9,6 +9,7 @@ image: /images/banners/ep05banner.png
 audio: no
 video: phlCzUwf_gw
 speakers: [William Blacoe, Steven Guscott]
+transcript: 1
 categories: [child care, parenting]
 tags: [maternity leave, interdependence, father figure]
 comments: true
