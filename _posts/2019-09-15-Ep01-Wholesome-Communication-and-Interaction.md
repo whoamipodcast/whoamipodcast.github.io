@@ -2,6 +2,7 @@
 layout: post
 type: episode
 title: Wholesome Communication and Interaction
+postnumber: 1
 epnumber: 1
 section: 0
 description: In their first podcast episode Steven and William discuss their motivations for asking the age-old question 'Who am I?' and how best to go about their quest of exploring possible paths to an answer.

@@ -2,6 +2,7 @@
 layout: post
 type: episode
 title: A Still Small Voice
+postnumber: 28
 epnumber: 7
 section: 2
 description: Aleechea Pitts is a police chaplain. In this episode she tells us about her path to finding her personal identity in serving others and praising God through writing self-help books, giving workshops, singing, playing music and preaching the gospel of Christ. Her path has been illuminated by a figurative voice that guides her everyday decision-making and provides her life with peace and fulfillment.

@@ -2,6 +2,7 @@
 layout: post
 type: episode
 title: Social Family Norms
+postnumber: 11
 epnumber: 3
 section: 2
 description: What influence does technology have on the fabric of society? Is it a curse or an opportunity for progress? Today William and Steven discuss the effects that artificial has had and might yet have, the dangers and how to ensure that life with machines runs harmoniously with common values.

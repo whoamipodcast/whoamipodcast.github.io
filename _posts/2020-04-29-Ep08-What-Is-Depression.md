@@ -2,6 +2,7 @@
 layout: post
 type: episode
 title: What Is Depression?
+postnumber: 30
 epnumber: 8
 section: 0
 description: One topic that has affected Steven and William personally is that of mental health. In this episode they share their personal experiences of suffering, learning, developing and coping.

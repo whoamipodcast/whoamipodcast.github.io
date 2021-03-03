@@ -2,6 +2,7 @@
 layout: post
 type: episode
 title: Homosexuality in Society
+postnumber: 17
 epnumber: 4
 section: 3
 description: Human sexuality begins to emerge at an early age. Our gender identity takes form and we become involved in complex dynamics, at first with our parents, and later with society in general.

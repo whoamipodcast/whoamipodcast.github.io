@@ -2,6 +2,7 @@
 layout: post
 type: episode
 title: Early Sexual Development
+postnumber: 14
 epnumber: 4
 section: 0
 description: Human sexuality begins to emerge at an early age. Our gender identity takes form and we become involved in complex dynamics, at first with our parents, and later with society in general.

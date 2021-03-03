@@ -2,6 +2,7 @@
 layout: post
 type: episode
 title: Genders, Orientations, Traditions and Expectations
+postnumber: 15
 epnumber: 4
 section: 1
 description: Human sexuality begins to emerge at an early age. Our gender identity takes form and we become involved in complex dynamics, at first with our parents, and later with society in general.

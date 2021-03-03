@@ -2,6 +2,7 @@
 layout: post
 type: episode
 title: The Truth Shall Set You Free
+postnumber: 44
 epnumber: 18
 section: 0
 description: Kade Roundy and I follow up on our previous discussion (Ep. 10) about the principles of libertarian, government, war, ethics and societal values. We approach these topics in the context of humanity's vulnerability to deception. People's beliefs and behaviours can be manipulated by messages of false history, false news-reporting, false scientific publishing, etc. Through various historic examples and personal experiences we reason about ways to rise above the lies and perceive the world in its true form.

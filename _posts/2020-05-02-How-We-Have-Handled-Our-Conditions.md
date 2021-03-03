@@ -2,6 +2,7 @@
 layout: post
 type: episode
 title: How We Have Handled Our Conditions
+postnumber: 33
 epnumber: 8
 section: 3
 description: One topic that has affected Steven and William personally is that of mental health. In this episode they share their personal experiences of suffering, learning, developing and coping.

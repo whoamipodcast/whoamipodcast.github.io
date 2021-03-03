@@ -2,6 +2,7 @@
 layout: post
 type: episode
 title: Creativity and Writing
+postnumber: 4
 epnumber: 1
 section: 3
 description: In their first podcast episode Steven and William discuss their motivations for asking the age-old question 'Who am I?' and how best to go about their quest of exploring possible paths to an answer.

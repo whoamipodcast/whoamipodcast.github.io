@@ -6,9 +6,9 @@ header: fixed
 {% include header.html %}
   </header>
 
-{% assign posts = site.posts | sort: 'section' | sort: 'date' %}
+{% assign posts = site.posts | sort: 'postnumber' %}
 
-{% if page.type == "episode" %}
+{% if page.type contains "episode" %}
   <main id="main" class="main-page">
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
@@ -26,7 +26,7 @@ header: fixed
 {% assign ep = "" %}
 {% assign braked = 0 %}
 {% for post in posts %}
-  {% if post.type == "episode" or post.type == "adventurebook" %}
+  {% if post.type contains "episode" %}
   {% if post.section == 0 %}
   {% if braked == 0 %}
     {% assign ppep = pep %}
@@ -55,7 +55,7 @@ header: fixed
 {% assign sn = -1 %}
 {% assign braked = 0 %}
 {% for post in posts %}
-  {% if post.type == "episode" or post.type == "adventurebook" %}
+  {% if post.type contains "episode" %}
   {% if braked == 0 %}
     {% assign pps = ps %}
     {% assign ps = s %}
@@ -77,7 +77,7 @@ header: fixed
 
 {% assign samount = 0 %}
 {% for post in posts %}
-  {% if post.type == "episode" or post.type == "adventurebook" %}
+  {% if post.type contains "episode" %}
     {% if post.epnumber == page.epnumber %}
 	  {% assign samount = samount | plus:1 %}
 	{% endif %}
@@ -88,7 +88,7 @@ header: fixed
 				  {% if pps != "" %}<a href="{{ site.baseurl }}{{ pps }}"><img class="backward" src="/images/forwardicon_filled.png"></a>{% endif %}
 				  &nbsp;
 				</div>
-				{% if post.type == "adventurebook" %}
+				{% if page.type contains "adventurebook" %}
 					<h3 style="width: 60%; float: left; text-align: center;"><a class="episodelink" href="{{ site.baseurl }}{{ pep.url }}">Adventure Book #{{ page.epnumber }}</a>Part {{ page.section | plus:1 }}</h3>
 				{% else %}
 					<h3 style="width: 60%; float: left; text-align: center;"><a class="episodelink" href="{{ site.baseurl }}{{ pep.url }}">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }}</a>{% if samount > 1 %} {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}{% endif %}</h3>

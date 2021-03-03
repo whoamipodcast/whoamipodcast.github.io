@@ -2,6 +2,7 @@
 layout: post
 type: episode
 title: Personal Experience With Depression
+postnumber: 31
 epnumber: 8
 section: 1
 description: One topic that has affected Steven and William personally is that of mental health. In this episode they share their personal experiences of suffering, learning, developing and coping.
