@@ -28,3 +28,6 @@ Sam Harris has authored books and hosts a podcast on topics such as rationality,
 
 "War Is a Racket" is a famous speech by Major General Smedley Butler
 <a href="https://en.wikipedia.org/wiki/War_Is_a_Racket">https://en.wikipedia.org/wiki/War_Is_a_Racket</a>
+
+Ivor Cummings, also known as the fat emperor, is a biochemical engineer and health expert
+<a href="https://thefatemperor.com/">https://thefatemperor.com</a>

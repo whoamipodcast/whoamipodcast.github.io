@@ -1,9 +1,8 @@
 ---
 layout: post
-type: episode
+type: adventurebook
 title: Can We Survive the Frozen Sahara?
-epnumber: 17.1
-abnumber: 1
+epnumber: 1
 section: 0
 description: For a change, Steve and I are reading from an adventure book in which you can choose your own path: "Heart of Ice" by Dave Morris. Not only are there many ways to die, but there are multiple possible outcomes of the overall story. Follow us on an adventure of travelling through treacherous terrotories including the icy desert of futuristic Northern Africa.
 image: /images/banners/ab01banner.jpg
