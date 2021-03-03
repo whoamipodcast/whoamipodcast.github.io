@@ -125,7 +125,7 @@ header: fixed
 			  <h3 class="boldh3">Sections in this Episode:</h3>
 			  <table border="0">
 			  <tr><td><i class="fa fa-circle" style="font-size:8pt;"></i>&nbsp;&nbsp;This Introduction</td><td></td></tr>
-			  {% for post in posts %}{% if post.type == "episode" %}{% if post.epnumber == page.epnumber %}{% if post.section != 0 %}
+			  {% for post in posts %}{% if post.type contains "episode" %}{% if post.epnumber == page.epnumber %}{% if post.section != 0 %}
 			  <tr>
 			  <td><i class="fa fa-circle" style="font-size:8pt;"></i>&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></td>
 			  <td>{% if post.video %}<span style="white-space:nowrap;">&nbsp;( <a href="https://www.youtube.com/watch?v={{ post.video }}" class="venobox vbox-item" data-vbtype="video" data-autoplay="true"><i class="fa fa-youtube-play" style="font-size:16pt;"></i> Excerpt )</a></span></td>{% endif %}
@@ -211,7 +211,7 @@ header: fixed
       <div class="row">
 {% assign eamount = 0 %}
 {% for post in site.posts %}
-{% if post.type == "episode" %}
+{% if post.type contains "episode" %}
 {% if post.epnumber != page.epnumber %}
 {% if post.section == 0 %}
 {% assign eamount = eamount | plus:1 %}
@@ -288,7 +288,7 @@ header: fixed
 							<h3 style="margin-top: 20px; margin-bottom: 5px;">Appearances:</h3>
 							{% assign appearances_array = "" | split: "/" %}
 							{% for post in posts %}
-							{% if post.type == "episode" %}
+							{% if post.type contains "episode" %}
 							{% if post.section == 0 %}
 							{% if post.speakers contains page.title %}
 							{% capture link %}<a href="{{ site.baseurl }}{{ post.url }}">Ep. {{ post.epnumber }}</a>{% endcapture %}

@@ -9,7 +9,7 @@
         <div class="row">
 {% assign amount = 0 %}
 {% for post in site.posts %}
-{% if post.type == "episode" %}
+{% if post.type contains "episode" %}
 {% if post.section == 0 %}
   {% assign amount = amount | plus:1 %}
   {% if amount > 3 %}
