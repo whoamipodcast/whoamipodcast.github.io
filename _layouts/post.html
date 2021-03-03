@@ -89,7 +89,7 @@ header: fixed
 				  &nbsp;
 				</div>
 				{% if page.type contains "adventurebook" %}
-					<h3 style="width: 60%; float: left; text-align: center;"><a class="episodelink" href="{{ site.baseurl }}{{ pep.url }}">Adventure Book #{{ page.epnumber }}</a>Part {{ page.section | plus:1 }}</h3>
+					<h3 style="width: 60%; float: left; text-align: center;"><a class="episodelink" href="{{ site.baseurl }}{{ pep.url }}">Adventure Book #{{ page.epnumber }}</a> Part {{ page.section | plus:1 }}</h3>
 				{% else %}
 					<h3 style="width: 60%; float: left; text-align: center;"><a class="episodelink" href="{{ site.baseurl }}{{ pep.url }}">Episode #{% if page.epnumber < 10 %}0{% endif %}{{ page.epnumber }}</a>{% if samount > 1 %} {% if page.section == 0 %}Introduction{% else %}Section {{ page.section }}{% endif %}{% endif %}</h3>
 				{% endif %}

@@ -7,8 +7,8 @@ epnumber: 18
 section: 0
 description: Kade Roundy and I follow up on our previous discussion (Ep. 10) about the principles of libertarian, government, war, ethics and societal values. We approach these topics in the context of humanity's vulnerability to deception. People's beliefs and behaviours can be manipulated by messages of false history, false news-reporting, false scientific publishing, etc. Through various historic examples and personal experiences we reason about ways to rise above the lies and perceive the world in its true form.
 image: /images/banners/ep18banner.jpg
-audio: 
-video: 
+audio: s1!e1c0f
+video: 6HMiX8bDA94
 transcript: 0
 speakers: [Kade Roundy, William Blacoe]
 categories: [war, propaganda, truth]
