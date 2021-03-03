@@ -227,7 +227,11 @@ header: fixed
 			  </div>
 			  <div class="excerpt">
 			    <a href="{{ site.baseurl }}{{ post.url }}">
-				  <h5 class="boldh5">Ep. {{ post.epnumber }}{% if post.section > 0 %}({{ post.section }}){% endif %}: {{ post.title }}</h5>
+				  {% if post.type contains "adventurebook" %}
+				  <h5 class="boldh5">Adventure Book #{{ post.abnumber }}:<br>{{ post.title }}</h5>
+					{% else %}
+					<h5 class="boldh5">Ep. {{ post.epnumber }}: {{ post.title }}</h5>
+					{% endif %}
 				</a>
 				<p style="margin-bottom: 0;">{{ post.description | truncatewords:50 | replace: '<b>', '' | replace '</b>', '' }}</p>
 				<p class="fadetowhite">
