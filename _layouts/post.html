@@ -83,10 +83,14 @@ header: fixed
 
 {% assign samount = 0 %}
 {% for post in posts %}
-  {% if post.type contains "episode" %}
+	{% if page.type contains "adventurebook" %}
+		{% if post.abnumber == page.abnumber %}
+			{% assign samount = samount | plus:1 %}
+		{% endif %}
+  {% elsif post.type contains "episode" %}
     {% if post.epnumber == page.epnumber %}
-	  {% assign samount = samount | plus:1 %}
-	{% endif %}
+			{% assign samount = samount | plus:1 %}
+		{% endif %}
   {% endif %}
 {% endfor %}
 			    <div style="width: 20%; float: left; text-align: left; white-space: nowrap;">
@@ -130,11 +134,11 @@ header: fixed
 		{% if page.type contains "adventurebook" %}
 			<!-- list of parts -->
 			<div>
-				<h3 class="boldh3">Parts of this Adventure Book:</h3>
+				<h3 class="boldh3">Overview:</h3>
 				<table border="0">
 					{% for post in posts %}{% if post.type contains "adventurebook" %}{% if post.abnumber == page.abnumber %}
 					<tr>
-					<td><i class="fa fa-circle" style="font-size:8pt;"></i>&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></td>
+					<td><span style="font-size: 1rem; font-weight: bold;">{{ page.section | plus: 1 }}.</span>&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></td>
 					</tr>
 					{% endif %}{% endif %}{% endfor %}
 					</table>
@@ -160,7 +164,7 @@ header: fixed
 			<!-- video -->
 			{% if page.type contains "adventurebook" %}
 				<div>
-					<h3 class="boldh3">Watch Part {{ page.section | plus: 1 }} of Adventure Book #{{ page.abnumber }}:</h3>
+					<h3 class="boldh3">Watch Part {{ page.section | plus: 1 }}:</h3>
 					<div class="aspect-ratio-video">
 							<iframe width="100%" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
@@ -178,7 +182,7 @@ header: fixed
 			<!-- audio -->
 			{% if page.type contains "adventurebook" %}
 				<div>
-					<h3 class="boldh3">Listen to Part {{ page.section | plus: 1 }} of Adventure Book #{{ page.abnumber }}:</h3>
+					<h3 class="boldh3">Listen to Part {{ page.section | plus: 1 }}:</h3>
 					<div>
 						<iframe sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups" scrolling="no" width="100%" height="185" frameborder="0" src="https://embed.radiopublic.com/e?if=who-am-i-6Vy9k9&ge={{ page.audio }}"></iframe>
 					</div>
@@ -247,46 +251,46 @@ header: fixed
 	</div>
 		
 			<!-- related posts -->
-		  <h3 class="boldh3">Other Episodes:</h3>
-      <div class="row">
+			<h3 class="boldh3">Other Episodes:</h3>
+			<div class="row">
 {% assign eamount = 0 %}
 {% for post in site.posts %}
-{% if post.type contains "episode" %}
-{% if post.epnumber != page.epnumber %}
-{% if post.section == 0 %}
-{% assign eamount = eamount | plus:1 %}
-  {% if eamount > 4 %}
-    {% break %}
-  {% endif %}
-		    <div class="col-md-3">
-			<div class="latestepisodes">
-			  <div>
-				<a href="{{ site.baseurl }}{{ post.url }}">
-				  <img class="thumbnail" src="{{ post.image }}">
-				</a>
-			  </div>
-			  <div class="excerpt">
-			    <a href="{{ site.baseurl }}{{ post.url }}">
-				  {% if post.type contains "adventurebook" %}
-				  <h5 class="boldh5">Adventure Book #{{ post.abnumber }}:<br>{{ post.title }}</h5>
-					{% else %}
-					<h5 class="boldh5">Ep. {{ post.epnumber }}: {{ post.title }}</h5>
-					{% endif %}
-				</a>
-				<p style="margin-bottom: 0;">{{ post.description | truncatewords:50 | replace: '<b>', '' | replace '</b>', '' }}</p>
-				<p class="fadetowhite">
-				</p>
-			  </div>
-			  <div style="float: bottom; text-align: center;">
-				<a class="readmorebutton" href="{{ site.baseurl }}{{ post.url }}">Watch / Listen{% if post.transcript > 0 %} / Read{% endif %}</a>
-				<p style="margin-bottom: 25px;"></p>
-			  </div>
-			  <div class="clearboth"></div>
-			</div>
-		    </div>
-{% endif %}
-{% endif %}
-{% endif %}
+	{% if post.type contains "episode" %}
+		{% if post.section == 0 %}
+			{% if post != page %}
+				{% assign eamount = eamount | plus:1 %}
+				{% if eamount > 4 %}
+					{% break %}
+				{% endif %}
+					<div class="col-md-3">
+						<div class="latestepisodes">
+							<div>
+							<a href="{{ site.baseurl }}{{ post.url }}">
+								<img class="thumbnail" src="{{ post.image }}">
+							</a>
+							</div>
+							<div class="excerpt">
+								<a href="{{ site.baseurl }}{{ post.url }}">
+								{% if post.type contains "adventurebook" %}
+									<h5 class="boldh5">Adventure Book #{{ post.abnumber }}:<br>{{ post.title }}</h5>
+								{% else %}
+									<h5 class="boldh5">Ep. {{ post.epnumber }}: {{ post.title }}</h5>
+								{% endif %}
+							</a>
+							<p style="margin-bottom: 0;">{{ post.description | truncatewords:50 | replace: '<b>', '' | replace '</b>', '' }}</p>
+							<p class="fadetowhite">
+							</p>
+							</div>
+							<div style="float: bottom; text-align: center;">
+							<a class="readmorebutton" href="{{ site.baseurl }}{{ post.url }}">Watch / Listen{% if post.transcript > 0 %} / Read{% endif %}</a>
+							<p style="margin-bottom: 25px;"></p>
+							</div>
+							<div class="clearboth"></div>
+						</div>
+					</div>
+			{% endif %}
+		{% endif %}
+	{% endif %}
 {% endfor %}					
 
 		  <!-- comments -->
