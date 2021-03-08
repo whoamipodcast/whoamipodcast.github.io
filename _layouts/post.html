@@ -27,20 +27,26 @@ header: fixed
 {% assign braked = 0 %}
 {% for post in posts %}
   {% if post.type contains "episode" %}
-  {% if post.section == 0 %}
-  {% if braked == 0 %}
-    {% assign ppep = pep %}
-	{% assign pep = ep %}
-	{% assign ep = post %}
-	{% if pep != "" %}
-	{% if pep.epnumber == page.epnumber %}
-	  {% assign thiseppost = post %}
-	  {% assign braked = 1 %}
-	  {% break %}
-	{% endif %}
-	{% endif %}
-  {% endif %}
-  {% endif %}
+		{% if post.section == 0 %}
+			{% if braked == 0 %}
+				{% assign ppep = pep %}
+				{% assign pep = ep %}
+				{% assign ep = post %}
+				{% if pep != "" %}
+					{% if page.type contains "adventurebook" %}
+						{% if pep.abnumber == page.abnumber %}
+							{% assign braked = 1 %}
+							{% break %}
+						{% endif %}
+					{% else %}
+						{% if pep.epnumber == page.epnumber %}
+							{% assign braked = 1 %}
+							{% break %}
+						{% endif %}
+					{% endif %}
+				{% endif %}
+			{% endif %}
+		{% endif %}
   {% endif %}
 {% endfor %}
 {% if braked == 0 %}
@@ -56,16 +62,16 @@ header: fixed
 {% assign braked = 0 %}
 {% for post in posts %}
   {% if post.type contains "episode" %}
-  {% if braked == 0 %}
-    {% assign pps = ps %}
-    {% assign ps = s %}
-	{% assign s = post.url %}
-	{% assign sn = post.section %}
-	{% if ps == page.url %}
-	  {% assign braked = 1 %}
-	  {% break %}
-	{% endif %}
-  {% endif %}
+		{% if braked == 0 %}
+			{% assign pps = ps %}
+			{% assign ps = s %}
+			{% assign s = post.url %}
+			{% assign sn = post.section %}
+			{% if ps == page.url %}
+				{% assign braked = 1 %}
+				{% break %}
+			{% endif %}
+		{% endif %}
   {% endif %}
 {% endfor %}
 {% if braked == 0 %}
@@ -119,38 +125,72 @@ header: fixed
 			</div>
 			<!-- description -->
 			<p>{{ page.description }}</p>
-{% if page.section == 0 %}{% if samount > 1 %}
+{% if page.section == 0 %}
+	{% if samount > 1 %}
+		{% if page.type contains "adventurebook" %}
+			<!-- list of parts -->
+			<div>
+				<h3 class="boldh3">Parts of this Adventure Book:</h3>
+				<table border="0">
+					{% for post in posts %}{% if post.type contains "adventurebook" %}{% if post.abnumber == page.abnumber %}
+					<tr>
+					<td><i class="fa fa-circle" style="font-size:8pt;"></i>&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></td>
+					</tr>
+					{% endif %}{% endif %}{% endfor %}
+					</table>
+			</div>
+		{% else %}
 			<!-- list of sections -->
 			<div>
-			  <h3 class="boldh3">Sections in this Episode:</h3>
-			  <table border="0">
-			  <tr><td><i class="fa fa-circle" style="font-size:8pt;"></i>&nbsp;&nbsp;This Introduction</td><td></td></tr>
-			  {% for post in posts %}{% if post.type contains "episode" %}{% if post.epnumber == page.epnumber %}{% if post.section != 0 %}
-			  <tr>
-			  <td><i class="fa fa-circle" style="font-size:8pt;"></i>&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></td>
-			  <td>{% if post.video %}<span style="white-space:nowrap;">&nbsp;( <a href="https://www.youtube.com/watch?v={{ post.video }}" class="venobox vbox-item" data-vbtype="video" data-autoplay="true"><i class="fa fa-youtube-play" style="font-size:16pt;"></i> Excerpt )</a></span></td>{% endif %}
-			  </tr>
-			  {% endif %}{% endif %}{% endif %}{% endfor %}
-			  </table>
-		    </div>
-{% endif %}{% endif %}
+				<h3 class="boldh3">Sections in this Episode:</h3>
+				<table border="0">
+					<tr><td><i class="fa fa-circle" style="font-size:8pt;"></i>&nbsp;&nbsp;This Introduction</td><td></td></tr>
+					{% for post in posts %}{% if post.type contains "episode" %}{% if post.epnumber == page.epnumber %}{% if post.section != 0 %}
+					<tr>
+					<td><i class="fa fa-circle" style="font-size:8pt;"></i>&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></td>
+					<td>{% if post.video %}<span style="white-space:nowrap;">&nbsp;( <a href="https://www.youtube.com/watch?v={{ post.video }}" class="venobox vbox-item" data-vbtype="video" data-autoplay="true"><i class="fa fa-youtube-play" style="font-size:16pt;"></i> Excerpt )</a></span>{% endif %}</td>
+					</tr>
+					{% endif %}{% endif %}{% endif %}{% endfor %}
+					</table>
+			</div>
+		{% endif %}
+	{% endif %}
+{% endif %}
 {% if page.video %}		  
-            <!-- video -->
-            <div>
-  		      <h3 class="boldh3">Watch{% if page.section == 0 %} the Full Episode{% else %} a Short Excerpt{% endif %}:</h3>
-			  <div class="aspect-ratio-video">
-  			    <iframe width="100%" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			  </div>
-		    </div>
+			<!-- video -->
+			{% if page.type contains "adventurebook" %}
+				<div>
+					<h3 class="boldh3">Watch Part {{ page.section | plus: 1 }} of Adventure Book #{{ page.abnumber }}:</h3>
+					<div class="aspect-ratio-video">
+							<iframe width="100%" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			{% else %}
+				<div>
+					<h3 class="boldh3">Watch{% if page.section == 0 %} the Full Episode{% else %} a Short Excerpt{% endif %}:</h3>
+					<div class="aspect-ratio-video">
+							<iframe width="100%" src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			{% endif %}
 {% endif %}
 {% if page.audio %}
-            <!-- audio -->
-            <div>
-			  <h3 class="boldh3">Listen{% if page.section == 0 %} to the Full Episode{% else %} to a Short Excerpt{% endif %}:</h3>
-			  <div>
-  				<iframe sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups" scrolling="no" width="100%" height="185" frameborder="0" src="https://embed.radiopublic.com/e?if=who-am-i-6Vy9k9&ge={{ page.audio }}"></iframe>
-			  </div>
-		  </div>
+			<!-- audio -->
+			{% if page.type contains "adventurebook" %}
+				<div>
+					<h3 class="boldh3">Listen to Part {{ page.section | plus: 1 }} of Adventure Book #{{ page.abnumber }}:</h3>
+					<div>
+						<iframe sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups" scrolling="no" width="100%" height="185" frameborder="0" src="https://embed.radiopublic.com/e?if=who-am-i-6Vy9k9&ge={{ page.audio }}"></iframe>
+					</div>
+				</div>
+			{% else %}
+				<div>
+					<h3 class="boldh3">Listen{% if page.section == 0 %} to the Full Episode{% else %} to a Short Excerpt{% endif %}:</h3>
+					<div>
+						<iframe sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups" scrolling="no" width="100%" height="185" frameborder="0" src="https://embed.radiopublic.com/e?if=who-am-i-6Vy9k9&ge={{ page.audio }}"></iframe>
+					</div>
+				</div>
+			{% endif %}
 {% endif %}
 {% assign cnt = page.content | strip_newlines %}
 {% if cnt != "" %}
