@@ -23,7 +23,7 @@ class Board{
 		canvas.addEventListener("mousemove", function(event){
 			b.isDragging = b.selectedPiece != null;
 			mouseMoveP = new Vector(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
-			//ta.value = mouseMoveP.x + ", " + mouseMoveP.y;
+			ta.value = "boardPoint: (" + mouseMoveP.x + ", " + mouseMoveP.y + ")\ngridPoint: (" + (Math.round(mouseMoveP.x / 3) / 10) + ", " + (Math.round(mouseMoveP.y / 2.6) / 10) + ")";
 			
 			if(b.selectedPiece){
 				b.selectedPiece.dragOffsetP = mouseMoveP.minus(mouseDownP);
@@ -35,6 +35,13 @@ class Board{
 			b.mouseButton = event.button;
 			mouseDownP = new Vector(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
 			b.selectedPiece = b.getPieceAt(mouseDownP);
+			
+			if(b.selectedPiece){
+				console.log("grid points:");
+				for(var boardPoint of b.selectedPiece.boardPoints){
+					console.log(boardPoint.pointwiseDivide(b.triangleBox));
+				}
+			}
 		}, false);
 		
 		canvas.addEventListener("mouseup", function(event){
@@ -85,6 +92,7 @@ class Board{
 			b.isDragging = false;
 			b.selectedPiece = null;
 			
+			b.savePiecesAsCookie();
 			b.game.checkIfCompletedLevel();
 		}, false);
 		
@@ -315,6 +323,13 @@ class Board{
 		return false;
 	}
 	
+	getPieceThatHasGridPoints(gridPoints){
+		for(var piece of this.pieces){
+			if(piece.boardPoints.length == gridPoints.length && piece.hasGridPoints(gridPoints)) return piece;
+		}
+		return null;
+	}
+	
 	getNeighbouringPieces(piece){
 		var r = new Array();
 		for(var p of this.pieces){
@@ -395,23 +410,39 @@ class Board{
 		this.drawGrid();
 		
 		for(var piece of this.pieces){
-			piece.draw(this.ctx);
+			if(piece !== this.selectedPiece) piece.draw(this.ctx);
 		}
+		if(this.selectedPiece) this.selectedPiece.draw(this.ctx);
 	}
 	
-	toCookieString(){
-		var s = "b" + this.gridSize.x + "," + this.gridSize.y;
+	savePiecesAsCookie(){
+		var cookieString = "";
 		for(var piece of this.pieces){
-			s += piece.toCookieString();
+			cookieString += piece.toCookieString();
 		}
-		return s;
-	}
-	
-	saveAsCookie(){
-		this.cookiesHelper.setCookie("board", this.toCookieString());
-	}
-	
-	usePiecesFromCookie(){
 		
+		this.cookiesHelper.removeCookie("board");
+		this.cookiesHelper.setCookie("board", cookieString);
+	}
+	
+	loadPiecesFromCookie(){
+		var pattern = /(p|v|t|,|[0-9\.]+)/g;
+		var cookieString = this.cookiesHelper.getCookie("board");
+		
+		if(cookieString){
+			var m, p;
+			this.pieces = new Array();
+			
+			m = pattern.exec(cookieString);
+			if(m && (m[1] == "p")){
+				do{
+					p = Piece.fromCookieString(this, pattern, cookieString);
+					this.pieces.push(p);
+				}while(pattern.lastIndex > 0); //continue loop if there is more of cookieString to parse
+			}
+			
+		}else{
+			console.log("Could not load board from cookie!");
+		}
 	}
 }

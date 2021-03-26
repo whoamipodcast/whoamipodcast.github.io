@@ -50,24 +50,92 @@ class Levels{
 		return this.isTargetPolygonFilled();
 	}
 	
+	//breaks down lines into sections the length of a triangle's edge
+	bigLinesToSmallLines(bigLines){
+		var smallLines = new Array();
+		
+		for(var bigLine of bigLines){
+			var fromBp = new Vector(bigLine.from[0], bigLine.from[1]);
+			var toBp = new Vector(bigLine.to[0], bigLine.to[1]);
+			var delta = toBp.minus(fromBp).divide(bigLine.sections);
+			for(var i=0; i<bigLine.sections; i++){
+				toBp = fromBp.plus(delta);
+				smallLines.push([fromBp, toBp]);
+				fromBp = toBp;
+			}
+		}
+		
+		return smallLines;
+	}
+	
 	//do not cross the middle horizontal line
 	completedLevel2(){
 		if(!this.isTargetPolygonFilled()) return false;
 		
-		var lines = new Array();
-		var bp1;
-		var bp2 = new Vector(6 * this.board.triangleBox.x, 6 * this.board.triangleBox.y);
-		var delta = new Vector(this.board.triangleBox.x, 0);
-		for(var i=0; i<8; i++){
-			bp1 = bp2;
-			bp2 = bp1.plus(delta);
-			lines.push([bp1, bp2]);
-		}
+		var bigLines = [{ from: [6, 6], to: [14, 6], sections: 8 }];
+		var smallLines = this.bigLinesToSmallLines(bigLines);
 		
-		return !this.isAnyLineCrossed(lines);
+		return !this.isAnyLineCrossed(smallLines);
 	}
 	
-	completedColorLevel(){
+	//clover
+	completedLevel3(){
+		if(!this.isTargetPolygonFilled()) return false;
+		
+		var bigLines = [
+			{ from: [8, 2], to: [10, 6], sections: 4 },
+			{ from: [14, 6], to: [10, 6], sections: 4 },
+			{ from: [8, 10], to: [10, 6], sections: 4 }
+		];
+		var smallLines = this.bigLinesToSmallLines(bigLines);
+		
+		return !this.isAnyLineCrossed(smallLines);
+	}
+	
+	//bee hive
+	completedLevel4(){
+		if(!this.isTargetPolygonFilled()) return false;
+		
+		var bigLines = [
+			{ from: [8, 2], to: [8.5, 3], sections: 1 },
+			{ from: [12, 2], to: [11.5, 3], sections: 1 },
+			{ from: [14, 6], to: [13, 6], sections: 1 },
+			{ from: [12, 10], to: [11.5, 9], sections: 1 },
+			{ from: [8, 10], to: [8.5, 9], sections: 1 },
+			{ from: [6, 6], to: [7, 6], sections: 1 },
+			{ from: [7, 6], to: [8.5, 3], sections: 3 },
+			{ from: [8.5, 3], to: [11.5, 3], sections: 3 },
+			{ from: [11.5, 3], to: [13, 6], sections: 3 },
+			{ from: [13, 6], to: [11.5, 9], sections: 3 },
+			{ from: [11.5, 9], to: [8.5, 9], sections: 3 },
+			{ from: [8.5, 9], to: [7, 6], sections: 3 }
+		];
+		var smallLines = this.bigLinesToSmallLines(bigLines);
+		
+		return !this.isAnyLineCrossed(smallLines);
+	}
+	
+	//ice cream cones
+	completedLevel5(){
+		if(!this.isTargetPolygonFilled()) return false;
+		
+		var bigLines = [
+			{ from: [8, 2], to: [10, 6], sections: 4 },
+			{ from: [12, 2], to: [10, 6], sections: 4 },
+			{ from: [14, 6], to: [10, 6], sections: 4 },
+			{ from: [12, 10], to: [10, 6], sections: 4 },
+			{ from: [8, 10], to: [10, 6], sections: 4 },
+			{ from: [6, 6], to: [10, 6], sections: 4 }
+		];
+		var smallLines = this.bigLinesToSmallLines(bigLines);
+		
+		return !this.isAnyLineCrossed(smallLines);
+	}
+	
+	//connected colors
+	completedLevel6(){
+		if(!this.isTargetPolygonFilled()) return false;
+		
 		var amountOfPieces = this.board.pieces.length;
 		
 		//assign each piece its own group
@@ -99,5 +167,50 @@ class Levels{
 		
 		//count amount of groups
 		return distinctGroupIndices.length == COLORS.length;
+	}
+	
+	//flower power
+	completedLevel7(){
+		if(!this.isTargetPolygonFilled()) return false;
+		
+		var bigLines = [
+			{ from: [8, 2], to: [9.5, 5], sections: 3 },
+			{ from: [12, 2], to: [10.5, 5], sections: 3 },
+			{ from: [14, 6], to: [11, 6], sections: 3 },
+			{ from: [12, 10], to: [10.5, 7], sections: 3 },
+			{ from: [8, 10], to: [9.5, 7], sections: 3 },
+			{ from: [6, 6], to: [9, 6], sections: 3 },
+			{ from: [9.5, 5], to: [10.5, 5], sections: 1 },
+			{ from: [10.5, 5], to: [11, 6], sections: 1 },
+			{ from: [11, 6], to: [10.5, 7], sections: 1 },
+			{ from: [10.5, 7], to: [9.5, 7], sections: 1 },
+			{ from: [9.5, 7], to: [9, 6], sections: 1 },
+			{ from: [9, 6], to: [9.5, 5], sections: 1 }
+		];
+		var smallLines = this.bigLinesToSmallLines(bigLines);
+		
+		return !this.isAnyLineCrossed(smallLines);
+	}
+	
+	//william
+	completedLevel8(){
+		if(!this.isTargetPolygonFilled()) return false;
+		
+		var requiredPieces = [
+			[[6, 6], [5.5, 5], [5, 4], [6, 4], [7, 4], [8, 4], [7.5, 5], [7, 6], [6.5, 5]],
+			[[7, 6], [8, 6], [8.5, 5], [9, 4], [8, 4], [7.5, 5]],
+			[[9, 6], [9.5, 7], [9, 8], [8.5, 7], [8, 6], [8.5, 5], [9, 4], [10, 4], [9.5, 5]],
+			[[10.5, 5], [10, 4], [9.5, 5], [9, 6], [9.5, 7], [10.5, 7], [10, 6]],
+			[[12, 4], [11.5, 5], [11, 6], [10.5, 7], [10, 6], [10.5, 5], [11, 4]],
+			[[10.5, 7], [11, 6], [11.5, 5], [12, 6], [12.5, 7], [11.5, 7]],
+			[[14, 6], [13, 6], [12, 6], [11.5, 5], [12, 4], [12.5, 5], [13, 4], [13.5, 5]]
+		];
+		
+		for(var gridPoints of requiredPieces){
+			var p = this.board.getPieceThatHasGridPoints(gridPoints);
+			if(p == null) return false;
+		}
+		
+		return true;
 	}
 }

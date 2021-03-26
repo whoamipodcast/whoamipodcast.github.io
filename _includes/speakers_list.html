@@ -1,41 +1,40 @@
     <section id="speakers" class="wow fadeInUp">
       <div class="container">
         <div class="section-header">
-          <h2>Podcast Speakers</h2>
+          <h2>Recent Speakers</h2>
           <p>Get to know the speakers on our podcast.</p>
         </div>
         <div class="row">		
-{% for post in site.posts %}
-  {% if post.type contains "speaker" %}
+{% assign speakers = site.posts | where: "type", "speaker" | sort: 'date' | reverse | slice: 0, 3 %}
+{% for speaker in speakers %}
 		  <div class="col-md-4">
             <div class="speaker">
-			  <a href="{{ site.baseurl }}{{ post.url }}">
-                <img src="{{ post.image }}" alt="{{ post.title }}" style="width: 100%; aspect-ratio: 540/720; object-fit: cover; object-position: 50% 0%;">
+			  <a href="{{ site.baseurl }}{{ speaker.url }}">
+                <img src="{{ speaker.image }}" alt="{{ speaker.title }}" style="width: 100%; aspect-ratio: 540/720; object-fit: cover; object-position: 50% 0%;">
 			  </a>
               <div class="details">
-                <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a></h3>
-                <p>{{ post.title }}</p>
+                <h3><a href="{{ site.baseurl }}{{ speaker.url }}">{{ speaker.name }}</a></h3>
+                <p>{{ speaker.title }}</p>
                 <div class="social">
-    {% if post.twitter %}
-                  <a href="https://twitter.com/{{ post.twitter }}"><i class="fa fa-twitter"></i></a>
+    {% if speaker.twitter %}
+                  <a href="https://twitter.com/{{ speaker.twitter }}"><i class="fa fa-twitter"></i></a>
     {% endif %}
-    {% if post.facebook %}
-                  <a href="https://facebook.com/{{ post.facebook }}"><i class="fa fa-facebook-square"></i></a>
+    {% if speaker.facebook %}
+                  <a href="https://facebook.com/{{ speaker.facebook }}"><i class="fa fa-facebook-square"></i></a>
     {% endif %}
-    {% if post.instagram %}
-                  <a href="https://instagram.com/{{ post.instagram }}"><i class="fa fa-instagram"></i></a>
+    {% if speaker.instagram %}
+                  <a href="https://instagram.com/{{ speaker.instagram }}"><i class="fa fa-instagram"></i></a>
     {% endif %}
-    {% if post.linkedin %}
-                  <a href="https://linkedin.com/in/{{ post.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
+    {% if speaker.linkedin %}
+                  <a href="https://linkedin.com/in/{{ speaker.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
     {% endif %}
-    {% if post.homepage %}
-                  <a href="{{ post.homepage }}"><i class="fa fa-link"></i></a>
+    {% if speaker.homepage %}
+                  <a href="{{ speaker.homepage }}"><i class="fa fa-link"></i></a>
     {% endif %}
                 </div>
               </div>
             </div>
           </div>
-  {% endif %}
 {% endfor %}
         </div>
       </div>

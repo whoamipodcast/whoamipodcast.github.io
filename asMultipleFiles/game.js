@@ -4,7 +4,13 @@ class Game{
 		this.cookiesHelper = cookiesHelper;
 		this.board = new Board(this, cookiesHelper, canvas, gridSize);
 		this.board.useStandardTargetPolygon();
-		this.board.useStandardPieces();
+		
+		if(cookiesHelper.hasCookie("board")){
+			this.board.loadPiecesFromCookie();
+		}else{
+			this.board.useStandardPieces();
+		}
+		this.board.savePiecesAsCookie();
 
 		this.levels = new Levels(this.board);
 		
@@ -23,11 +29,11 @@ class Game{
 				}
 			}
 			
-			ta.value = "mouseDown: " + g.board.isMouseDown + "\nmouseHeldDown: " + g.board.isMouseHeldDown + "\ndragging: " + g.board.isDragging + "\nmouseDownDuration: " + g.board.mouseDownDuration + "\nis a piece selected: " + (g.board.selectedPiece != null);
+			//ta.value = "mouseDown: " + g.board.isMouseDown + "\nmouseHeldDown: " + g.board.isMouseHeldDown + "\ndragging: " + g.board.isDragging + "\nmouseDownDuration: " + g.board.mouseDownDuration + "\nis a piece selected: " + (g.board.selectedPiece != null);
 		}, interval);
 	}
 	
 	checkIfCompletedLevel(){
-		console.log("is level completed? " + this.levels.completedColorLevel());
+		console.log("is level completed? " + this.levels.completedLevel8());
 	}
 }

@@ -1,19 +1,20 @@
 class Piece{
-	constructor(board, rawGridPoints, rawTriangles, color){
+	constructor(board, gridPoints, triangles, color){
 		this.board = board;
 		this.color = color;
 		this.borderColor = "black";
 		
 		this.boardPoints = new Array();
-		for(var rawGridPoint of rawGridPoints){
-			this.boardPoints.push(new Vector(rawGridPoint[0] * board.triangleBox.x, rawGridPoint[1] * board.triangleBox.y));
+		for(var gridPoint of gridPoints){
+			if(Array.isArray(gridPoint)) gridPoint = new Vector(gridPoint[0], gridPoint[1]);
+			this.boardPoints.push(gridPoint.pointwiseTimes(board.triangleBox));
 		}
 		
 		this.dragOffsetP = new Vector(0, 0);
 		
 		this.triangles = new Array();
-		for(var rawTriangle of rawTriangles){
-			var triangle = new Triangle(board, rawTriangle[0], rawTriangle[1]);
+		for(var triangle of triangles){
+			if(Array.isArray(triangle)) triangle = new Triangle(board, triangle[0], triangle[1]);
 			this.triangles.push(triangle);
 		}
 	}
@@ -211,5 +212,68 @@ class Piece{
 			s += tr.toCookieString();
 		}
 		return s;
+	}
+	
+	static fromCookieString(board, pattern, cookieString){
+		var m, c, v, t;
+		var vs = new Array();
+		var ts = new Array();
+		
+		m = pattern.exec(cookieString); //0, 1, 2, ... -> color
+		if(m){
+			c = parseInt(m[1]);
+			if(COLORS[c]){
+				while(true){
+					m = pattern.exec(cookieString);
+					
+					//null -> finished parsing cookieString, or "p" -> next piece
+					if(m == null || m[1] == "p"){
+						return new Piece(board, vs, ts, COLORS[c]);
+					
+					}else{
+						
+						//next grid point
+						if(m[1] == "v"){
+							v = Vector.fromCookieString(pattern, cookieString);
+							if(v){
+								vs.push(v);
+							}else{
+								return null;
+							}
+							
+						//next triangle
+						}else if(m[1] == "t"){
+							t = Triangle.fromCookieString(board, pattern, cookieString);
+							if(t){
+								ts.push(t);
+							}else{
+								return null;
+							}
+							
+						}
+					}
+				}
+			}
+		}
+		return null;
+	}
+	
+	hasGridPoints(gridPoints){
+		for(var gridPoint of gridPoints){
+
+			if(Array.isArray(gridPoint)) gridPoint = new Vector(gridPoint[0], gridPoint[1]);
+			var boardPoint = gridPoint.pointwiseTimes(this.board.triangleBox);
+			
+			var hasGridPoint = false;
+			for(var thisBoardPoint of this.boardPoints){
+				if(thisBoardPoint.equals(boardPoint)){
+					hasGridPoint = true;
+					break;
+				}
+			}
+			if(!hasGridPoint) return false;
+			
+		}
+		return true;
 	}
 }

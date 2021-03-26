@@ -21,28 +21,22 @@ class CookiesHelper{
 	}
 	
 	setCookie(attribute, value){
-    //document.cookie = attribute + "=" + value + ";";
-		
-		var today = new Date();
-		var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
-
-		function setCookie(name, value)
-		{
-			document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
-		}
+    document.cookie = attribute + "=" + value + ";";
+		this.refresh();
 	}
 	
 	removeCookie(attribute){
     document.cookie = attribute + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+		this.refresh();
 	}
 	
 	removeAllCookies(){
-		for(var attribute of this.cookies){
-			this.removeAllCookie(attribute);
+		for(var attribute in this.cookies){
+			this.removeCookie(attribute);
 		}
 	}
 	
-	get(attribute){
+	getCookie(attribute){
 		return attribute in this.cookies ? this.cookies[attribute] : null;
 	}
 }

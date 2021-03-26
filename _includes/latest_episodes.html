@@ -17,28 +17,7 @@
   {% endif %}
 		  <div class="col-md-4">
 			<div class="latestepisodes">
-			  <div>
-				<a href="{{ site.baseurl }}{{ post.url }}">
-				  <img class="thumbnail" src="{{ post.image }}">
-				</a>
-			  </div>
-			  <div class="excerpt">
-			    <a href="{{ site.baseurl }}{{ post.url }}">
-				  {% if post.type contains "adventurebook" %}
-				  <h5 class="boldh5">Adventure Book #{{ post.abnumber }}:<br>{{ post.title }}</h5>
-					{% else %}
-					<h5 class="boldh5">Ep. {{ post.epnumber }}: {{ post.title }}</h5>
-					{% endif %}
-				</a>
-				<p style="margin-bottom: 0;">{{ post.description | truncatewords:50 | replace: '<b>', '' | replace '</b>', '' }}</p>
-				<p class="fadetowhite">
-				</p>
-			  </div>
-			  <div style="float: bottom; text-align: center;">
-				<a class="readmorebutton" href="{{ site.baseurl }}{{ post.url }}">Watch / Listen{% if post.transcript > 0 %} / Read{% endif %}</a>
-				<p style="margin-bottom: 25px;"></p>
-			  </div>
-			  <div class="clearboth"></div>
+			  {% include episodebox.html %}
 			</div>
 		  </div>
 {% endif %}

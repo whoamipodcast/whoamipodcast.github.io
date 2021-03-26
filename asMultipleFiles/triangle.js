@@ -1,8 +1,10 @@
 class Triangle{
-	constructor(board, isPointingUp, rawLeftmostGridP){
+	constructor(board, isPointingUp, leftmostGridP){
 		this.board = board;
 		this.isPointingUp = isPointingUp;
-		this.leftmostBoardP = new Vector(rawLeftmostGridP[0] * board.triangleBox.x, rawLeftmostGridP[1] * board.triangleBox.y);
+		
+		if(Array.isArray(leftmostGridP)) leftmostGridP = new Vector(leftmostGridP[0], leftmostGridP[1]);
+		this.leftmostBoardP = leftmostGridP.pointwiseTimes(board.triangleBox);
 		
 		this.refreshBoardPoints();
 	}
@@ -115,5 +117,23 @@ class Triangle{
 	
 	toCookieString(){
 		return "t" + (this.isPointingUp ? 1 : 0) + this.leftmostBoardP.pointwiseDivide(this.board.triangleBox).toCookieString();
+	}
+	
+	static fromCookieString(board, pattern, cookieString){
+		var m, b, v, t;
+		
+		m = pattern.exec(cookieString); //0/1 -> isPointingUp
+		if(m){
+			b = m[1] == "1";
+			m = pattern.exec(cookieString); //v -> leftmostBoardP
+			if(m && m[1] == "v"){
+				v = Vector.fromCookieString(pattern, cookieString);
+				t = new Triangle(board, b, v);
+				if(t){
+					return t;
+				}
+			}
+		}
+		return null;
 	}
 }
