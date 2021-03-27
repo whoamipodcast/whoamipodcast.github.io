@@ -32,6 +32,10 @@ class Vector{
 		return this.x * this.x + this.y * this.y;
 	}
 	
+	round(){
+		return new Vector(Math.round(this.x), Math.round(this.y));
+	}
+	
 	equals(v){
 		return this.x === v.x && this.y === v.y;
 	}

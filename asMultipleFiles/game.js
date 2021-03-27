@@ -34,6 +34,6 @@ class Game{
 	}
 	
 	checkIfCompletedLevel(){
-		console.log("is level completed? " + this.levels.completedLevel8());
+		//console.log("is level completed? " + this.levels.completedLevel8());
 	}
 }

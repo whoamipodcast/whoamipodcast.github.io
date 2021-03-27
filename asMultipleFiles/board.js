@@ -2,7 +2,10 @@ class Board{
 	constructor(game, cookiesHelper, canvas, gridSize){
 		this.game = game;
 		this.cookiesHelper = cookiesHelper;
+		
 		this.canvas = canvas;
+		this.canvasSize = new Vector(canvas.width, canvas.height);
+		this.canvasOffset = new Vector(canvas.offsetLeft, canvas.offsetTop);
 		this.ctx = canvas.getContext("2d");
 		
 		this.gridSize = gridSize;
@@ -20,39 +23,35 @@ class Board{
 		this.mouseDownDuration = 0;
 		var mouseDownP, mouseMoveP;
 		
-		canvas.addEventListener("mousemove", function(event){
+		var onMouseMove = function(event){
 			b.isDragging = b.selectedPiece != null;
-			mouseMoveP = new Vector(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
-			ta.value = "boardPoint: (" + mouseMoveP.x + ", " + mouseMoveP.y + ")\ngridPoint: (" + (Math.round(mouseMoveP.x / 3) / 10) + ", " + (Math.round(mouseMoveP.y / 2.6) / 10) + ")";
+			mouseMoveP = b.getMouseBoardPoint(event);
+			//console.log("mouse move: " + mouseMoveP);
 			
 			if(b.selectedPiece){
 				b.selectedPiece.dragOffsetP = mouseMoveP.minus(mouseDownP);
 			}
-		}, false);
+		}
 		
-		canvas.addEventListener("mousedown", function(event){
+		var onMouseDown = function(event){
 			b.isMouseDown = true;
-			b.mouseButton = event.button;
-			mouseDownP = new Vector(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+			mouseDownP = b.getMouseBoardPoint(event);
+			console.log(event);
+			console.log("mouse down: " + mouseDownP);
 			b.selectedPiece = b.getPieceAt(mouseDownP);
-			
-			if(b.selectedPiece){
-				console.log("grid points:");
-				for(var boardPoint of b.selectedPiece.boardPoints){
-					console.log(boardPoint.pointwiseDivide(b.triangleBox));
-				}
-			}
-		}, false);
+		}
 		
-		canvas.addEventListener("mouseup", function(event){
+		var onMouseUp = function(event){
 			b.isMouseDown = false;
+			console.log(event);
+			console.log("mouse up");
 			
 			//if mouse was not held down
 			if(!b.isMouseHeldDown){
 				//after dragging
 				if(b.isDragging){
 					if(b.selectedPiece){
-						var mouseUpP = new Vector(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+						var mouseUpP = b.getMouseBoardPoint(event);
 						
 						b.selectedPiece.dragOffsetP = new Vector(0, 0);
 						b.selectedPiece.translate(mouseUpP.minus(mouseDownP));
@@ -94,12 +93,46 @@ class Board{
 			
 			b.savePiecesAsCookie();
 			b.game.checkIfCompletedLevel();
-		}, false);
+		}
 		
 		canvas.addEventListener("contextmenu", function(event){
 			//prevent context menu from popping up
 			event.preventDefault();
 		}, false);
+		
+		canvas.addEventListener("mousedown", onMouseDown, false);
+		canvas.addEventListener("touchstart", onMouseDown, false);
+		
+		canvas.addEventListener("mouseup", onMouseUp, false);
+		canvas.addEventListener("touchend", onMouseUp, false);
+		
+		canvas.addEventListener("mousemove", onMouseMove, false);
+		canvas.addEventListener("touchmove", onMouseMove, false);
+	}
+	
+	getMouseBoardPoint(mouseEvent){
+		var clientP;
+		console.log("mouse event type: " + mouseEvent.type);
+		switch(mouseEvent.type.substring(0, 5)){
+			case "mouse":
+				clientP = new Vector(mouseEvent.clientX, mouseEvent.clientY);
+				this.mouseButton = mouseEvent.button;
+				break;
+			case "touch":
+				if("touches" in mouseEvent){
+					var touch = mouseEvent.touches[0]; // || mouseEvent.changedTouches[0];
+					clientP = new Vector(touch.clientX, touch.clientY);
+					this.mouseButton = 0;
+					break;
+				}else{
+					return null;
+				}
+		}
+		var mouseP = clientP.minus(this.canvasOffset);
+		var canvasStyle = window.getComputedStyle(this.canvas);
+		var canvasStyleSize = new Vector(parseInt(canvasStyle.getPropertyValue("width")), parseInt(canvasStyle.getPropertyValue("height")));
+		
+		return mouseP.pointwiseTimes(this.canvasSize).pointwiseDivide(canvasStyleSize).round();
 	}
 	
 	flipSelectedPiece(){
