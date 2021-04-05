@@ -1,0 +1,32 @@
+---
+layout: page
+title: Podcast Speakers
+permalink: /speakers/
+---
+{% include get_speakers.html %}
+{% for speaker in speakers %}
+	
+	<div class="speakerbox">
+		<a href="{{ site.baseurl }}{{ speaker.url }}">
+			<img src="{{ speaker.image }}" alt="{{ speaker.title }}" style="width: 200px; height: 200px; object-fit: cover; object-position: 50% 0%; padding: 15px;">
+		</a>
+		<table style="display: inline; vertical-align: top;">
+			<tbody>
+				<tr><td style="padding-top: 20px;">
+					<a href="{{ site.baseurl }}{{ speaker.url }}" style="color: black;">
+					<span style="text-transform: uppercase; font-size: 30px; font-weight: 600;">{{ speaker.title }}</span><span style="font-size: 25px; font-weight: 500;"> - {{ speaker.vocation }}</span>
+					</a>
+				</td></tr>
+				
+				{% assign episodes = site.posts | where: "type", "episode" | where: "section", 0 | sort: "date" | reverse %}
+				{% for episode in episodes %}
+					{% if episode.speakers contains speaker.title %}
+						<tr><td>
+							<a href="{{ site.baseurl }}{{ episode.url }}">Ep. {{ episode.epnumber }} - {{ episode.title }}</a>
+						</td></tr>
+					{% endif %}
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+{% endfor %}

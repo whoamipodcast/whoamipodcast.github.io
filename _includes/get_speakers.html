@@ -1,0 +1,19 @@
+{% assign speakers = "" | split: "," %}
+{% assign speaker_names = "" | split: "," %}
+{% assign all_speakers = site.posts | where: "type", "speaker" %}
+{% assign host_names = site.posts | where: "type", "host" | map: "title" %}
+{% assign posts = site.posts | where: "type", "episode" | sort: "date" | reverse %}
+{% for post in posts %}
+	{% for speaker in all_speakers %}
+		{% for speaker_name in post.speakers %}
+			{% if speaker_name == speaker.title %}
+			{% unless speakers contains speaker %}
+			{% unless host_names contains speaker_name %}
+				{% assign speakers = speakers | push: speaker %}
+				{% assign speaker_names = speaker_names | push: speaker_name %}
+			{% endunless %}
+			{% endunless %}
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+{% endfor %}

@@ -1,9 +1,0 @@
----
-layout: page
-title: People Page
-permalink: /people/
----
-{% assign speakers = site.posts | where: "type", "speaker" | sort: 'date' %}
-{% for speaker in speakers %}
-	{{ speaker.title }}<br>
-{% endfor %}
