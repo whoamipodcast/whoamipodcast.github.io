@@ -1,6 +1,16 @@
 <head>
   
-  <title>{% if page.type contains "adventurebook" %}Adventure Book #{{ page.abnumber }}{% else %}Ep. #{{ page.epnumber }}{% endif %}{% if page.section > 0 %} ({{ page.section }}){% endif %}{% if page.title %}: {{ page.title }} – {% endif %}{{ site.name }}</title>
+<title>
+{% if page.type contains "adventurebook" %}
+	Adv. Book #{{ page.abnumber }}({{ page.part }}): 
+{% elsif page.type contains "episode" %}
+	Ep. #{{ page.epnumber }}{% if page.section > 0 %} ({{ page.section }}){% endif %}: 
+{% endif %}
+
+{% if page.title %}{{ page.title }} – {% endif %}
+
+{{ site.name }}
+</title>
   
 {% include meta.html %}
 
