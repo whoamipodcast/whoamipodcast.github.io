@@ -1,0 +1,73 @@
+<main id="main" class="main-page">
+	<section id="speakers-details" class="wow fadeIn">
+		<div class="container">
+			<div class="row">
+			
+				<!-- left column -->
+				<div class="col-md-9">
+				
+				<!-- image and title -->
+				<div>
+					<img src="{{ page.image }}" style="max-width: 100%; max-height: 300px; margin-left: auto; margin-right: auto; display: block;">
+					<h1 style="font-weight: bold; margin-top: 20px; text-align: center;">{{ page.title }}</h1>
+				</div>
+				
+				<!-- meta data -->
+				<div class="entry-meta">
+					<span><i class="fa fa-calendar"></i>{{ page.date | date: "%e %b %Y" }}</span>
+					{% if page.categories.size > 0 %}
+					<span class="tag-meta">
+						<i class="fa fa-folder-o"></i>
+						<a href="#">{{ page.categories | join: ', ' }}</a>
+					</span>
+					{% endif %}
+					{% if page.tags.size > 0 %}
+					<span>
+						<i class="fa fa-tags"></i>
+						<a href="#">{{ page.tags | join: ', ' }}</a>
+					</span>
+					{% endif %}
+				</div>
+				{{ content }}
+				</div>
+				<!-- left column ends -->
+				
+		<!-- right column -->
+		<div class="col-md-3">
+{% assign amount_of_authors = page.author | split: "," | size %}
+			<div style="font-size:18pt; text-decoration: underline; margin-top: 20px;">Author{% if amount_of_authors > 1 %}s{% endif %}:</div>
+{% assign authors = site.posts | where: "type", "author" %}
+{% for author in authors %}
+{% if page.author contains author.title %}
+			<a href="{{ site.baseurl }}{{ author.url }}" style="width: inherit; height: auto;">
+				<img src="{{ author.image }}" style="width: inherit; height: auto; margin-top: 20px;">
+				<div style="font-size: 16pt; text-align: center;">{{ author.title }}</div>
+			</a>
+{% endif %}
+{% endfor %}
+		</div>
+		<!-- right column ends -->
+			</div>
+			<!-- related posts -->
+			<h3 class="boldh3">Other Blog Posts:</h3>
+			<div class="row">
+{% assign blogposts = site.posts | where: "type", "blogpost" | sort: "date" | reverse | slice: 0, 5 %}
+{% for blogpost in blogposts %}
+	{% unless blogpost.url == page.url %}
+				<div class="col-md-3">
+					<div class="latestepisodes">
+						{% include blogpostbox.html %}
+					</div>
+				</div>
+	{% endunless %}
+{% endfor %}
+			</div>
+			
+		  <!-- comments -->
+			<div class="row">
+				<h3 class="boldh3">Leave a Comment:</h3>
+{% include disqus.html %}
+      </div>
+		</div>
+    </section>
+  </main>

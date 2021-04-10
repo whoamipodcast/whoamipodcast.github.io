@@ -7,9 +7,9 @@
   <!-- OpenGraph SEO -->
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:type" content="article">
-{% if page.type contains "episode" %}<meta property="og:title" content="Episode {{ page.epnumber }} - {{ page.title }}" />
-{% elsif page.type contains "speaker" %}<meta property="og:title" content="{{ page.name }} - {{ page.title }}" />
-{% else %}<meta property="og:title" content="{{ page.title }}" />
+{% if page.type contains "episode" %}	<meta property="og:title" content="Episode {{ page.epnumber }} - {{ page.title }}" />
+{% elsif page.type contains "speaker" %}	<meta property="og:title" content="{{ page.name }} - {{ page.title }}" />
+{% else %}	<meta property="og:title" content="{{ page.title }}" />
 {% endif %}
   <meta property="og:description" content="{{ page.description }}" />
   <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
@@ -25,9 +25,9 @@
   
   <!-- Twitter SEO -->
   <meta name="twitter:card" content="summary_large_image"/>
-{% if page.type contains "episode" %}<meta name="twitter:title" content="Episode {{ page.epnumber }} - {{ page.title }}" />
-{% elsif page.type contains "speaker" %}<meta name="twitter:title" content="{{ page.name }} - {{ page.title }}" />
-{% else %}<meta name="twitter:title" content="{{ page.title }}" />
+{% if page.type contains "episode" %}	<meta name="twitter:title" content="Episode {{ page.epnumber }} - {{ page.title }}" />
+{% elsif page.type contains "speaker" %}	<meta name="twitter:title" content="{{ page.name }} - {{ page.title }}" />
+{% else %}	<meta name="twitter:title" content="{{ page.title }}" />
 {% endif %}
   <meta name="twitter:description" content="{{ page.description }}" />
   <meta name="twitter:site" content="@PodcastWhoami" />

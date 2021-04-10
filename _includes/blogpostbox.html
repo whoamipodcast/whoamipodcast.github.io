@@ -1,0 +1,18 @@
+<div>
+<a href="{{ site.baseurl }}{{ blogpost.url }}">
+	<img class="thumbnail" src="{{ blogpost.image }}">
+</a>
+</div>
+<div class="excerpt">
+	<a href="{{ site.baseurl }}{{ blogpost.url }}" style="text-align: center;">
+		<h5 class="boldh5">{{ blogpost.title }}</h5>
+	</a>
+<p style="margin-bottom: 0;">{{ blogpost.content | truncatewords:50 }}</p>
+<p class="fadetowhite" style="margin-bottom: 0px;">
+</p>
+</div>
+<div style="float: bottom; text-align: center; min-width: 50px;">
+<a class="readmorebutton" href="{{ site.baseurl }}{{ blogpost.url }}">&nbsp;&nbsp;Read&nbsp;&nbsp;</a>
+<p style="margin-bottom: 25px;"></p>
+</div>
+<div class="clearboth"></div>
