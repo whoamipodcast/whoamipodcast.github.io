@@ -7,7 +7,7 @@ section: 0
 part: 3
 description: Having reached the docks at Venis, Steven and William set out to cross the Mediterranean sea to reach Egypt. Will they be able to buy the items they need to cross the freezing Sahara? Or will they run into even more trouble than in the past? They have very little money to go on. But perhaps the peculiar ID card that they found previously will again grant them access to a local facility of the elite Compass Club.
 image: /images/banners/ab01banner.jpg
-audio: no
+audio: s1!a0b4b
 video: _1Jk1_Vlhx8
 speakers: [William Blacoe, Steven Guscott]
 categories: [RPG, adventure-book]
