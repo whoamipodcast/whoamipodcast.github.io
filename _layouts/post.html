@@ -6,12 +6,14 @@ header: fixed
 {% include header.html %}
   </header>
 
-{% assign posts = site.posts | sort: "date" %}
+
 
 {% if page.type contains "speaker" %}
 	{% include speaker.html %}
 {% elsif page.type contains "episode" %}
 	{% include episode.html %}
+{% elsif page.type contains "blog" %}
+	{% include blogpost.html %}
 {% endif %}
 
 {% include sharebuttons.html %}
