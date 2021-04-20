@@ -1,6 +1,6 @@
 ---
 layout: post
-type: [host, speaker]
+type: [host, speaker, author]
 title: William Blacoe
 image: /images/speakers/William540x720.min.jpg
 vocation: Co-Host of the Podcast

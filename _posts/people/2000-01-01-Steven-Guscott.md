@@ -1,6 +1,6 @@
 ---
 layout: post
-type: [host, speaker]
+type: [host, speaker, author]
 title: Steven Guscott
 image: /images/speakers/Steven540x720.min.jpg
 vocation: Co-Host of the Podcast
