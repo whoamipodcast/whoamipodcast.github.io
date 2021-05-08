@@ -9,7 +9,7 @@ image: /images/banners/ep20banner.jpg
 audio: s1!8dec9
 video: rTVtEkHkXyg
 transcript: 0
-speakers: [Falk Kästle, William Blacoe]
+speakers: [Falk Kastell, William Blacoe]
 categories: [intuition, nature, wellness]
 tags: []
 comments: true
