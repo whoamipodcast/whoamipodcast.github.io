@@ -2,12 +2,12 @@
 layout: post
 type: speaker
 title: Falk Kästle
-image: /images/speakers/FalkKästle.png
+image: /images/speakers/FalkKaestle.png
 vocation: Artist
 ---
-Falk Kästle was born in 1986 in Heidelberg. He studied Communications Design in Mannheim. He studied Photography and Painting in England.
+Falk Kästle was born in 1986 in Heidelberg, Germany. He studied Communications Design in Mannheim. He studied Photography and Painting in England.
 
-This whole-blood artist lives in Mannheim and works for local and international clients.
+This full-blooded artist lives in Mannheim and works for local and international clients.
 
 As a phtographer he impresses through his artistic proficiency and human depth which flow into his works.
 
