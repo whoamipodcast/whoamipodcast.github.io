@@ -23,5 +23,5 @@ Polish pastor in Calgary, Canada using his voice to shun uninvited police:
 Markus Streinz is a transformation coach providing personal liberation:  
 <a href="https://liberator-academy.com">https://liberator-academy.com</a>
 
-Robert Kiyosaki teach financial intelligence in his book, including "Rich Dad, Poor Dad":  
+Robert Kiyosaki teaches financial intelligence in his books, including "Rich Dad, Poor Dad":  
 <a href="https://en.wikipedia.org/wiki/Rich_Dad_Poor_Dad">https://en.wikipedia.org/wiki/Rich_Dad_Poor_Dad</a>
