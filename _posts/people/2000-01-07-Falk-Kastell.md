@@ -5,7 +5,7 @@ title: Falk Kastell
 image: /images/speakers/FalkKastell.png
 vocation: Artist
 ---
-Falk Kästle was born in 1986 in Heidelberg, Germany. He studied Communications Design in Mannheim. He studied Photography and Painting in England.
+Falk Kastell was born in 1986 in Heidelberg, Germany. He studied Communications Design in Mannheim. He studied Photography and Painting in England.
 
 This full-blooded artist lives in Mannheim and works for local and international clients.
 
