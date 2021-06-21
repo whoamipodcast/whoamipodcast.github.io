@@ -6,7 +6,7 @@ epnumber: 22
 section: 0
 description: Today Falk Kastell helps me better understand what intuition is and how it can work in every-day life. William's heavy intellectual propensity makes it a challenge for him to come to terms with subconscious signals and relying on them to make decisions. Let's see whether Falk can assist him in raising his awareness and expanding his personal capacity for multi-faceted perception.
 image: /images/banners/ep22banner.jpg
-audio: no
+audio: s1!d6f76
 video: Z8SfjTiV_Pk
 transcript: 0
 speakers: [Falk Kastell, William Blacoe]
