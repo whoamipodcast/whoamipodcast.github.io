@@ -14,15 +14,15 @@ categories: [politics, partisanship, unity]
 tags: []
 comments: true
 ---
-"I don't care who does the electing, as long as I get to do the nominating." - Boss Tweed<br>
-is quoted in Larry Lessig's TED talk "Our democracy no longer represents the people. Here's how we fix it":<br>
+"I don't care who does the electing, as long as I get to do the nominating." - Boss Tweed  
+is quoted in Larry Lessig's TED talk "Our democracy no longer represents the people. Here's how we fix it":  
 <a href="https://www.youtube.com/watch?v=PJy8vTu66tE">https://www.youtube.com/watch?v=PJy8vTu66tE</a>
 
-By signing the Telecommunications Act of 1996, Bill Clinton made it possible for about 90% of the country’s major media companies to be owned by six corporations:<br>
+By signing the Telecommunications Act of 1996, Bill Clinton made it possible for about 90% of the country’s major media companies to be owned by six corporations:  
 <a href="https://truthout.org/articles/democracy-in-peril-twenty-years-of-media-consolidation-under-the-telecommunications-act/">https://truthout.org/articles/democracy-in-peril-twenty-years-of-media-consolidation-under-the-telecommunications-act/</a>
 
-The Overton Window is the range of policies politically acceptable in the mainstream media:<br>
+The Overton Window is the range of policies politically acceptable in the mainstream media:  
 <a href="https://en.wikipedia.org/wiki/Overton_window">https://en.wikipedia.org/wiki/Overton_window</a>
 
-"Safe without a State - How a natural legal system works without a monopoly of violence" is a book by Oliver Janich (title translated from the original German):<br>
+"Safe without a State - How a natural legal system works without a monopoly of violence" is a book by Oliver Janich (title translated from the original German):  
 <a href="https://www.oliverjanich.de/sicher-ohne-staat-mein-neues-buch-ist-erschienen">https://www.oliverjanich.de/sicher-ohne-staat-mein-neues-buch-ist-erschienen</a>
