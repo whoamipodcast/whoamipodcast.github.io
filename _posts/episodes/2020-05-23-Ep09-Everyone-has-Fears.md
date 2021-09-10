@@ -7,7 +7,7 @@ section: 0
 description: Continuing the topic of mental health, William and Steven talk about their experiences with anxiety and its consequences in every-day life.
 image: /images/banners/ep09banner.jpg
 audio: s1!93b1f
-video: NA0uV6H-D5E
+video: Ep09-Everyone-has-Fears
 transcript: 0
 speakers: [William Blacoe, Steven Guscott]
 categories: [mental health, anxiety]

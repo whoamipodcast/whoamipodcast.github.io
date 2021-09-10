@@ -7,7 +7,7 @@ section: 1
 description: William and Steven speak openly about the faith they were raised in and how they have personally identified with it. Religion can provide inner strength, a sense of belonging and community, a purpose in life, and a path to transcendence.
 image: /images/banners/ep06banner.jpg
 audio: no
-video: kgiXXz8Fkg0
+video: no
 speakers: [William Blacoe, Steven Guscott]
 transcript: 1
 categories: [religion, faith]

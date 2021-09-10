@@ -8,7 +8,7 @@ part: 2
 description: After failing their last attempt at surviving the frozen Sahara, Steve and William restart the adventure story "Heart of Ice". This time reversing their roles of reader and decider, they follow a differnt path of treachery and peril, this time as an explorer character. Will they achieve their goal of staying alive for an entire episode, or will they have to cheat and undo some of the decisions that led them to unexpected death along their way to the lost city of Du-En?
 image: /images/banners/ab01banner.jpg
 audio: s1!4252b
-video: nV3houy9u7g
+video: Ab01-Another-Attempt-part-2
 speakers: [William Blacoe, Steven Guscott]
 categories: [RPG, adventure-book]
 tags: []

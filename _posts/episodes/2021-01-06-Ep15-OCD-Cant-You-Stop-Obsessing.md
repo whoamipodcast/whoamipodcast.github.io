@@ -7,7 +7,7 @@ section: 0
 description: OCD is often misrepresented in the media. Whath is really behind the ritualistic actions that affected persons feel compelled to do to quell their unease? How does it feel to have unwanted, recurring thoughts? What is the source of this disorder? If you are affected, how can you turn a seeming weakness such as OCD to your own advantage, in order to develop yourself into something greater?
 image: /images/banners/ep15banner.jpg
 audio: s1!f61ce
-video: 3ZThpOXjO0I
+video: Ep15-OCD-Cant-You-Stop-Obsessing
 transcript: 0
 speakers: [William Blacoe, Steven Guscott]
 categories: [OCD, anxiety, self-development]

@@ -7,7 +7,7 @@ section: 0
 description: Today Steven and William discuss their views on the political division into the left and right wings. They argue that this differentiation is unnecessary and artificial, as both groups have much to offer, but to solve different problems. This insight underlines how they should complement each other, rather than get at each other's throats.
 image: /images/banners/ep23banner.jpg
 audio: s1!d266e
-video: fk9BEo6yJO0
+video: Ep23-Left-and-Right-Unite
 transcript: 0
 speakers: [Steven Guscott, William Blacoe]
 categories: [politics, partisanship, unity]

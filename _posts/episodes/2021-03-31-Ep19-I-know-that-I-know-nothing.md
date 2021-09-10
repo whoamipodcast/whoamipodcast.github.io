@@ -7,7 +7,7 @@ section: 0
 description: Today Mr. INTP and I talk about the relation between reality and our capacity to grasp it, how our knowledge of the world is based on the scientific method, and how common it is for you and me to base our entire thinking and decision-making on theories that may be internally consistent but are not provably true; they have merely not been falsified... yet.
 image: /images/banners/ep19banner.png
 audio: s1!0de69
-video: qlZweoFo6MU
+video: Ep19-I-know-that-I-know-nothing
 transcript: 0
 speakers: [Mr. INTP, William Blacoe]
 categories: [epistemology, science]

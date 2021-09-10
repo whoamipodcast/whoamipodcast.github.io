@@ -8,7 +8,7 @@ part: 4
 description: After travelling from Venis to Kahira to the lost city of Du-En, Steven and William are confronted with a mystical cave that is supposed to contain the heart of Volent, a meteorite that allegedly grants powers of godhood. This is the final battleground of our adventure, where we and several other serious raiders are in a deadly competition to obtain inifinite power. Who can we trust? How many times will we die on our way through the cave? Find out in this episode.
 image: /images/banners/ab01banner.jpg
 audio: s1!f6ce5
-video: jUjlglcAgoM
+video: Ab01-It-all-comes-down-to-this-part-4
 speakers: [William Blacoe, Steven Guscott]
 categories: [RPG, adventure-book]
 tags: []

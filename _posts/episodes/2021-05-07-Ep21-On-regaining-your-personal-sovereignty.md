@@ -7,7 +7,7 @@ section: 0
 description: Kevin Beutler is a body builder turned network marketer. Having recognised the great business opportunity that has come with the revolution in the financial technology sector, he is now a self-made millionaire. He not only lives with financial freedom, but with mental serenity and fulfillment. Today Kevin shares with us some of the changes and decisions that were vital to his personal and entrepreneurial development.
 image: /images/banners/ep21banner.jpg
 audio: s1!9394e
-video: iKEGlofd4o0
+video: Ep21-On-Regaining-Your-Personal-Sovereignty
 transcript: 0
 speakers: [Kevin Beutler, William Blacoe]
 categories: [freedom, mindset, money]

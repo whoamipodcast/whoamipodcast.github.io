@@ -7,7 +7,7 @@ section: 1
 description: In this episode Steven and William share their excitement for science-fiction as it pertains to self-awareness, free will and the difference between man and machine, if there is any. Will there ever be conscious
 image: /images/banners/ep02banner.png
 audio: no
-video: SHz85Ugq3Bg
+video: no
 speakers: [William Blacoe, Steven Guscott]
 transcript: 1
 categories: [artificial intelligence, consciousness]

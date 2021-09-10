@@ -7,7 +7,7 @@ section: 2
 description: In their first podcast episode Steven and William discuss their motivations for asking the age-old question 'Who am I?' and how best to go about their quest of exploring possible paths to an answer.
 image: /images/banners/ep01banner.png
 audio: no
-video: -ER8sP5xg7c
+video: no
 speakers: [William Blacoe, Steven Guscott]
 transcript: 1
 categories: [communication]
