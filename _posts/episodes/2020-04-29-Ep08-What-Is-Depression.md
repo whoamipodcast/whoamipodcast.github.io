@@ -6,7 +6,7 @@ epnumber: 8
 section: 0
 description: One topic that has affected Steven and William personally is that of mental health. In this episode they share their personal experiences of suffering, learning, developing and coping.
 image: /images/banners/ep08banner.jpg
-audio: s1!ca05e
+audio: Ep-08-What-Is-Depression-ehju40
 video: Ep08-What-Is-Depression
 transcript: 1
 speakers: [William Blacoe, Steven Guscott]

@@ -6,7 +6,7 @@ epnumber: 27
 section: 0
 description: How is it possible that billions of people are more likely to believe something that has no scientific foundation just because persons in position of authority say it is the case? What is it about our psychological make-up that makes us susceptible to such assertions, be they by politicians, journalists or doctors, even if such figures have proven to be untrustworthy multiple times before? Mr. INTP and I talk about our observations and speculate about possible causes for mass deception, partcularly in the covid era.
 image: /images/banners/ep27banner.jpg
-audio: s1!bf503
+audio: Ep-27-A-Civilisation-in-Perpetual-Fear-and-Uncertainty-e17331h
 video: Ep27-A-Civilisation-In-Fear
 transcript: 0
 speakers: [Mr. INTP, William Blacoe]

@@ -6,7 +6,7 @@ epnumber: 3
 section: 0
 description: What influence does technology have on the fabric of society? Is it a curse or an opportunity for progress? Today William and Steven discuss the effects that artificial has had and might yet have, the dangers and how to ensure that life with machines runs harmoniously with common values.
 image: /images/banners/ep03banner.jpg
-audio: s1!fdde7
+audio: Ep-03-A-New-Mechanised-World-e96cgv
 video: Ep03-A-New-Mechanised-World
 speakers: [William Blacoe, Steven Guscott]
 transcript: 1

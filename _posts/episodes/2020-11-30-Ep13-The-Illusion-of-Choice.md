@@ -6,7 +6,7 @@ epnumber: 13
 section: 0
 description: We often perceive a plethora of options and choices to be freeing and empowering. But not only is this relative to our cultural expectations, it can even be counter-productive to be confronted with too many things to choose from. Our discussion of realities and illusions concerning freedom of choice is based on the TED talk "The art of choosing" by Sheena Iyengar (see link below).
 image: /images/banners/ep13banner.jpg
-audio: s1!08f4c
+audio: Ep-13-The-Illusion-of-Choice-engb6k
 video: Ep13-The-Illusion-of-Choice
 transcript: 0
 speakers: [William Blacoe, Steven Guscott]

@@ -6,7 +6,7 @@ epnumber: 2
 section: 0
 description: In this episode Steven and William share their excitement for science-fiction as it pertains to self-awareness, free will and the difference between man and machine, if there is any. Will there ever be conscious robots, indistinguishable from humans?
 image: /images/banners/ep02banner.png
-audio: s1!e5c487bb538175f43efdbd3a2dc17dbbe2f45f7f
+audio: Ep-02-Ghost-in-the-machine-e6adqa
 video: Ep02-Ghost-in-the-Machine
 transcript: 1
 speakers: [William Blacoe, Steven Guscott]

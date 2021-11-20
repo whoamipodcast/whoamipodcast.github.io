@@ -7,7 +7,7 @@ section: 0
 part: 1
 description: For a change, Steve and I are reading from an adventure book in which you can choose your own path&colon; "Heart of Ice" by Dave Morris. Not only are there many ways to die, but there are multiple possible outcomes of the overall story. Follow us on an adventure of travelling through treacherous terrotories including the icy desert of futuristic Northern Africa.
 image: /images/banners/ab01banner.jpg
-audio: s1!e1c0f
+audio: Adv--Book-1-Can-We-Survive-the-Frozen-Sahara--part-1-er8uu7
 video: Ab01-Can-We-Survive-the-Frozen-Sahara-part-1
 transcript: 0
 speakers: [William Blacoe, Steven Guscott]

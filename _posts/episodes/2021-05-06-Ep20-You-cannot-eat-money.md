@@ -6,7 +6,7 @@ epnumber: 20
 section: 0
 description: Falk and William discuss the current state of the world in terms of the progress of technology vs. human connection and respect for nature, being attentive to intutions vs. being driven by cerebral messaging, praising the economy as humanity's highest good vs. personal relationships and development, and many other things.
 image: /images/banners/ep20banner.jpg
-audio: s1!8dec9
+audio: Ep-20-When-will-we-realize-that-you-cannot-eat-money-e10g8ps
 video: Ep20-You-cannot-eat-money
 transcript: 0
 speakers: [Falk Kastell, William Blacoe]

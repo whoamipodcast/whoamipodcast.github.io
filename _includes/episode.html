@@ -159,14 +159,14 @@
 				<div>
 					<h3 class="boldh3">Watch Part {{ page.part }}:</h3>
 					<div class="aspect-ratio-video">
-							<iframe src="https://odysee.com/$/embed/{{ page.video }}" allowfullscreen></iframe>
+						<iframe src="https://odysee.com/$/embed/{{ page.video }}" allowfullscreen></iframe>
 					</div>
 				</div>
 			{% else %}
 				<div>
 					<h3 class="boldh3">Watch{% if page.section == 0 %} the Full Episode{% else %} a Short Excerpt{% endif %}:</h3>
 					<div class="aspect-ratio-video">
-							<iframe src="https://odysee.com/$/embed/{{ page.video }}" allowfullscreen></iframe>
+						<iframe src="https://odysee.com/$/embed/{{ page.video }}" allowfullscreen></iframe>
 					</div>
 				</div>
 			{% endif %}
@@ -176,15 +176,15 @@
 			{% if page.type contains "adventurebook" %}
 				<div>
 					<h3 class="boldh3">Listen to Part {{ page.part }}:</h3>
-					<div>
-						<iframe sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups" scrolling="no" width="100%" height="185" frameborder="0" src="https://embed.radiopublic.com/e?if=who-am-i-6Vy9k9&ge={{ page.audio }}"></iframe>
+					<div class="aspect-ratio-audio">
+						<iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" frameborder="0" scrolling="no"></iframe>
 					</div>
 				</div>
 			{% else %}
 				<div>
 					<h3 class="boldh3">Listen{% if page.section == 0 %} to the Full Episode{% else %} to a Short Excerpt{% endif %}:</h3>
-					<div>
-						<iframe sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups" scrolling="no" width="100%" height="185" frameborder="0" src="https://embed.radiopublic.com/e?if=who-am-i-6Vy9k9&ge={{ page.audio }}"></iframe>
+					<div class="aspect-ratio-audio">
+						<iframe src="https://anchor.fm/whoamipodcast/embed/episodes/{{ page.audio }}" frameborder="0" scrolling="no"></iframe>
 					</div>
 				</div>
 			{% endif %}

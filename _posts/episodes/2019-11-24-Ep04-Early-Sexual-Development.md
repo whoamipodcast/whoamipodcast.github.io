@@ -6,7 +6,7 @@ epnumber: 4
 section: 0
 description: Human sexuality begins to emerge at an early age. Our gender identity takes form and we become involved in complex dynamics, at first with our parents, and later with society in general.
 image: /images/banners/ep04banner.png
-audio: s1!75b0b
+audio: Ep-04-Early-Sexual-Development-e9unb2
 video: Ep04-Early-Sexual-Development
 transcript: 1
 speakers: [William Blacoe, Steven Guscott]

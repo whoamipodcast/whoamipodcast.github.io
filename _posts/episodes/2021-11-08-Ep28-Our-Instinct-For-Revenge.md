@@ -6,7 +6,7 @@ epnumber: 28
 section: 0
 description: How would you react if you or a loved one were to be violated? Would you be blinded by rage, seeking nothing less than brutal vengeance? Or would you be able to distance yourself from that terrible experience and be content with the judicial process taking its course? Could you ever forgive the perpetrator? Or would his cruel act leave a vexing mark on your soul forever? In today's episode Steven and I discuss these and related questions and what we learn about our internal nature in response to outward experiences of undeserved crisis.
 image: /images/banners/ep28banner.jpg
-audio: no
+audio: Ep-28-Our-Instinct-for-Revenge-e1ac2m0
 video: Ep28-Our-Instinct-For-Revenge
 transcript: 0
 speakers: [Steven Guscott, William Blacoe]

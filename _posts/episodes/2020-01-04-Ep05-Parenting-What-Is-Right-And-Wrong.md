@@ -6,7 +6,7 @@ epnumber: 5
 section: 0
 description: As a young person enters the new adventure of becoming a parent, they are confronted with challenges they can never be truly prepared for, no matter how much knowledge they acquired beforehand. Making mistakes and learning from them in practise seems to be the only way for us to progress, be it as children or as parents.
 image: /images/banners/ep05banner.png
-audio: s1!f36d3
+audio: Ep-05-Parenting-What-is-Right-and-Wrong-ea8tq5
 video: Ep05-Parenting-What-is-Right-and-Wrong
 speakers: [William Blacoe, Steven Guscott]
 transcript: 1

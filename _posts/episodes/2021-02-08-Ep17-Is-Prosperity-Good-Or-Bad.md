@@ -6,7 +6,7 @@ epnumber: 17
 section: 0
 description: Today we discuss how different approaches to wealth and the accrual of wealth can be a two-edged sword. Are you getting rich by exploiting other people? Or are you building your financial independence by helping others achieve their own as well? We consider how our psychology towards money can have a great effect on our well-being and direction in life.
 image: /images/banners/ep17banner.jpg
-audio: s1!7c44e
+audio: Ep-17-Is-Prosperity-Good-Or-Bad-eq5gda
 video: Ep17-Is-Prosperity-Good-Or-Bad
 transcript: 0
 speakers: [William Blacoe, Steven Guscott]
