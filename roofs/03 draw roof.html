@@ -1,0 +1,454 @@
+<!-- Licensed under a BSD license. See license.html for license -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Three.js - Primitives</title>
+    <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+    #c {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    </style>
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+  </body>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://threejs.org/build/three.module.js"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+
+
+function v3(x, y, z){
+	return new THREE.Vector3(x, y, z);
+}
+
+function add(v1, v2){
+	const r = new THREE.Vector3();
+	r.addVectors(v1, v2);
+	return r;
+}
+
+function subtract(v1, v2){
+	const r = new THREE.Vector3();
+	r.subVectors(v1, v2);
+	return r;
+}
+
+function crossProduct(v1, v2){
+	/*return new THREE.Vector3(
+		v1.y * v2.z - v1.z * v2.y,
+		v1.z * v2.x - v1.x * v2.z,
+		v1.x * v2.y - v1.y * v2.x
+	);*/
+	
+	const r = new THREE.Vector3();
+	r.crossVectors(v1, v2);
+	return r;
+}
+
+/*const v1 = new THREE.Vector3(1, 0.5, 0);
+const v2 = new THREE.Vector3(-0.5, 1, 0);
+//console.log(crossProduct(v1, v2).normalize());
+console.log(v1);
+console.log(v2);
+const v3 = new THREE.Vector3();
+console.log(v3.addVectors(v1, v2));
+console.log(v1);
+console.log(v2);*/
+
+
+
+class RoofGeometry extends THREE.BufferGeometry {
+
+	constructor(width) {
+		super();
+
+		this.type = 'RoofGeometry';
+
+		this.parameters = {
+			width: width/*,
+			height: height,
+			depth: depth,
+			widthSegments: widthSegments,
+			heightSegments: heightSegments,
+			depthSegments: depthSegments*/
+		};
+
+		const scope = this;
+				
+		//v1: bottom left, v2: bottom right, v3: top middle
+		function buildTriangle(v1, v2, v3){
+			return {
+				vertices: [v1, v2, v3],
+				indices: [[0, 1, 2]],
+				normal: crossProduct(subtract(v2, v1), subtract(v3, v1)).normalize(),
+				uvVertices: [[0, 0], [1, 0], [0.5, 1]]
+			};
+		}
+		
+		//v1: bottom left, v2: bottom right, v3: top right, v4: top left
+		function buildRectangle(v1, v2, v3, v4){
+			return {
+				vertices: [v1, v2, v3, v4],
+				indices: [[0, 1, 2], [2, 3, 0]],
+				normal: crossProduct(subtract(v2, v1), subtract(v4, v1)).normalize(),
+				uvVertices: [[0, 0], [1, 0], [1, 1], [0, 1]]
+			};
+		}
+		
+		//assumes camera direction to be along -z axis
+		//builds shape in octant +x, +y, -z
+		function buildRoofFragments(width, height, depth){
+		
+			const frontTriangle = [
+				v3(0, 0, 0),
+				v3(width, 0, 0),
+				v3(Math.floor(width / 2), height, 0)
+			];
+			
+			const moveBack = v3(0, 0, -depth);
+			const backTriangle = [
+				add(frontTriangle[0], moveBack),
+				add(frontTriangle[1], moveBack),
+				add(frontTriangle[2], moveBack),
+			];
+		
+			const faces = [
+				buildTriangle(frontTriangle[0], frontTriangle[1], frontTriangle[2]), //front triangle
+				buildTriangle(backTriangle[0], backTriangle[2], backTriangle[1]), //back triangle
+				buildRectangle(frontTriangle[1], backTriangle[1], backTriangle[2], frontTriangle[2]), //top right rectangle
+				buildRectangle(frontTriangle[0], frontTriangle[2], backTriangle[2], backTriangle[0]), //top left rectangle
+				buildRectangle(backTriangle[0], backTriangle[1], frontTriangle[1], frontTriangle[0]) //bottom rectangle
+			];
+			
+			return faces;
+		}
+		
+		const height = Math.round(width * Math.sqrt(.5));
+		const fragments = buildRoofFragments(width, height, height);
+		console.log(fragments);
+		
+		// buffers
+		const indices = [];
+		const vertices = [];
+		const normals = [];
+		const uvs = [];
+		
+		let vertexCounter = 0;
+		for(let i in fragments){
+			let fragment = fragments[i];
+		
+			for(let j in fragment.indices){
+				let triangleIndices = fragment.indices[j];
+				indices.push(
+					vertexCounter + triangleIndices[0],
+					vertexCounter + triangleIndices[1],
+					vertexCounter + triangleIndices[2]
+				);
+			}
+		
+			let normal = fragment.normal;
+			
+			for(let j in fragment.vertices){
+				let vertex = fragment.vertices[j];
+				vertices.push(vertex.x, vertex.y, vertex.z);
+				normals.push(normal.x, normal.y, normal.z);
+				vertexCounter++;
+			}
+			
+			for(let j in fragment.uvVertices){
+				let uvVertex = fragment.uvVertices[j];
+				uvs.push(uvVertex[0], uvVertex[1]);
+			}
+		}
+
+		// build geometry
+		this.setIndex( indices );
+		this.setAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
+		this.setAttribute( 'normal', new THREE.Float32BufferAttribute( normals, 3 ) );
+		this.setAttribute( 'uv', new THREE.Float32BufferAttribute( uvs, 2 ) );
+		
+		console.log({
+			"indices": indices,
+			"vertices": vertices,
+			"normals": normals,
+			"uvs": uvs
+		});
+	}
+}
+
+
+
+
+
+
+
+
+class RoofGeometry1 extends THREE.BufferGeometry {
+
+	constructor( width = 1, height = 1, depth = 1, widthSegments = 1, heightSegments = 1, depthSegments = 1 ) {
+		super();
+
+		this.type = 'RoofGeometry';
+
+		this.parameters = {
+			width: width,
+			height: height,
+			depth: depth,
+			widthSegments: widthSegments,
+			heightSegments: heightSegments,
+			depthSegments: depthSegments
+		};
+
+		const scope = this;
+
+		// segments
+		widthSegments = Math.floor( widthSegments );
+		heightSegments = Math.floor( heightSegments );
+		depthSegments = Math.floor( depthSegments );
+
+		// buffers
+		const indices = [];
+		const vertices = [];
+		const normals = [];
+		const uvs = [];
+
+		// helper variables
+		let numberOfVertices = 0;
+		let groupStart = 0;
+
+		// build each side of the roof geometry
+		buildPlane( 'z', 'y', 'x', - 1, - 1, depth, height, width, depthSegments, heightSegments, 0 ); // px
+		buildPlane( 'z', 'y', 'x', 1, - 1, depth, height, - width, depthSegments, heightSegments, 1 ); // nx
+		buildPlane( 'x', 'z', 'y', 1, 1, width, depth, height, widthSegments, depthSegments, 2 ); // py
+		buildPlane( 'x', 'z', 'y', 1, - 1, width, depth, - height, widthSegments, depthSegments, 3 ); // ny
+		buildPlane( 'x', 'y', 'z', 1, - 1, width, height, depth, widthSegments, heightSegments, 4 ); // pz
+		buildPlane( 'x', 'y', 'z', - 1, - 1, width, height, - depth, widthSegments, heightSegments, 5 ); // nz
+
+		// build geometry
+		this.setIndex( indices );
+		this.setAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
+		this.setAttribute( 'normal', new THREE.Float32BufferAttribute( normals, 3 ) );
+		this.setAttribute( 'uv', new THREE.Float32BufferAttribute( uvs, 2 ) );
+
+		function buildPlane( u, v, w, udir, vdir, width, height, depth, gridX, gridY, materialIndex ) {
+			const segmentWidth = width / gridX;
+			const segmentHeight = height / gridY;
+
+			const widthHalf = width / 2;
+			const heightHalf = height / 2;
+			const depthHalf = depth / 2;
+
+			const gridX1 = gridX + 1;
+			const gridY1 = gridY + 1;
+
+			let vertexCounter = 0;
+			let groupCount = 0;
+
+			const vector = new THREE.Vector3();
+
+			// generate vertices, normals and uvs
+			for ( let iy = 0; iy < gridY1; iy ++ ) {
+				const y = iy * segmentHeight - heightHalf;
+
+				for ( let ix = 0; ix < gridX1; ix ++ ) {
+					const x = ix * segmentWidth - widthHalf;
+
+					// set values to correct vector component
+					vector[ u ] = x * udir;
+					vector[ v ] = y * vdir;
+					vector[ w ] = depthHalf;
+
+					// now apply vector to vertex buffer
+					vertices.push( vector.x, vector.y, vector.z );
+
+					// set values to correct vector component
+					vector[ u ] = 0;
+					vector[ v ] = 0;
+					vector[ w ] = depth > 0 ? 1 : - 1;
+
+					// now apply vector to normal buffer
+					normals.push( vector.x, vector.y, vector.z );
+
+					// uvs
+					uvs.push( ix / gridX );
+					uvs.push( 1 - ( iy / gridY ) );
+
+					// counters
+					vertexCounter += 1;
+				}
+			}
+
+			// indices
+
+			// 1. you need three indices to draw a single face
+			// 2. a single segment consists of two faces
+			// 3. so we need to generate six (2*3) indices per segment
+			for ( let iy = 0; iy < gridY; iy ++ ) {
+				for ( let ix = 0; ix < gridX; ix ++ ) {
+					const a = numberOfVertices + ix + gridX1 * iy;
+					const b = numberOfVertices + ix + gridX1 * ( iy + 1 );
+					const c = numberOfVertices + ( ix + 1 ) + gridX1 * ( iy + 1 );
+					const d = numberOfVertices + ( ix + 1 ) + gridX1 * iy;
+
+					// faces
+					indices.push( a, b, d );
+					indices.push( b, c, d );
+
+					// increase counter
+					groupCount += 6;
+				}
+			}
+
+			// add a group to the geometry. this will ensure multi material support
+			scope.addGroup( groupStart, groupCount, materialIndex );
+
+			// calculate new start value for groups
+			groupStart += groupCount;
+
+			// update total number of vertices
+			numberOfVertices += vertexCounter;
+			
+			console.log({
+				"indices": indices,
+				"vertices": vertices,
+				"normals": normals,
+				"uvs": uvs
+			});
+		}
+	}
+
+}
+
+
+
+
+const canvas = document.querySelector('#c');
+
+function main() {
+  const renderer = new THREE.WebGLRenderer({canvas});
+
+  const fov = 40;
+  const aspect = 2;  // the canvas default
+  const near = 0.1;
+  const far = 1000;
+  const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+  camera.position.z = 120;
+
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xAAAAAA);
+
+  {
+    const color = 0xFFFFFF;
+    const intensity = 1;
+    const light = new THREE.DirectionalLight(color, intensity);
+    light.position.set(-1, 2, 4);
+    scene.add(light);
+  }
+  {
+    const color = 0xFFFFFF;
+    const intensity = 1;
+    const light = new THREE.DirectionalLight(color, intensity);
+    light.position.set(1, -2, -4);
+	scene.add(light);
+  }
+
+  const objects = [];
+  const loader = new THREE.TextureLoader();
+
+  function createMaterial() {
+    const material = new THREE.MeshPhongMaterial({
+      //side: THREE.DoubleSide
+	  side: THREE.FrontSide,
+	  //map: loader.load('https://r105.threejsfundamentals.org/threejs/resources/images/wall.jpg')
+	  map: loader.load('https://github.com/whoamipodcast/whoamipodcast.github.io/raw/master/moreBlueThanWhite.png')
+    });
+
+    const hue = Math.random();
+    const saturation = 1;
+    const luminance = .95;
+    material.color.setHSL(hue, saturation, luminance);
+	
+	//material.specular = new THREE.Color(0xFFFFFF);
+	//material.shininess = 100;
+
+    return material;
+  }
+
+  function addSolidGeometry(x, y, geometry) {
+    const mesh = new THREE.Mesh(geometry, createMaterial());	
+	mesh.position.x = x;
+	mesh.position.y = y;
+	
+	scene.add(mesh);
+    objects.push(mesh);
+  }
+
+  /*function addLineGeometry(x, y, geometry) {
+    const material = new THREE.LineBasicMaterial({color: 0x000000});
+    const mesh = new THREE.LineSegments(geometry, material);
+    addObject(x, y, mesh);
+  }*/
+
+  {
+    const width = 20;
+    const height = 16;
+    const depth = 8;
+    //addSolidGeometry(-2, 2, new THREE.BoxGeometry(width, height, depth));
+	addSolidGeometry(-30, 0, new RoofGeometry(width));
+	addSolidGeometry(20, 2, new RoofGeometry1(width, height, depth));
+  }
+  
+  function resizeRendererToDisplaySize(renderer) {
+    const canvas = renderer.domElement;
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    const needResize = canvas.width !== width || canvas.height !== height;
+    if (needResize) {
+      renderer.setSize(width, height, false);
+    }
+    return needResize;
+  }
+
+  function render(time) {
+    time *= 0.001;
+
+    if (resizeRendererToDisplaySize(renderer)) {
+      const canvas = renderer.domElement;
+      camera.aspect = canvas.clientWidth / canvas.clientHeight;
+      camera.updateProjectionMatrix();
+    }
+
+    objects.forEach((obj, ndx) => {
+      const speed = .2 + ndx * .05;
+      const rot = time * speed;
+      obj.rotation.x = rot;
+      obj.rotation.y = rot;
+    });
+
+    renderer.render(scene, camera);
+
+    requestAnimationFrame(render);
+  }
+
+  requestAnimationFrame(render);
+}
+
+main();
+</script>
+</html>
