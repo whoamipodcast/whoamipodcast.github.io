@@ -1,0 +1,411 @@
+<html>
+	<head>
+		<style>
+			*{
+				font-family: Arial;
+			}
+			body{
+				background-color: white;
+			}
+			div{
+				height: 20px;
+			}
+			div.buttons{
+				margin-top: 20px;
+				margin-bottom: 25px;
+			}
+			div.content{
+				margin-left: 15px;
+			}
+			div.inline{
+				display: inline-block;
+				margin-left: 30px;
+			}
+			div.caption{
+				margin-top: 20px;
+				margin-bottom: 5px;
+			}
+			label{
+				background-color: lightgray;
+				padding: 8px;
+				margin-top: 50px;
+				margin-bottom: 5px;
+				margin-right: 8px;
+				cursor: pointer;
+			}
+			div.scroll{
+				background-color: lightgray;
+				width: 1000px;
+				height: 300px;
+				overflow: scroll;
+			}
+			textarea{
+				width: 1000px;
+				resize: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="buttons">
+			<label>
+				<input id="fileOpener" type="file" style="position: absolute; top: -1000px;" required />
+				<span>Open Image File</span>
+			</label>
+			<label id="applyChangesButton">
+				<span>Apply Changes</span>
+			</label>
+			<label id="saveAsPngButton">
+				<span>Save as PNG</span>
+			</label>
+		</div>
+		
+		<div class="content">
+			<div class="caption">Before Changes:</div>
+			<div class="scroll">
+				<img id="imageTag"></img>
+			</div>
+			
+			<div class="inline">
+				<div class="caption" id="zoomFactorCaption">Zoom Factor: 1</div>
+				<div>
+					<input type="range" id="zoomFactorInput" min="-3" max="5" value="0" style="width: 300px;" disabled></input>
+				</div>
+			</div>
+			<div class="inline">
+				<div class="caption">Image Properties:</div>
+				<div id="imagePropertiesText">ajszd azdhiu ahsd iuah duiahd</div>
+			</div>
+			<div class="inline">
+				<div class="caption">Message Properties:</div>
+				<div id="messagePropertiesText">ajszd azdhiu ahsd iuah duiahd</div>
+			</div>
+			
+			<div class="caption">After Changes:</div>
+			<div class="scroll">
+				<canvas id="canvasAfterChanges"></canvas>
+			</div>
+			
+			<div class="caption">Embedded Text:</div>
+			<div>
+				<textarea id="textarea" rows="15" disabled></textarea>
+			</div>
+		</div>
+		
+		<script src="ScriptLoader.js"></script>
+		<script>
+			/*const fileOpener = document.getElementById("fileOpener");
+			const applyChangesButton = document.getElementById("applyChangesButton");
+			const saveAsPngButton = document.getElementById("saveAsPngButton");
+			const imageTag = document.getElementById("imageTag");
+			const zoomFactorCaption = document.getElementById("zoomFactorCaption");
+			const zoomFactorInput = document.getElementById("zoomFactorInput");
+			const canvasAfterChanges = document.getElementById("canvasAfterChanges");
+			const textarea = document.getElementById("textarea");*/
+			
+			const elIds = ["fileOpener", "applyChangesButton", "saveAsPngButton", "imageTag", "zoomFactorCaption", "zoomFactorInput", "imagePropertiesText", "messagePropertiesText", "canvasAfterChanges", "textarea"];
+			let els = {}
+			for(let elId of elIds) els[elId] = document.getElementById(elId);
+			
+			//"§" = empty string, "|" = new line
+			const codeArray = ["§", "|", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " ", "+", "-", ".", ":", ",", ";", "*", "/", "_", "#", "'", "!", "\"", "$", "%", "&", "(", ")", "=", "?", "<", ">", "ä", "ö", "ü"];
+			const amountOfBitsPerChannel = 3; //how many bits per channel are used for encoded message?
+			const amountOfBitsPerCharacter = 6; //how many bits are used per character? should be ld(codeArray.length)
+			
+			function loadImageFromFile(file){
+				return new Promise((resolve, reject) => {
+					const image = new Image();
+					
+					image.onload = () => {
+						resolve(image);
+					};
+					
+					image.src = URL.createObjectURL(file);
+				});
+			}
+			
+			function getZoomFactor(){
+				return 2 ** zoomFactorInput.value;
+			}
+			
+			function drawImageToImageTag(image, imageTag){
+				const zoomFactor = getZoomFactor();
+				imageTag.src = image.src;
+				imageTag.width = image.width * zoomFactor;
+				imageTag.height = image.height * zoomFactor;
+			}
+			
+			function drawImageToCanvas(image, canvas){
+				const zoomFactor = getZoomFactor();
+				const width = image.width * zoomFactor;
+				const height = image.height * zoomFactor;
+				
+				canvas.width = width;
+				canvas.height = height;
+				
+				const ctx = canvas.getContext("2d");
+				ctx.drawImage(image, 0, 0, width, height);
+			}
+			
+			function canvasToImageData(canvas){
+				return canvas.getContext("2d").getImageData(0, 0, canvas.width, canvas.height);
+			}
+			
+			function canvasToImage(canvas){
+				const image = new Image();
+				image.src = canvas.toDataURL();
+				
+				return image;
+			}
+			
+			function imageToImageData(image){
+				return new Promise((resolve, reject) => {
+					const canvas = document.createElement("canvas");
+					
+					canvas.width = image.width;
+					canvas.height = image.height;
+					
+					const ctx = canvas.getContext("2d");
+					ctx.drawImage(image, 0, 0);
+					
+					//return canvasToImageData(canvas);
+					resolve(canvasToImageData(canvas));
+				});
+			}
+			
+			function imageDataToImage(imageData){
+				return new Promise((resolve, reject) => {
+					const canvas = document.createElement("canvas");
+				
+					canvas.width = imageData.width;
+					canvas.height = imageData.height;
+					
+					const ctx = canvas.getContext("2d");
+					ctx.putImageData(imageData, 0, 0);
+					
+					//return canvasToImage(canvas);
+					resolve(canvasToImage(canvas));
+				});
+			}
+			
+			function removeTransparency(imageData){
+				return new Promise((resolve, reject) => {
+					let imageContainsTransparency = false;
+				
+					const array = imageData.data;
+					
+					for(let i=0; i<array.length; i+=4){
+						let alpha = array[i+3];
+						if(alpha < 255){
+							imageContainsTransparency = true;
+							//interpolate between given color and white background
+							//using alpha and its complement to 255 as linear weights
+							let white = 255 - alpha;
+							let a = alpha / 255;
+							array[i] = Math.round(a * array[i]) + white;
+							array[i+1] = Math.round(a * array[i+1]) + white;
+							array[i+2] = Math.round(a * array[i+2]) + white;
+						}else{
+							array[i] = array[i];
+							array[i+1] = array[i+1];
+							array[i+2] = array[i+2];
+						}
+						array[i+3] = 255;
+					}
+					resolve(imageContainsTransparency);
+				});
+			}
+			
+			function saveImageAsPng(image){
+				URL.revokeObjectURL(image.src); //free up memory
+				
+				const canvas = document.createElement("canvas");
+				canvas.width = image.width;
+				canvas.height = image.height;
+				
+				const ctx = canvas.getContext("2d");
+				ctx.drawImage(image, 0, 0);
+				
+				let dl = document.createElement("a");
+				dl.setAttribute("download", "asd.png");
+				
+				canvas.toBlob(blob => {
+					const url = URL.createObjectURL(blob);
+					dl.setAttribute("href", url);
+					dl.click();
+				});
+			}
+			
+			function updateZoomFunction(imageBeforeChanges, imageAfterChanges){
+				zoomFactorInput.disabled = false;
+				zoomFactorInput.oninput = () => {
+					zoomFactorCaption.innerText = "Zoom Factor: " + getZoomFactor();
+					drawImageToImageTag(imageBeforeChanges, imageTag);
+					drawImageToCanvas(imageAfterChanges, canvasAfterChanges);
+				}
+			}
+			
+			function decode(imageData){
+				return new Promise((resolve, reject) => {
+					const array = imageData.data;
+
+					let text = "";
+					let bitString = "";
+					
+					//go through all pixels
+					for(let i=0; i<array.length; i+=4){
+						//go through all channels
+						for(let j=0; j<3; j++){
+							let value = array[i + j]; //number in image (between 0 and 255)
+							let valueAsBitString = value.toString(2);
+							valueAsBitString = ("0").repeat(8 - valueAsBitString.length) + valueAsBitString;
+							console.log("pixel", (i/4), "channel", j, "has value", valueAsBitString);
+
+							//extract [value]'s [amountOfBitsPerChannel] least significant bits from left to right
+							for(let k=valueAsBitString.length - amountOfBitsPerChannel; k<valueAsBitString.length; k++){
+								bitString += valueAsBitString[k];
+								
+								//whenever the buffer of extracted bits is long enough to decode it as a character
+								if(bitString.length == amountOfBitsPerCharacter){
+									const number = parseInt(bitString, 2);
+									const character = codeArray[number];
+									console.log("extracting character", character, "from bitstring", bitString, "which was number", number);
+									text += character;
+									bitString = "";
+								}
+							}
+						}
+					}
+					
+					//return text;
+					resolve(text);
+				});
+			}
+			
+			function encode(imageData, text){
+				return new Promise((resolve, reject) => {
+				
+					const array = imageData.data;
+					
+					let textIsUsedUp = text == "";
+					let textPointer = 0;
+					let bitString = "";
+					let bitStringPointer = 0;
+				
+					//go through all pixels
+					for(let i=0; i<array.length; i+=4){
+						//go through all channels
+						for(let j=0; j<3; j++){
+						
+							let value = 0; //number for encoded character. consists of [amountOfBitsPerChannel] many bits
+							
+							//go through bits starting at LSB
+							for(let k=0; !textIsUsedUp && k<amountOfBitsPerChannel; k++){
+							
+								if(bitStringPointer >= bitString.length){
+									if(textPointer >= text.length){
+										textIsUsedUp = true;
+										bitString = null;
+										console.error("more capacity in image than given text! filling remaining capacity with zeros.");
+										
+									}else{
+										//encode next text character as bits and buffer them
+										const character = text[textPointer++];
+										let number = codeArray.indexOf(character);
+										
+										bitString = number.toString(2);
+										bitString = ("0").repeat(amountOfBitsPerCharacter - bitString.length) + bitString; //ensure that bit string has length 6 
+										bitStringPointer = 0;
+										
+										console.log("refilling buffer:", character, number, bitString);
+									}
+								}
+								
+								if(!textIsUsedUp){
+									value = value << 1;
+									value += bitString[bitStringPointer++] == "1";
+									console.log("bit string pointer:", bitStringPointer, ", value:", value, ", bit string:", bitString);
+								}
+							}
+							
+							//save bits in channel
+							//by changing the [amountOfBitsPerChannel] least significant bits to 0 and then adding [value]
+							console.log("before change: pixel", (i / 4), ", channel", j, array[i + j], (array[i + j]).toString(2));
+							array[i + j] = ((array[i + j] >> amountOfBitsPerChannel) << amountOfBitsPerChannel) + value;
+							console.log("change " + amountOfBitsPerChannel + " lsb by adding", value, value.toString(2));
+							console.log("after change: pixel", (i / 4), ", channel", j, array[i + j], (array[i + j]).toString(2));
+						}
+					}
+					
+					resolve();
+				});
+			}
+			
+			//only characters in code array may be used in text area
+			els.textarea.oninput = event => {
+				const c = event.data;
+				if(codeArray.indexOf(c) == -1){
+					els.textarea.value = els.textarea.value.replaceAll(c, "");
+				}
+			};
+			
+			els.fileOpener.onchange = () => {
+				const file = fileOpener.files[0];
+			
+				loadImageFromFile(file)
+				.then(imageBeforeChanges => {
+					
+					drawImageToImageTag(imageBeforeChanges, imageTag);
+					
+					imageToImageData(imageBeforeChanges)
+					.then((imageData) => {
+					
+						removeTransparency(imageData)
+						.then(imageBeforeChangesContainsTransparency => {
+						
+							els.imagePropertiesText.innerText = file.name
+							+ ", " + imageBeforeChanges.width + " x " + imageBeforeChanges.height
+							+ ", contains" + (imageBeforeChangesContainsTransparency ? "" : " no") + " transparency";
+						
+							imageDataToImage(imageData)
+							.then(imageAfterChanges => {
+							
+								drawImageToCanvas(imageAfterChanges, canvasAfterChanges);
+								
+								updateZoomFunction(imageBeforeChanges, imageAfterChanges)
+								
+								els.textarea.disabled = false;
+								decode(imageData)
+								.then(decodedText => {
+									
+									let maxMessageLength = Math.floor(imageBeforeChanges.width * imageBeforeChanges.height * 3 * amountOfBitsPerChannel / amountOfBitsPerCharacter);
+									els.messagePropertiesText.innerText = decodedText.length + " / " + maxMessageLength + " characters";
+									
+									els.textarea.value = decodedText;
+									els.textarea.maxLength = maxMessageLength;
+									
+									els.applyChangesButton.onclick = () => {
+										const text = textarea.value;
+
+										encode(imageData, text)
+										.then(() => {
+
+											imageDataToImage(imageData)
+											.then(imageAfterChanges => {
+											
+												drawImageToCanvas(imageAfterChanges, els.canvasAfterChanges);
+												
+												updateZoomFunction(imageBeforeChanges, imageAfterChanges);
+												
+												saveAsPngButton.onclick = () => { saveImageAsPng(imageAfterChanges); };
+											});
+										});
+									}
+								});
+							});
+						});
+					});
+				});
+			};
+		</script>
+	</body>
+</html>
