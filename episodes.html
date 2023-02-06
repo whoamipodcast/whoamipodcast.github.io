@@ -1,10 +1,32 @@
 ---
-layout: page
-title: Episodes Archive
+layout: default
 permalink: /episodes/
 ---
+
 {% assign years = site.posts | where: "type", "episode" | where: "section", 0 | group_by_exp:"post", "post.date | date: '%Y'" %}
+{% assign years_array = "" | split: "/" %}
 {% for year in years %}
+  {% assign years_array = years_array | push: year.name %}
+{% endfor %}
+
+<header id="header" class="header-fixed">
+{% include header.html %}
+  </header>
+  <main id="main" class="main-page">
+    <section id="speakers-details" class="wow fadeIn">
+      <div class="container">
+        <div class="section-header">
+          <h2>Episodes Archive</h2>
+          <p id="years"></p>
+        </div>
+
+        <div class="row">
+		  <div class="col-lg-12">
+            <div class="details">
+
+
+{% for year in years %}
+<div id="year{{ year.name }}" style="display: none;">
   <h2>{{ year.name }}</h2>
   {% assign months = year.items | group_by_exp:"post", "post.date | date: '%B'" %}
   {% for month in months %}
@@ -19,4 +41,40 @@ permalink: /episodes/
 	  {% endfor %}
 		</div>
   {% endfor %}
+</div>
 {% endfor %}
+
+
+
+            </div>
+          </div>
+        </div>
+		
+      </div>
+    </section>
+  </main>
+  
+<script>
+const years = [{{ years_array | join: ', ' }}];
+const yearsTag = document.getElementById("years");
+
+const showYear = (year) => {
+	console.log("showing year " + year);
+	for(i in years){
+		let visibility = year == years[i] ? "block" : "none";
+		document.getElementById("year" + years[i]).style.display = visibility;
+	}
+}
+
+for(i in years){
+	let spanTag = document.createElement("span");
+	spanTag.style.paddingLeft = "8px";
+	spanTag.style.paddingRight = "8px";
+	spanTag.style.cursor = "pointer";
+	spanTag.innerText = "" + years[i];
+	spanTag.setAttribute("onclick", "showYear(" + years[i] + ");");
+	yearsTag.appendChild(spanTag);
+}
+
+showYear(2023);
+</script>

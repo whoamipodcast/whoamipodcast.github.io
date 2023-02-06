@@ -1,0 +1,22 @@
+---
+layout: page
+title: Episodes Archive
+permalink: /episodes_all_years/
+---
+{% assign years = site.posts | where: "type", "episode" | where: "section", 0 | group_by_exp:"post", "post.date | date: '%Y'" %}
+{% for year in years %}
+  <h2>{{ year.name }}</h2>
+  {% assign months = year.items | group_by_exp:"post", "post.date | date: '%B'" %}
+  {% for month in months %}
+	<h3>{{ month.name }}</h3>
+		<div class="row">
+	  {% for post in month.items %}
+		  <div class="col-md-4">
+			<div class="latestepisodes">
+			  {% include episodebox.html %}
+			</div>
+		  </div>
+	  {% endfor %}
+		</div>
+  {% endfor %}
+{% endfor %}
