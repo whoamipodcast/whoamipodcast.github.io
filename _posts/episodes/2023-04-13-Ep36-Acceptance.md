@@ -8,7 +8,7 @@ description: Apathy is not caring about what goes on with you and around you. Ac
 image: /images/banners/ep36banner.jpg
 transcript: 0
 audio: Ep-36-I-Surrender---Freedom-through-Acceptance-e22lb00
-youtube: https://youtu.be/AyRNnHPCDas
+youtube: AyRNnHPCDas
 speakers: [Steven Guscott, William Blacoe]
 categories: [acceptance, surrender, freedom]
 tags: []
