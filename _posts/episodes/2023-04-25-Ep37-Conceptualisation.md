@@ -8,6 +8,7 @@ description: The Western world view is one of engineering and logic. It has soli
 image: /images/banners/ep37banner.jpg
 transcript: 0
 audio: Ep-37-The-Trap-of-Conceptualisation-e23689n
+video: Ep37-Conceptualisation
 youtube: MK5fyuGkFrU
 speakers: [Steven Guscott, William Blacoe]
 categories: [unconscious, perspectives, freedom]
