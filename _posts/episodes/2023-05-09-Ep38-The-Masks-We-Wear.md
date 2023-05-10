@@ -14,4 +14,4 @@ categories: [unconscious, pretense, awareness]
 tags: []
 comments: true
 ---
-The lecture "<a href="https://www.youtube.com/watch?v=5S1d3cNge24&t=1975s">The Stuff of Thought: Language as a window into human nature</a>" by Steven Pinker gives some examples and explanations of persons choosing to express their intention indirectly in order to get the best possible outcome with the least possible risk.
+The lecture "<a href="https://www.youtube.com/watch?v=5S1d3cNge24&t=1975s">The Stuff of Thought: Language as a window into human nature</a>" by Steven Pinker gives some examples and explanations of persons choosing to express their intention indirectly in order to get the best possible outcome with the least possible risk. 
