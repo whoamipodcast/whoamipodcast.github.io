@@ -61,20 +61,32 @@ const yearsTag = document.getElementById("years");
 const showYear = (year) => {
 	console.log("showing year " + year);
 	for(i in years){
-		let visibility = year == years[i] ? "block" : "none";
-		document.getElementById("year" + years[i]).style.display = visibility;
+		let yearDiv = document.getElementById("year" + years[i]);
+		let spanTag = document.getElementById("selectYear" + years[i]);
+		
+		if(year == years[i]){
+			yearDiv.style.display = "block";
+			spanTag.style.borderBottomStyle = "solid";
+		}else{
+			yearDiv.style.display = "none";
+			spanTag.style.borderBottomStyle = "none";
+		}
 	}
 }
 
 for(i in years){
 	let spanTag = document.createElement("span");
+	spanTag.id = "selectYear" + years[i];
 	spanTag.style.paddingLeft = "8px";
 	spanTag.style.paddingRight = "8px";
+	spanTag.style.paddingBottom = "5px";
+	spanTag.style.borderBottomColor = "rgb(248, 34, 73)";
+	spanTag.style.borderBottomWidth = "4px";
 	spanTag.style.cursor = "pointer";
 	spanTag.innerText = "" + years[i];
 	spanTag.setAttribute("onclick", "showYear(" + years[i] + ");");
 	yearsTag.appendChild(spanTag);
 }
 
-showYear(2023);
+showYear(years[0]);
 </script>
