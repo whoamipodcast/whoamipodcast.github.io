@@ -8,7 +8,7 @@ description: What does it take for a person interested in helping other people w
 image: /images/banners/ep39banner.jpg
 transcript: 0
 audio: Ep-39-From-the-Life-of-a-Psycho-Therapist-e25012n
-video: 
+lbry: Ep39-From-the-life-of-a-psycho-therapist
 youtube: 2NBEtx3n4Go
 speakers: [Koji Okumura, William Blacoe]
 categories: [therapy, awareness, work]
