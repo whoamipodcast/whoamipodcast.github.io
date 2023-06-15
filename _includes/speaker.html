@@ -23,6 +23,8 @@
   {% endif %}
   {% if page.linkedin %}                <a href="https://linkedin.com/in/{{ page.linkedin }}"><i class="fa fa-linkedin"></i></a>
   {% endif %}
+  {% if page.youtube %}                <a href="{{ page.youtube }}"><i class="fa fa-youtube"></i></a>
+  {% endif %}
   {% if page.homepage %}                <a href="{{ page.homepage }}"><i class="fa fa-link"></i></a>
   {% endif %}
               </div>
@@ -35,13 +37,13 @@
 									{% if post.type contains "episode" %}
 										{% if post.section == 0 %}
 											{% if post.speakers contains page.title %}
-												{% capture link %}<a href="{{ site.baseurl }}{{ post.url }}">Ep. {{ post.epnumber }}</a>{% endcapture %}
+												{% capture link %}<a href="{{ site.baseurl }}{{ post.url }}">Ep. {{ post.epnumber }} - {{ post.title }}</a>{% endcapture %}
 												{% assign appearances_array = appearances_array | push: link %}
 											{% endif %}
 										{% endif %}
 									{% endif %}
 								{% endfor %}
-								{{ appearances_array | join: ', ' }}
+								{{ appearances_array | join: '<br>' }}
 							{% endif %}
             </div>
           </div>
