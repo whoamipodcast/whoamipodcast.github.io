@@ -1,0 +1,147 @@
+<html>
+	<head>
+	</head>
+	
+	<body style="margin:0px;">
+		<canvas id="canvas" style="background:lightblue; padding:0px; width:100%;"></canvas>
+		
+		<script>
+			(async () => {
+			
+				const frogWidth = 236; //118;
+				const frogHeight = 180; //90;
+			
+				const canvas = document.getElementById("canvas");
+				canvas.width = 7 * frogWidth;
+				canvas.height = frogHeight;
+				const ctx = canvas.getContext("2d");
+				
+				const createImage = async (filename) => {
+					let image = new Image();
+					image.src = filename;
+					await image.decode();
+					return image;
+				};
+				
+				const clearPosition = (position) => {
+					ctx.clearRect(frogWidth * position, 0, frogWidth, frogHeight);
+				};
+				
+				const drawFrog = (frog) => {
+					if(frog){
+						ctx.drawImage(frog.image, frogWidth * frog.position, 0, frogWidth, frogHeight);
+					}
+				};
+				
+				const moveFrog = (position) => {
+					//which frog exists at position?
+					if(frogs[position]){
+						const frog = frogs[position];
+						
+						//is a single move possible?
+						const singleMovePosition = frog.position + frog.move;
+						if(singleMovePosition >= 0 && singleMovePosition < frogs.length){ //single move position is within array bounds
+							const singleMovePositionFrog = frogs[singleMovePosition];
+							
+							//is single move position empty?
+							if(!singleMovePositionFrog){
+							
+								//make a single move
+								clearPosition(position);
+								frogs[position] = null;
+								frogs[singleMovePosition] = frog;
+								frog.position = singleMovePosition;
+								drawFrog(frog);
+								
+							//is a double move possible?
+							}else{
+								const doubleMovePosition = frog.position + 2 * frog.move;
+								if(doubleMovePosition >= 0 && doubleMovePosition < frogs.length){ //double move position is within array bounds
+								const doubleMovePositionFrog = frogs[doubleMovePosition];
+								
+									if(singleMovePositionFrog.move == -frog.move //is single move position filled by an opposing frog?
+										&& !doubleMovePositionFrog //is double move position empty?
+									){
+									
+										//make a double move
+										clearPosition(position);
+										frogs[position] = null;
+										frogs[doubleMovePosition] = frog;
+										frog.position = doubleMovePosition;
+										drawFrog(frog);
+									}
+								}
+							}
+						}
+					}
+				}
+			
+				const greenFrogImage = await createImage("greenFrog.png");
+				const brownFrogImage = await createImage("brownFrog.png");
+				
+				const frogs = [];
+				
+				frogs[0] = {
+					image: greenFrogImage,
+					position: 0,
+					move: 1
+				};
+				
+				frogs[1] = {
+					image: greenFrogImage,
+					position: 1,
+					move: 1
+				};
+				
+				frogs[2] = {
+					image: greenFrogImage,
+					position: 2,
+					move: 1
+				};
+				
+				frogs[3] = null;
+				
+				frogs[4] = {
+					image: brownFrogImage,
+					position: 4,
+					move: -1
+				};
+				
+				frogs[5] = {
+					image: brownFrogImage,
+					position: 5,
+					move: -1
+				};
+				
+				frogs[6] = {
+					image: brownFrogImage,
+					position: 6,
+					move: -1
+				};
+				
+				//draw frogs initially
+				frogs.forEach(f => drawFrog(f));
+				
+				canvas.onclick = (event) => {
+					const rect = canvas.getBoundingClientRect();
+					const canvasX = event.clientX - rect.left;
+					const canvasY = event.clientY - rect.top;
+					//console.log("click at " + canvasX + ", " + canvasY);
+					//console.log("canvas width is " + rect.width);
+					
+					//const position = Math.floor(canvasX / frogWidth);
+					const position = Math.floor(7 * canvasX / rect.width);
+					//console.log("position: " + position);
+					moveFrog(position);
+				}
+				
+				/*canvas.addEventListener("touchstart", () => {
+					console.log("touched");
+				});*/
+				
+			})().catch(e => {
+				console.log(e);
+			});
+		</script>
+	</body>
+</html>
