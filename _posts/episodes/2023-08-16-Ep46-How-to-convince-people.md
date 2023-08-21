@@ -15,3 +15,8 @@ categories: [manipulation, belief systems]
 tags: []
 comments: true
 ---
+1984 is a dystopian novel by George Orwell that is often cited in the context of social engineering:
+<a href="https://en.wikipedia.org/wiki/Nineteen_Eighty-Four">https://en.wikipedia.org/wiki/Nineteen_Eighty-Four</a>
+
+"Chain of Command" is the double episode of Star Trek: The Next Generation referenced in this discussion:
+<a href="https://en.wikipedia.org/wiki/Chain_of_Command_(Star_Trek:_The_Next_Generation)">https://en.wikipedia.org/wiki/Chain_of_Command_(Star_Trek:_The_Next_Generation)</a>
