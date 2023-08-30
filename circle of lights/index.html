@@ -1,0 +1,85 @@
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<canvas id="canvas" width="1000" height="700" style="background:lightgray;"></canvas>
+	
+		<script>
+			const canvas = document.getElementById("canvas");
+			const context = canvas.getContext("2d");
+			
+			const drawCircle = (circle) => {
+				context.beginPath();
+				context.arc(circle.centerX, circle.centerY, circle.radius, 0, 2 * Math.PI);
+				context.fillStyle = circle.lit ? "orange" : "darkgray";
+				context.fill();
+			};
+			
+			const prepareCircles = (amountCircles) => {
+				const circles = [];
+				
+				const circlesCenterX = Math.round(canvas.width * 0.5);
+				const circlesCenterY = Math.round(canvas.height * 0.5);
+				const circlesRadius = Math.round(Math.min(canvas.width, canvas.height) * 0.35);
+				const circleRadius = Math.round(Math.min(canvas.width, canvas.height) * 0.1);
+				
+				let angle = 0;
+				const angleDelta = 2 * Math.PI / amountCircles;
+				
+				for(let i=0; i<amountCircles; i++){
+					circles.push({
+						index: i,
+						centerX: Math.round(circlesCenterX + Math.cos(angle) * circlesRadius),
+						centerY: Math.round(circlesCenterY + Math.sin(angle) * circlesRadius),
+						radius: circleRadius,
+						lit: Math.random() > 0.5,
+					});
+					angle += angleDelta;
+				}
+				
+				return circles;
+			};
+			
+			const getCirclesAt = (canvasX, canvasY) => {
+				const circlesAt = [];
+				for(let circle of circles){
+					const distanceToCenter = Math.sqrt((circle.centerX - canvasX) ** 2 + (circle.centerY - canvasY) ** 2);
+					if(distanceToCenter <= circle.radius){
+						circlesAt.push(circle);
+					}
+				}
+				
+				return circlesAt;
+			};
+			
+			const switchCircleOnOff = (circle) => {
+				circle.lit = !circle.lit;
+				drawCircle(circle);
+			};
+			
+			const canvasClicked = (event) => {
+				const rect = canvas.getBoundingClientRect();
+				const canvasX = event.clientX - rect.left;
+				const canvasY = event.clientY - rect.top;
+				
+				const circlesClicked = getCirclesAt(canvasX, canvasY);
+				if(circlesClicked.length == 1){
+					const circleClicked = circlesClicked[0];
+					switchCircleOnOff(circleClicked);
+					switchCircleOnOff(circles[(circleClicked.index + amountCircles - 1) % amountCircles]);
+					switchCircleOnOff(circles[(circleClicked.index + 1) % amountCircles]);
+				}
+			};
+			
+			const amountCircles = 7;
+			const circles = prepareCircles(amountCircles);
+			
+			for(let circle of circles){
+				drawCircle(circle);
+			}
+			
+			canvas.onclick = canvasClicked;
+		</script>
+	</body>
+</html>
