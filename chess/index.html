@@ -1,0 +1,47 @@
+<html>
+	<head>
+	
+	</head>
+	
+	<body style="background:lightblue; margin:0px;">
+		<canvas id="canvas" width="1000" height="1300" style="background:lightblue; cursor:pointer; width:100%;"></canvas>
+		
+		<script src="images.js"></script>
+		<script src="places.js"></script>
+		<script src="pieces.js"></script>
+		<script src="draw.js"></script>
+		<script src="ui.js"></script>
+		<script>
+			(async () => {
+			
+				const pieceImages = await getPieceImages();
+				console.log(pieceImages);
+				
+				const pieces = createPieces(pieceImages);
+				console.log(pieces);
+				
+				const placements = getPlacements(pieces);
+				console.log(placements);
+				
+				const board = {
+					boardX: 0,
+					boardY: 150,
+					pieceImages: pieceImages,
+					placements: placements,
+					isWhitesTurn: true,
+					blackBench: [0, 0, 0, 0, 0, 0], //uses piece indices
+					whiteBench: [0, 0, 0, 0, 0, 0],
+					blackBenchY: 25,
+					whiteBenchY: 1175,
+				};
+				
+				drawBoard(board);
+				
+				makeCanvasClickable(canvas, board);
+			
+			})().catch(e => {
+				console.log(e);
+			});
+		</script>
+	</body>
+</html>
