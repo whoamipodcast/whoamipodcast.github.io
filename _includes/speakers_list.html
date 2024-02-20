@@ -14,8 +14,8 @@
                 <img src="{{ speaker.image }}" alt="{{ speaker.title }}" style="width: 100%; aspect-ratio: 540/720; object-fit: cover; object-position: 50% 0%;">
 			  </a>
               <div class="details">
-                <h3><a href="{{ site.baseurl }}{{ speaker.url }}">{{ speaker.name }}</a></h3>
-                <p>{{ speaker.title }}</p>
+                <h3><a href="{{ site.baseurl }}{{ speaker.url }}">{{ speaker.title }}</a></h3>
+                <p>{{ speaker.vocation }}</p>
                 <div class="social">
     {% if speaker.twitter %}
                   <a href="https://twitter.com/{{ speaker.twitter }}"><i class="fa fa-twitter"></i></a>
