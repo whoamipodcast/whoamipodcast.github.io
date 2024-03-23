@@ -1,0 +1,197 @@
+<html>
+	<head>
+		<style>
+			body {
+				margin: 0;
+			}
+			.tile {
+				position: absolute;
+				background: pink;
+			}
+			.timer {
+				position: fixed;
+				height: 200px;
+				bottom: 300px;
+				font-size: 80pt;
+				font-family: Arial;
+				background: lightblue;
+				padding-top: 10%;
+				width: 60%;
+				margin-left: 20%;
+				text-align: center;
+				vertical-align: middle;
+				border: 5px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content"></div>
+		<script>
+			const goalDivs = [];
+			const tileDivs = [];
+			
+			//goals
+			const colorGoals = () => {
+				let colors = ["yellow", "green", "blue", "white", "orange", "red"];
+				colors = colors.concat(colors).concat(colors).concat(colors);
+				colors = colors.sort((a, b) => Math.random() - 0.5);
+				
+				let amountOfRows = 3;
+				let amountOfColumns = 3;
+				for(let y=0; y<amountOfRows; y++){
+					for(let x=0; x<amountOfColumns; x++){
+						goalDivs[y][x].style.background = colors[y * amountOfColumns + x];
+					}
+				}
+			}
+			
+			let amountOfRows = 3;
+			let amountOfColumns = 3;
+			const bodyWidth = document.body.offsetWidth;
+			let tileWidth = 0.3 * bodyWidth / amountOfColumns;
+			const goalsOffsetLeft = bodyWidth / 2 - (amountOfColumns / 2 * tileWidth);
+			const goalsHeight = 4 * tileWidth;
+			for(let y=0; y<amountOfRows; y++){
+				const tileRow = [];
+				for(let x=0; x<amountOfColumns; x++){
+					const tileDiv = document.createElement("div");
+					tileDiv.classList.add("tile");
+					tileDiv.style.width = Math.floor(0.8 * tileWidth) + "px";
+					tileDiv.style.height = Math.floor(0.8 * tileWidth) + "px";
+					tileDiv.style.left = Math.floor(goalsOffsetLeft + x * tileWidth + 0.05 * tileWidth) + "px";
+					tileDiv.style.top = Math.floor(y * tileWidth + 0.05 * tileWidth) + "px";
+					tileDiv.style.border = Math.floor(0.05 * tileWidth) + "px solid black";
+					document.body.appendChild(tileDiv);
+					tileRow.push(tileDiv);
+				}
+				goalDivs.push(tileRow);
+			}
+						
+			
+			//moveable tiles
+			let xGap, yGap;
+			
+			const colorTiles = () => {
+				let colors = ["yellow", "green", "blue", "white", "orange", "red"];
+				colors = colors.concat(colors).concat(colors).concat(colors);
+				colors.push("black");
+				colors = colors.sort((a, b) => Math.random() - 0.5);
+				
+				let amountOfRows = 5;
+				let amountOfColumns = 5;
+				for(let y=0; y<amountOfRows; y++){
+					for(let x=0; x<amountOfColumns; x++){
+						const color = colors[y * amountOfColumns + x];
+						tileDivs[y][x].style.background = color;
+						if(color == "black"){
+							xGap = x;
+							yGap = y;
+						}
+					}
+				}
+			}
+			
+			amountOfRows = 5;
+			amountOfColumns = 5;
+			tileWidth = bodyWidth / amountOfColumns;
+			for(let y=0; y<amountOfRows; y++){
+				const tileRow = [];
+				for(let x=0; x<amountOfColumns; x++){
+					const tileDiv = document.createElement("div");
+					tileDiv.classList.add("tile");
+					tileDiv.style.width = Math.floor(0.8 * tileWidth) + "px";
+					tileDiv.style.height = Math.floor(0.8 * tileWidth) + "px";
+					tileDiv.style.left = Math.floor(x * tileWidth + 0.05 * tileWidth) + "px";
+					tileDiv.style.top = Math.floor(goalsHeight + y * tileWidth + 0.05 * tileWidth) + "px";
+					tileDiv.style.border = Math.floor(0.05 * tileWidth) + "px solid black";
+					document.body.appendChild(tileDiv);
+					tileRow.push(tileDiv);
+				}
+				tileDivs.push(tileRow);
+			}
+			
+			document.body.addEventListener("click", (event) => {
+				if(tilesAreMoveable){
+					const xClick = Math.floor(event.clientX / tileWidth);
+					const yClick = Math.floor((event.clientY - goalsHeight) / tileWidth);
+					console.log(xClick + ", " + yClick);
+					
+					const xDelta = Math.abs(xClick - xGap);
+					const yDelta = Math.abs(yClick - yGap);
+					if(xClick >= 0 && xClick < amountOfColumns && yClick >= 0 && yClick < amountOfRows
+						&& xDelta * yDelta == 0 && xDelta + yDelta == 1){
+						const bg = tileDivs[yGap][xGap].style.background;
+						tileDivs[yGap][xGap].style.background = tileDivs[yClick][xClick].style.background;
+						tileDivs[yClick][xClick].style.background = bg;
+						xGap = xClick;
+						yGap = yClick;
+					}
+					
+					if(!playerHasWon && win()){
+						isTimerRunning = false;
+						playerHasWon = true;
+						tilesAreMoveable = false;
+						timer.innerText = "YOU WIN" + "\n" + timer.innerText;
+						timer.style.paddingBottom = "10%";
+					}
+				}
+			});
+			
+			
+			//start button / timer
+			const timer = document.createElement("span");
+			timer.classList.add("timer");
+			timer.innerText = "START";
+			document.body.appendChild(timer);
+
+			const getTimerText = (time) => {
+				const minutes = Math.floor(time / 60);
+				let seconds = time % 60;
+				if(seconds < 10) seconds = "0" + seconds;
+				
+				return minutes + ":" + seconds;
+			}
+
+			let isTimerRunning = false;
+			let playerHasWon = false;
+			let tilesAreMoveable = false;
+			timer.addEventListener("click", (event) => {
+				if(!isTimerRunning && !playerHasWon){
+					colorGoals();
+					colorTiles();
+					tilesAreMoveable = true;
+				
+					isTimerRunning = true;
+					let time = 0;
+					timer.innerText = getTimerText(time);
+					setInterval(() => {
+						if(isTimerRunning){
+							time += 1;
+							timer.innerText = getTimerText(time);
+						}
+					}, 1000);
+				}
+			});
+			
+			
+			//check for win
+			const sameColor = (goalX, goalY, tileX, tileY) => {
+				return goalDivs[goalY][goalX].style.background == tileDivs[tileY][tileX].style.background;
+			};
+			
+			const win = () => {
+				console.log(goalDivs[0][0].style.background + ", " + tileDivs[1][1].style.background);
+				return sameColor(0, 0, 1, 1) && sameColor(1, 0, 2, 1) && sameColor(2, 0, 3, 1)
+					&& sameColor(0, 1, 1, 2) && sameColor(1, 1, 2, 2) && sameColor(2, 1, 3, 2)
+					&& sameColor(0, 2, 1, 3) && sameColor(1, 2, 2, 3) && sameColor(2, 2, 3, 3);
+			};
+			
+			
+		</script>
+	</body>
+</html>
+
+
+
+
+
