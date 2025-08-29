@@ -47,6 +47,7 @@
 				}
 				
 				entries.sort((a, b) => a[0].localeCompare(b[0]));
+				console.log("Amount of entries from current table: " + entries.length);
 				return entries;
 			}
 			
@@ -54,6 +55,7 @@
 				const ta = document.getElementById("ta2");
 				let lines = ta.value.split("\n");
 				
+				console.log("Amount of unavailable speakers: " + lines.length);
 				return lines;
 			}
 			
@@ -80,17 +82,26 @@
 				}
 				
 				entries.sort((a, b) => a[0].localeCompare(b[0]));
+				console.log("Amount of entries from directory page: " + entries.length);
 				return entries;
 			}
 		
 			const getNewEntriesForTable = () => {
+			
+				const newEntriesForTable = [];
+				let row = 2;
+				
 				const entriesFromCurrentTable = getEntriesFromCurrentTable();
 				const unavailableSpeakers = getUnavailableSpeakers();
 				const entriesFromDirectoryPage = getEntriesFromDirectoryPage();
 				
-				const newEntriesForTable = [];
-				let row = 2;
+				const namesInCurrentTableButNotInDirectory = entriesFromCurrentTable.filter(entry1 =>
+					!entriesFromDirectoryPage.some(entry2 => entry1[0] == entry2[0]  //compare names (not ideal for duplicates)
+					/*&& entry1[2] == entry2[2]*/)  //compare ages?
+				);
 				
+				const namesInDirectoryButNotYetInTable = [];
+				const namesInDirectoryButNotAvailable = [];
 				for(let entryFromDirectoryPage of entriesFromDirectoryPage){
 				
 					//is speaker available?
@@ -106,6 +117,7 @@
 						if(entryFromCurrentTable == undefined){
 							newEntryForTable.push(""); //add "declined talking" to new entry
 							newEntryForTable.push("=if(F" + row + ";(today()-max(F" + row + ":M" + row + "))/365;\"No talk given yet\")"); //add formula for "Years since last talk" to new entry
+							namesInDirectoryButNotYetInTable.push(entryFromDirectoryPage[0]);
 						
 						//if member in directory exists in current table
 						}else{
@@ -113,23 +125,31 @@
 							newEntryForTable.push("=if(F" + row + ";(today()-max(F" + row + ":M" + row + "))/365;\"No talk given yet\")"); //add formula for "Years since last talk" to new entry
 							
 							for(let i=5; i<entryFromCurrentTable.length; i++){
-								newEntryForTable.push(entryFromCurrentTable[i]); //add "declined talking" to new entry
+								newEntryForTable.push(entryFromCurrentTable[i]); //add previous talk dates to new entry
 							}	
 						}
 						
 						row++;
 						newEntriesForTable.push(newEntryForTable);
+						
+					//if member is in directory but not available to speak
+					}else{
+						namesInDirectoryButNotAvailable.push(entryFromDirectoryPage[0]);
 					}
 				}
+				
+				console.log("Amount of new entries for table: " + newEntriesForTable.length);
+				console.log("Names in current table but not in directory:", namesInCurrentTableButNotInDirectory);
+				console.log("Names in directory and available but not yet in table:", namesInDirectoryButNotYetInTable);
+				console.log("Names in directory but not available to speak:", namesInDirectoryButNotAvailable);
+				
 				return newEntriesForTable;
 			}
 			
 			const cleanUp = () => {
 				const newEntriesForTable = getNewEntriesForTable();
 				
-				//console.log(newEntriesForTable);
 				const ta = document.getElementById("ta4");
-				
 				for(let newEntry of newEntriesForTable){
 					ta.value += newEntry.join("\t") + "\n";
 				}
