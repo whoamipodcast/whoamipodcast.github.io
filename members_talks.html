@@ -1,0 +1,143 @@
+<html>
+	<head>
+		<style>
+			div {
+				font-size: 14pt;
+			}
+			
+			textarea {
+				font-size: 14pt;
+				display: block;
+				margin: 20px;
+			}
+			
+			#button {
+				width: 200px;
+				height: 100px;
+				font-size: 26pt;
+				display: block;
+				margin: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>current table content:</div>
+		<textarea cols="100" rows="5" id="ta1"></textarea>
+		<div>unavailable speakers:</div>
+		<textarea cols="100" rows="5" id="ta2"></textarea>
+		<div>directory page content:</div>
+		<textarea cols="100" rows="5" id="ta3"></textarea>
+		<button onclick="cleanUp();" id="button">clean up</button>
+		<div>new table content:</div>
+		<textarea cols="100" rows="5" id="ta4"></textarea>
+	
+		<script>
+			const getEntriesFromCurrentTable = () => {
+				const ta = document.getElementById("ta1");
+				let lines = ta.value.split("\n");
+				
+				const entries = [];
+				for(let line of lines){
+					//skip header line
+					if(!line.startsWith("Name\t")){
+						const parts = line.split("\t");
+						parts[0] = parts[0].replace(/^\*+/, ""); //remove any leading stars from name
+						entries.push(parts);
+					}
+				}
+				
+				entries.sort((a, b) => a[0].localeCompare(b[0]));
+				return entries;
+			}
+			
+			const getUnavailableSpeakers = () => {
+				const ta = document.getElementById("ta2");
+				let lines = ta.value.split("\n");
+				
+				return lines;
+			}
+			
+			const getEntriesFromDirectoryPage = () => {
+				const ta = document.getElementById("ta3");
+				let lines = ta.value.split("\n");
+				
+				let processNames = false;
+				
+				const entries = [];
+				for(let line of lines){
+					if(line == "	Name	Gender	Age	Birth Date	Phone Number	E-mail"){
+						processNames = true;
+					}else if(line.startsWith("Count: ")){
+						processNames = false;
+					}else if(processNames){
+						const parts = line.split("\t");
+						entries.push([
+							parts[1].replace(/^\*+/, ""),
+							parts[2],
+							parts[3]
+						]);
+					}
+				}
+				
+				entries.sort((a, b) => a[0].localeCompare(b[0]));
+				return entries;
+			}
+		
+			const getNewEntriesForTable = () => {
+				const entriesFromCurrentTable = getEntriesFromCurrentTable();
+				const unavailableSpeakers = getUnavailableSpeakers();
+				const entriesFromDirectoryPage = getEntriesFromDirectoryPage();
+				
+				const newEntriesForTable = [];
+				let row = 2;
+				
+				for(let entryFromDirectoryPage of entriesFromDirectoryPage){
+				
+					//is speaker available?
+					if(!unavailableSpeakers.some(entry => entry == entryFromDirectoryPage[0])){
+						const newEntryForTable = [];
+						newEntryForTable.push(entryFromDirectoryPage[0]); //add name to new entry
+						newEntryForTable.push(entryFromDirectoryPage[1]); //add gender to new entry
+						newEntryForTable.push(entryFromDirectoryPage[2]); //add current age to new entry
+					
+						const entryFromCurrentTable = entriesFromCurrentTable.find(entry => entry[0] == entryFromDirectoryPage[0]);
+						
+						//if member is in directory but not yet in table
+						if(entryFromCurrentTable == undefined){
+							newEntryForTable.push(""); //add "declined talking" to new entry
+							newEntryForTable.push("=if(F" + row + ";(today()-max(F" + row + ":M" + row + "))/365;\"No talk given yet\")"); //add formula for "Years since last talk" to new entry
+						
+						//if member in directory exists in current table
+						}else{
+							newEntryForTable.push(entryFromCurrentTable[3]); //add "declined talking" to new entry
+							newEntryForTable.push("=if(F" + row + ";(today()-max(F" + row + ":M" + row + "))/365;\"No talk given yet\")"); //add formula for "Years since last talk" to new entry
+							
+							for(let i=5; i<entryFromCurrentTable.length; i++){
+								newEntryForTable.push(entryFromCurrentTable[i]); //add "declined talking" to new entry
+							}	
+						}
+						
+						row++;
+						newEntriesForTable.push(newEntryForTable);
+					}
+				}
+				return newEntriesForTable;
+			}
+			
+			const cleanUp = () => {
+				const newEntriesForTable = getNewEntriesForTable();
+				
+				//console.log(newEntriesForTable);
+				const ta = document.getElementById("ta4");
+				
+				for(let newEntry of newEntriesForTable){
+					ta.value += newEntry.join("\t") + "\n";
+				}
+			}
+			
+			window.onload = () => {
+				document.getElementById("ta1").focus();
+			};
+		</script>
+	</body>
+</html>
