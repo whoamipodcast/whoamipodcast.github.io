@@ -96,8 +96,12 @@
 				const entriesFromDirectoryPage = getEntriesFromDirectoryPage();
 				
 				const namesInCurrentTableButNotInDirectory = entriesFromCurrentTable.filter(entry1 =>
-					!entriesFromDirectoryPage.some(entry2 => entry1[0] == entry2[0]  //compare names (not ideal for duplicates)
-					/*&& entry1[2] == entry2[2]*/)  //compare ages?
+					!entriesFromDirectoryPage.some(entry2 => entry1[0] == entry2[0]  //same name
+					&& Math.abs(entry1[2] - entry2[2]) <= 1)  //similar age
+				).map(entry => entry[0] + " (" + entry[2] + ")");
+				
+				const unavailableSpeakersAndNotInDirectory = unavailableSpeakers.filter(name =>
+					!entriesFromDirectoryPage.some(entry => name == entry[0])  //same name
 				);
 				
 				const namesInDirectoryButNotYetInTable = [];
@@ -105,19 +109,22 @@
 				for(let entryFromDirectoryPage of entriesFromDirectoryPage){
 				
 					//is speaker available?
-					if(!unavailableSpeakers.some(entry => entry == entryFromDirectoryPage[0])){
+					if(!unavailableSpeakers.some(name => name == entryFromDirectoryPage[0])){
 						const newEntryForTable = [];
 						newEntryForTable.push(entryFromDirectoryPage[0]); //add name to new entry
 						newEntryForTable.push(entryFromDirectoryPage[1]); //add gender to new entry
 						newEntryForTable.push(entryFromDirectoryPage[2]); //add current age to new entry
 					
-						const entryFromCurrentTable = entriesFromCurrentTable.find(entry => entry[0] == entryFromDirectoryPage[0]);
+						const entryFromCurrentTable = entriesFromCurrentTable.find(entry =>
+							entry[0] == entryFromDirectoryPage[0] //same name
+							&& Math.abs(entry[2] - entryFromDirectoryPage[2]) <= 1 //similar age
+						);
 						
 						//if member is in directory but not yet in table
 						if(entryFromCurrentTable == undefined){
 							newEntryForTable.push(""); //add "declined talking" to new entry
 							newEntryForTable.push("=if(F" + row + ";(today()-max(F" + row + ":M" + row + "))/365;\"No talk given yet\")"); //add formula for "Years since last talk" to new entry
-							namesInDirectoryButNotYetInTable.push(entryFromDirectoryPage[0]);
+							namesInDirectoryButNotYetInTable.push(entryFromDirectoryPage[0] + " (" + entryFromDirectoryPage[2] + ")");
 						
 						//if member in directory exists in current table
 						}else{
@@ -134,14 +141,15 @@
 						
 					//if member is in directory but not available to speak
 					}else{
-						namesInDirectoryButNotAvailable.push(entryFromDirectoryPage[0]);
+						namesInDirectoryButNotAvailable.push(entryFromDirectoryPage[0] + " (" + entryFromDirectoryPage[2] + ")");
 					}
 				}
 				
-				console.log("Amount of new entries for table: " + newEntriesForTable.length);
+				console.log("Amount of entries for new table: " + newEntriesForTable.length);
 				console.log("Names in current table but not in directory:", namesInCurrentTableButNotInDirectory);
 				console.log("Names in directory and available but not yet in table:", namesInDirectoryButNotYetInTable);
 				console.log("Names in directory but not available to speak:", namesInDirectoryButNotAvailable);
+				console.log("Names unavailable to speak and not in directory:", unavailableSpeakersAndNotInDirectory);
 				
 				return newEntriesForTable;
 			}
